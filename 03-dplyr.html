@@ -22,24 +22,6 @@
     </div>
     <div class="selector-container ">
       
-      <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
-        
-        
-        <abbr class="icon" title="This lesson is in the Workbench Beta Phase (beta stage). Click here to visit a snapshot of the styles version from 2023-02-06." style="text-decoration: unset">
-            <span class="visually-hidden">This lesson is in the Workbench Beta Phase (beta stage).</span>
-          <a href="https://datacarpentry.github.io/r-socialsci" class="external-link alert-link" style="color: #383838">
-            <i aria-hidden="true" class="icon" data-feather="alert-circle" style="background: #719eff; border-radius: 5px"></i>
-            <span class="visually-hidden">Visit a snapshot of the styles version from 2023-02-06</span>
-          </a>
-        </abbr>
-        
-        
-        Workbench Beta | 
-        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="external-link alert-link" style="text-decoration: wavy overline">Give Feedback</a> | 
-        <a href="https://carpentries.github.io/workbench/beta-phase.html" class="external-link alert-link">Learn More</a>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      
       
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -291,11 +273,11 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Data Wrangling with dplyr</h1>
-        <p> Last updated on 2023-04-03 | 
-        
-        
+        <p> Last updated on 2023-04-10 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/03-dplyr.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        
+        
         
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -481,22 +463,22 @@ Chirodzo):</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code># A tibble: 39 × 14
-   key_ID village  interview_date      no_membrs years_liv respo…¹ rooms memb_…²
-    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;  
- 1      8 Chirodzo 2016-11-16 00:00:00        12        70 burntb…     3 yes    
- 2      9 Chirodzo 2016-11-16 00:00:00         8         6 burntb…     1 no     
- 3     10 Chirodzo 2016-12-16 00:00:00        12        23 burntb…     5 no     
- 4     34 Chirodzo 2016-11-17 00:00:00         8        18 burntb…     3 yes    
- 5     35 Chirodzo 2016-11-17 00:00:00         5        45 muddaub     1 yes    
- 6     36 Chirodzo 2016-11-17 00:00:00         6        23 sunbri…     1 yes    
- 7     37 Chirodzo 2016-11-17 00:00:00         3         8 burntb…     1 &lt;NA&gt;   
- 8     43 Chirodzo 2016-11-17 00:00:00         7        29 muddaub     1 no     
- 9     44 Chirodzo 2016-11-17 00:00:00         2         6 muddaub     1 &lt;NA&gt;   
-10     45 Chirodzo 2016-11-17 00:00:00         9         7 muddaub     1 no     
-# … with 29 more rows, 6 more variables: affect_conflicts &lt;chr&gt;,
+   key_ID village  interview_date      no_membrs years_liv respondent_wall_type
+    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
+ 1      8 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
+ 2      9 Chirodzo 2016-11-16 00:00:00         8         6 burntbricks         
+ 3     10 Chirodzo 2016-12-16 00:00:00        12        23 burntbricks         
+ 4     34 Chirodzo 2016-11-17 00:00:00         8        18 burntbricks         
+ 5     35 Chirodzo 2016-11-17 00:00:00         5        45 muddaub             
+ 6     36 Chirodzo 2016-11-17 00:00:00         6        23 sunbricks           
+ 7     37 Chirodzo 2016-11-17 00:00:00         3         8 burntbricks         
+ 8     43 Chirodzo 2016-11-17 00:00:00         7        29 muddaub             
+ 9     44 Chirodzo 2016-11-17 00:00:00         2         6 muddaub             
+10     45 Chirodzo 2016-11-17 00:00:00         9         7 muddaub             
+# ℹ 29 more rows
+# ℹ 8 more variables: rooms &lt;dbl&gt;, memb_assoc &lt;chr&gt;, affect_conflicts &lt;chr&gt;,
 #   liv_count &lt;dbl&gt;, items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
-#   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
-#   ²​memb_assoc</code></pre>
+#   instanceID &lt;chr&gt;</code></pre>
 </div>
 <p>We can also specify multiple conditions within the
 <code>filter()</code> function. We can combine conditions using either
@@ -519,22 +501,21 @@ function, separated by commas:</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code># A tibble: 10 × 14
-   key_ID village  interview_date      no_membrs years_liv respo…¹ rooms memb_…²
-    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;  
- 1     10 Chirodzo 2016-12-16 00:00:00        12        23 burntb…     5 no     
- 2     49 Chirodzo 2016-11-16 00:00:00         6        26 burntb…     2 &lt;NA&gt;   
- 3     52 Chirodzo 2016-11-16 00:00:00        11        15 burntb…     3 no     
- 4     56 Chirodzo 2016-11-16 00:00:00        12        23 burntb…     2 yes    
- 5     65 Chirodzo 2016-11-16 00:00:00         8        20 burntb…     3 no     
- 6     66 Chirodzo 2016-11-16 00:00:00        10        37 burntb…     3 yes    
- 7     67 Chirodzo 2016-11-16 00:00:00         5        31 burntb…     2 no     
- 8     68 Chirodzo 2016-11-16 00:00:00         8        52 burntb…     3 no     
- 9    199 Chirodzo 2017-06-04 00:00:00         7        17 burntb…     2 yes    
-10    200 Chirodzo 2017-06-04 00:00:00         8        20 burntb…     2 &lt;NA&gt;   
-# … with 6 more variables: affect_conflicts &lt;chr&gt;, liv_count &lt;dbl&gt;,
-#   items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
-#   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
-#   ²​memb_assoc</code></pre>
+   key_ID village  interview_date      no_membrs years_liv respondent_wall_type
+    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
+ 1     10 Chirodzo 2016-12-16 00:00:00        12        23 burntbricks         
+ 2     49 Chirodzo 2016-11-16 00:00:00         6        26 burntbricks         
+ 3     52 Chirodzo 2016-11-16 00:00:00        11        15 burntbricks         
+ 4     56 Chirodzo 2016-11-16 00:00:00        12        23 burntbricks         
+ 5     65 Chirodzo 2016-11-16 00:00:00         8        20 burntbricks         
+ 6     66 Chirodzo 2016-11-16 00:00:00        10        37 burntbricks         
+ 7     67 Chirodzo 2016-11-16 00:00:00         5        31 burntbricks         
+ 8     68 Chirodzo 2016-11-16 00:00:00         8        52 burntbricks         
+ 9    199 Chirodzo 2017-06-04 00:00:00         7        17 burntbricks         
+10    200 Chirodzo 2017-06-04 00:00:00         8        20 burntbricks         
+# ℹ 8 more variables: rooms &lt;dbl&gt;, memb_assoc &lt;chr&gt;, affect_conflicts &lt;chr&gt;,
+#   liv_count &lt;dbl&gt;, items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
+#   instanceID &lt;chr&gt;</code></pre>
 </div>
 <p>We can also form “and” statements with the <code>&amp;</code>
 operator instead of commas:</p>
@@ -552,22 +533,21 @@ operator instead of commas:</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code># A tibble: 10 × 14
-   key_ID village  interview_date      no_membrs years_liv respo…¹ rooms memb_…²
-    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;  
- 1     10 Chirodzo 2016-12-16 00:00:00        12        23 burntb…     5 no     
- 2     49 Chirodzo 2016-11-16 00:00:00         6        26 burntb…     2 &lt;NA&gt;   
- 3     52 Chirodzo 2016-11-16 00:00:00        11        15 burntb…     3 no     
- 4     56 Chirodzo 2016-11-16 00:00:00        12        23 burntb…     2 yes    
- 5     65 Chirodzo 2016-11-16 00:00:00         8        20 burntb…     3 no     
- 6     66 Chirodzo 2016-11-16 00:00:00        10        37 burntb…     3 yes    
- 7     67 Chirodzo 2016-11-16 00:00:00         5        31 burntb…     2 no     
- 8     68 Chirodzo 2016-11-16 00:00:00         8        52 burntb…     3 no     
- 9    199 Chirodzo 2017-06-04 00:00:00         7        17 burntb…     2 yes    
-10    200 Chirodzo 2017-06-04 00:00:00         8        20 burntb…     2 &lt;NA&gt;   
-# … with 6 more variables: affect_conflicts &lt;chr&gt;, liv_count &lt;dbl&gt;,
-#   items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
-#   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
-#   ²​memb_assoc</code></pre>
+   key_ID village  interview_date      no_membrs years_liv respondent_wall_type
+    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
+ 1     10 Chirodzo 2016-12-16 00:00:00        12        23 burntbricks         
+ 2     49 Chirodzo 2016-11-16 00:00:00         6        26 burntbricks         
+ 3     52 Chirodzo 2016-11-16 00:00:00        11        15 burntbricks         
+ 4     56 Chirodzo 2016-11-16 00:00:00        12        23 burntbricks         
+ 5     65 Chirodzo 2016-11-16 00:00:00         8        20 burntbricks         
+ 6     66 Chirodzo 2016-11-16 00:00:00        10        37 burntbricks         
+ 7     67 Chirodzo 2016-11-16 00:00:00         5        31 burntbricks         
+ 8     68 Chirodzo 2016-11-16 00:00:00         8        52 burntbricks         
+ 9    199 Chirodzo 2017-06-04 00:00:00         7        17 burntbricks         
+10    200 Chirodzo 2017-06-04 00:00:00         8        20 burntbricks         
+# ℹ 8 more variables: rooms &lt;dbl&gt;, memb_assoc &lt;chr&gt;, affect_conflicts &lt;chr&gt;,
+#   liv_count &lt;dbl&gt;, items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
+#   instanceID &lt;chr&gt;</code></pre>
 </div>
 <p>In an “or” statement, observations must meet <em>at least one</em> of
 the specified conditions. To form “or” statements we use the logical
@@ -584,22 +564,22 @@ operator for “or,” which is the vertical bar (|):</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code># A tibble: 88 × 14
-   key_ID village  interview_date      no_membrs years_liv respo…¹ rooms memb_…²
-    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;  
- 1      8 Chirodzo 2016-11-16 00:00:00        12        70 burntb…     3 yes    
- 2      9 Chirodzo 2016-11-16 00:00:00         8         6 burntb…     1 no     
- 3     10 Chirodzo 2016-12-16 00:00:00        12        23 burntb…     5 no     
- 4     23 Ruaca    2016-11-21 00:00:00        10        20 burntb…     4 &lt;NA&gt;   
- 5     24 Ruaca    2016-11-21 00:00:00         6         4 burntb…     2 no     
- 6     25 Ruaca    2016-11-21 00:00:00        11         6 burntb…     3 no     
- 7     26 Ruaca    2016-11-21 00:00:00         3        20 burntb…     2 no     
- 8     27 Ruaca    2016-11-21 00:00:00         7        36 burntb…     2 &lt;NA&gt;   
- 9     28 Ruaca    2016-11-21 00:00:00         2         2 muddaub     1 no     
-10     29 Ruaca    2016-11-21 00:00:00         7        10 burntb…     2 yes    
-# … with 78 more rows, 6 more variables: affect_conflicts &lt;chr&gt;,
+   key_ID village  interview_date      no_membrs years_liv respondent_wall_type
+    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
+ 1      8 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
+ 2      9 Chirodzo 2016-11-16 00:00:00         8         6 burntbricks         
+ 3     10 Chirodzo 2016-12-16 00:00:00        12        23 burntbricks         
+ 4     23 Ruaca    2016-11-21 00:00:00        10        20 burntbricks         
+ 5     24 Ruaca    2016-11-21 00:00:00         6         4 burntbricks         
+ 6     25 Ruaca    2016-11-21 00:00:00        11         6 burntbricks         
+ 7     26 Ruaca    2016-11-21 00:00:00         3        20 burntbricks         
+ 8     27 Ruaca    2016-11-21 00:00:00         7        36 burntbricks         
+ 9     28 Ruaca    2016-11-21 00:00:00         2         2 muddaub             
+10     29 Ruaca    2016-11-21 00:00:00         7        10 burntbricks         
+# ℹ 78 more rows
+# ℹ 8 more variables: rooms &lt;dbl&gt;, memb_assoc &lt;chr&gt;, affect_conflicts &lt;chr&gt;,
 #   liv_count &lt;dbl&gt;, items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
-#   instanceID &lt;chr&gt;, and abbreviated variable names ¹​respondent_wall_type,
-#   ²​memb_assoc</code></pre>
+#   instanceID &lt;chr&gt;</code></pre>
 </div>
 </section><section id="pipes"><h2 class="section-heading">Pipes<a class="anchor" aria-label="anchor" href="#pipes"></a>
 </h2>
@@ -665,7 +645,7 @@ Mac.</li>
  8 Chirodzo 2016-11-17 00:00:00         7        29 muddaub             
  9 Chirodzo 2016-11-17 00:00:00         2         6 muddaub             
 10 Chirodzo 2016-11-17 00:00:00         9         7 muddaub             
-# … with 29 more rows</code></pre>
+# ℹ 29 more rows</code></pre>
 </div>
 <p>In the above code, we use the pipe to send the
 <code>interviews</code> dataset first through <code>filter()</code> to
@@ -712,7 +692,7 @@ data, we can assign it a new name:</p>
  8 Chirodzo 2016-11-17 00:00:00         7        29 muddaub             
  9 Chirodzo 2016-11-17 00:00:00         2         6 muddaub             
 10 Chirodzo 2016-11-17 00:00:00         9         7 muddaub             
-# … with 29 more rows</code></pre>
+# ℹ 29 more rows</code></pre>
 </div>
 <p>Note that the final dataframe (<code>interviews_ch</code>) is the
 leftmost part of this expression.</p>
@@ -739,7 +719,7 @@ interviews where respondents were members of an irrigation association
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -765,7 +745,7 @@ interviews where respondents were members of an irrigation association
  8 more_once                2        3
  9 once                     3        3
 10 never                    3        3
-# … with 23 more rows</code></pre>
+# ℹ 23 more rows</code></pre>
 </div>
 </div>
 </div>
@@ -790,22 +770,22 @@ rooms used for sleeping (i.e. avg number of people per room):</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code># A tibble: 131 × 15
-   key_ID village  interview_date      no_membrs years_liv respo…¹ rooms memb_…²
-    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;  
- 1      1 God      2016-11-17 00:00:00         3         4 muddaub     1 &lt;NA&gt;   
- 2      1 God      2016-11-17 00:00:00         7         9 muddaub     1 yes    
- 3      3 God      2016-11-17 00:00:00        10        15 burntb…     1 &lt;NA&gt;   
- 4      4 God      2016-11-17 00:00:00         7         6 burntb…     1 &lt;NA&gt;   
- 5      5 God      2016-11-17 00:00:00         7        40 burntb…     1 &lt;NA&gt;   
- 6      6 God      2016-11-17 00:00:00         3         3 muddaub     1 &lt;NA&gt;   
- 7      7 God      2016-11-17 00:00:00         6        38 muddaub     1 no     
- 8      8 Chirodzo 2016-11-16 00:00:00        12        70 burntb…     3 yes    
- 9      9 Chirodzo 2016-11-16 00:00:00         8         6 burntb…     1 no     
-10     10 Chirodzo 2016-12-16 00:00:00        12        23 burntb…     5 no     
-# … with 121 more rows, 7 more variables: affect_conflicts &lt;chr&gt;,
+   key_ID village  interview_date      no_membrs years_liv respondent_wall_type
+    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
+ 1      1 God      2016-11-17 00:00:00         3         4 muddaub             
+ 2      1 God      2016-11-17 00:00:00         7         9 muddaub             
+ 3      3 God      2016-11-17 00:00:00        10        15 burntbricks         
+ 4      4 God      2016-11-17 00:00:00         7         6 burntbricks         
+ 5      5 God      2016-11-17 00:00:00         7        40 burntbricks         
+ 6      6 God      2016-11-17 00:00:00         3         3 muddaub             
+ 7      7 God      2016-11-17 00:00:00         6        38 muddaub             
+ 8      8 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
+ 9      9 Chirodzo 2016-11-16 00:00:00         8         6 burntbricks         
+10     10 Chirodzo 2016-12-16 00:00:00        12        23 burntbricks         
+# ℹ 121 more rows
+# ℹ 9 more variables: rooms &lt;dbl&gt;, memb_assoc &lt;chr&gt;, affect_conflicts &lt;chr&gt;,
 #   liv_count &lt;dbl&gt;, items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
-#   instanceID &lt;chr&gt;, people_per_room &lt;dbl&gt;, and abbreviated variable names
-#   ¹​respondent_wall_type, ²​memb_assoc</code></pre>
+#   instanceID &lt;chr&gt;, people_per_room &lt;dbl&gt;</code></pre>
 </div>
 <p>We may be interested in investigating whether being a member of an
 irrigation association had any effect on the ratio of household members
@@ -827,22 +807,22 @@ chain:</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code># A tibble: 92 × 15
-   key_ID village  interview_date      no_membrs years_liv respo…¹ rooms memb_…²
-    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;  
- 1      1 God      2016-11-17 00:00:00         7         9 muddaub     1 yes    
- 2      7 God      2016-11-17 00:00:00         6        38 muddaub     1 no     
- 3      8 Chirodzo 2016-11-16 00:00:00        12        70 burntb…     3 yes    
- 4      9 Chirodzo 2016-11-16 00:00:00         8         6 burntb…     1 no     
- 5     10 Chirodzo 2016-12-16 00:00:00        12        23 burntb…     5 no     
- 6     12 God      2016-11-21 00:00:00         7        20 burntb…     3 yes    
- 7     13 God      2016-11-21 00:00:00         6         8 burntb…     1 no     
- 8     15 God      2016-11-21 00:00:00         5        30 sunbri…     2 yes    
- 9     21 God      2016-11-21 00:00:00         8        20 burntb…     1 no     
-10     24 Ruaca    2016-11-21 00:00:00         6         4 burntb…     2 no     
-# … with 82 more rows, 7 more variables: affect_conflicts &lt;chr&gt;,
+   key_ID village  interview_date      no_membrs years_liv respondent_wall_type
+    &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
+ 1      1 God      2016-11-17 00:00:00         7         9 muddaub             
+ 2      7 God      2016-11-17 00:00:00         6        38 muddaub             
+ 3      8 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
+ 4      9 Chirodzo 2016-11-16 00:00:00         8         6 burntbricks         
+ 5     10 Chirodzo 2016-12-16 00:00:00        12        23 burntbricks         
+ 6     12 God      2016-11-21 00:00:00         7        20 burntbricks         
+ 7     13 God      2016-11-21 00:00:00         6         8 burntbricks         
+ 8     15 God      2016-11-21 00:00:00         5        30 sunbricks           
+ 9     21 God      2016-11-21 00:00:00         8        20 burntbricks         
+10     24 Ruaca    2016-11-21 00:00:00         6         4 burntbricks         
+# ℹ 82 more rows
+# ℹ 9 more variables: rooms &lt;dbl&gt;, memb_assoc &lt;chr&gt;, affect_conflicts &lt;chr&gt;,
 #   liv_count &lt;dbl&gt;, items_owned &lt;chr&gt;, no_meals &lt;dbl&gt;, months_lack_food &lt;chr&gt;,
-#   instanceID &lt;chr&gt;, people_per_room &lt;dbl&gt;, and abbreviated variable names
-#   ¹​respondent_wall_type, ²​memb_assoc</code></pre>
+#   instanceID &lt;chr&gt;, people_per_room &lt;dbl&gt;</code></pre>
 </div>
 <p>The <code>!</code> symbol negates the result of the
 <code>is.na()</code> function. Thus, if <code>is.na()</code> returns a
@@ -877,7 +857,7 @@ to produce this data frame!</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1194,7 +1174,7 @@ represented?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb48">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1237,7 +1217,7 @@ add the number of observations (hint: see <code>?n</code>).</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1285,7 +1265,7 @@ add the number of observations (hint: see <code>?n</code>).</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb52">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1359,9 +1339,6 @@ with subsets of data.</li>
 				<p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
         
-	
-        
-        
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/03-dplyr.Rmd" class="external-link">Edit on GitHub</a>
         
 	
@@ -1374,9 +1351,9 @@ with subsets of data.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/bd6c0b5bd195b32a93a78764e96d5230ee517542" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/f7cb787f7a18463375e7f8e3363c514007b64425" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0ceab89e860e078ab8686cf653563da0a5513afd" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/3d088c7fe81191d665cb8a812aff737e5c1b145f" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/d19ac71c590ad9a56a8e5547be02c19663b4a5d6" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/926afe7bcf7cc5f063d698c6f136458f6287eaec" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1388,17 +1365,17 @@ with subsets of data.</li>
     {
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
-  "@id": "https://preview.carpentries.org/r-socialsci03-dplyr.html",
+  "@id": "https://datacarpentry.org/r-socialsci03-dplyr.html",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "Data Wrangling with dplyr",
   "creativeWorkStatus": "active",
-  "url": "https://preview.carpentries.org/r-socialsci03-dplyr.html",
-  "identifier": "https://preview.carpentries.org/r-socialsci03-dplyr.html",
-  "dateCreated": "2023-04-03",
-  "dateModified": "2023-04-03",
-  "datePublished": "2023-04-03"
+  "url": "https://datacarpentry.org/r-socialsci03-dplyr.html",
+  "identifier": "https://datacarpentry.org/r-socialsci03-dplyr.html",
+  "dateCreated": "2017-05-25",
+  "dateModified": "2023-04-10",
+  "datePublished": "2023-04-10"
 }
 
   </script><script>
