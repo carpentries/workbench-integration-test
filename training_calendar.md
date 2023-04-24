@@ -8,7 +8,7 @@ This training is designed for people who want to become certified Carpentries in
 
 For more information about what will be covered at this training as well as a sample schedule, check out our [Instructor Training Curriculum](https://carpentries.github.io/instructor-training/).
 
-In addition to Instructor Training, certification as a Carpentries Instructor includes 3 short ‘checkout' steps. For more details, see our [Checkout Instructions page](https://carpentries.github.io/instructor-training/checkout/index.html).
+In addition to Instructor Training, certification as a Carpentries Instructor includes 3 short ‘checkout' steps. For more details, see our [Checkout Instructions page](https://carpentries.github.io/instructor-training/checkout).
 
 ### How to Register for an Instructor Training
 
@@ -43,13 +43,6 @@ More details on our [cancellation and makeup policy](https://docs.carpentries.or
 ### Upcoming Instructor Training
 
 New trainings are added to this calendar on a quarterly basis.
-
-<hr>
-
-
-#### [April 26-27, 2023](https://www.eventbrite.com/e/online-instructor-training-april-26-27-2023-tickets-568436357447)
-
-**Two 8-hour days:** 9 am to 5 pm Central European Summer Time / 12:30 pm to 8:30 pm India Standard Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+Event&iso=20230426T09&p1=195&ah=8)
 
 <hr>
 
