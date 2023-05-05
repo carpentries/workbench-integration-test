@@ -88,6 +88,9 @@
     <loc>https://carpentries.github.io/instructor-trainingadditional_exercises.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/instructor-trainingaio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/instructor-trainingcheckout.html</loc>
   </url>
   <url>
@@ -101,6 +104,9 @@
   </url>
   <url>
     <loc>https://carpentries.github.io/instructor-trainingicebreakers.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/instructor-trainingimages.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/instructor-trainingindex.html</loc>
@@ -193,6 +199,9 @@
     <loc>https://carpentries.github.io/instructor-traininginstructor/additional_exercises.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/instructor-traininginstructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/instructor-traininginstructor/checkout.html</loc>
   </url>
   <url>
@@ -208,7 +217,16 @@
     <loc>https://carpentries.github.io/instructor-traininginstructor/icebreakers.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/instructor-traininginstructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/instructor-traininginstructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/instructor-traininginstructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/instructor-traininginstructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/instructor-traininginstructor/members.html</loc>
@@ -227,6 +245,12 @@
   </url>
   <url>
     <loc>https://carpentries.github.io/instructor-traininginstructor/training_calendar.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/instructor-traininginstructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/instructor-trainingkey-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/instructor-trainingmembers.html</loc>
