@@ -55,9 +55,6 @@
     <loc>https://datacarpentry.org/r-raster-vector-geospatialabout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialaio.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialdata/Global/Boundaries/ne_110m_graticules_all/ne_110m_graticules_1.README.html</loc>
   </url>
   <url>
@@ -83,9 +80,6 @@
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialdiscuss.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialimages.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialindex.html</loc>
@@ -145,34 +139,16 @@
     <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/about.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/aio.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/discuss.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/images.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/index.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/instructor-notes.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor/reference.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialinstructor-notes.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-raster-vector-geospatialkey-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatialprofiles.html</loc>
