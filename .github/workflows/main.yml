@@ -54,6 +54,8 @@ jobs:
       - name: "Copy and setup lesson"
         run: |
           cp -r lesson/* .
+          sed -i "/sandpaper\:/d" config.yaml
+          sed -i "/varnish\:/d" config.yaml
           printf "sandpaper: carpentries/sandpaper\nvarnish: carpentries/varnish\npegboard: carpentries/pegboard\n" >> config.yaml
 
       - name: "Set up R"
