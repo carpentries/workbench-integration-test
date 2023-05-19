@@ -358,13 +358,13 @@ projections?</li>
 </div>
 </div>
 </div>
-<div id="prereq1" class="callout prereq">
+<div id="things-youll-need-to-complete-this-episode" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="things-youll-need-to-complete-this-episode" class="callout-inner">
 <h3 class="callout-title">Things You’ll Need To Complete This
-Episode<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+Episode<a class="anchor" aria-label="anchor" href="#things-youll-need-to-complete-this-episode"></a>
 </h3>
 <div class="callout-content">
 <p>See the <a href=".">lesson homepage</a> for detailed information
@@ -466,12 +466,12 @@ rasters are different. When this is the case, <code>ggplot</code> won’t
 render the image. It won’t even throw an error message to tell you
 something has gone wrong. We can look at Coordinate Reference Systems
 (CRSs) of the DTM and the hillshade data to see how they differ.</p>
-<div id="challenge1" class="callout challenge">
+<div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
 <p>View the CRS for each of these two datasets. What projection does
@@ -580,12 +580,12 @@ into a new CRS. Keep in mind that reprojection only works when you first
 have a defined CRS for the raster object that you want to reproject. It
 cannot be used if no CRS is defined. Lucky for us, the
 <code>DTM_hill_HARV</code> has a defined CRS.</p>
-<div id="callout1" class="callout callout">
+<div id="data-tip" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="data-tip" class="callout-inner">
-<h3 class="callout-title">Data Tip<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<h3 class="callout-title">Data Tip<a class="anchor" aria-label="anchor" href="#data-tip"></a>
 </h3>
 <div class="callout-content">
 <p>When we reproject a raster, we move it from one “grid” to another.
@@ -716,12 +716,12 @@ DTM hillshade, to see how they are different.</p>
 <code>DTM_hill_UTMZ18N_HARV</code> is now UTM. However, the extent
 values of <code>DTM_hillUTMZ18N_HARV</code> are different from
 <code>DTM_hill_HARV</code>.</p>
-<div id="challenge2" class="callout challenge">
+<div id="challenge-extent-change-with-crs-change" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-extent-change-with-crs-change" class="callout-inner">
-<h3 class="callout-title">Challenge: Extent Change with CRS Change<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Challenge: Extent Change with CRS Change<a class="anchor" aria-label="anchor" href="#challenge-extent-change-with-crs-change"></a>
 </h3>
 <div class="callout-content">
 <p>Why do you think the two extents differ?</p>
@@ -832,13 +832,13 @@ dataframe from our newly reprojected raster.</p>
 </div>
 <figure><img src="fig/03-raster-reproject-in-r-rendered-plot-projected-raster-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>We have now successfully draped the Digital Terrain Model on top of
 our hillshade to produce a nice looking, textured map!</p>
-<div id="challenge3" class="callout challenge">
+<div id="challenge-reproject-then-plot-a-digital-terrain-model" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-reproject-then-plot-a-digital-terrain-model" class="callout-inner">
 <h3 class="callout-title">Challenge: Reproject, then Plot a Digital
-Terrain Model<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+Terrain Model<a class="anchor" aria-label="anchor" href="#challenge-reproject-then-plot-a-digital-terrain-model"></a>
 </h3>
 <div class="callout-content">
 <p>Create a map of the <a href="https://www.neonscience.org/field-sites/field-sites-map/SJER" class="external-link">San
@@ -896,13 +896,13 @@ files.</p>
 </div>
 </div>
 </div>
-<div id="challenge4" class="callout challenge">
+<div id="challenge-reproject-then-plot-a-digital-terrain-model" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-reproject-then-plot-a-digital-terrain-model" class="callout-inner">
 <h3 class="callout-title">Challenge: Reproject, then Plot a Digital
-Terrain Model<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge4"></a>
+Terrain Model<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-reproject-then-plot-a-digital-terrain-model"></a>
 </h3>
 <div class="callout-content">
 <p>If you completed the San Joaquin plotting challenge in the <a href="02-raster-plot/">Plot Raster Data in R</a> episode, how does the
@@ -971,8 +971,8 @@ CRSs.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/46c7ecefdd72abdcd1ad9a5a0ec52b7406ae761d" class="external-link">sandpaper (0.11.17)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/aae8083f519fb74a753e0765bc83e73b31ac42eb" class="external-link">pegboard (0.5.3)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/4b9d0c5fc59f9fff608dcd7d06111371610dc6d0" class="external-link">sandpaper (0.11.18)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/3b06f4559892e31ff0a6bae1d838cd1ba6fd94fb" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/926afe7bcf7cc5f063d698c6f136458f6287eaec" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
@@ -995,7 +995,7 @@ CRSs.</li>
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial03-raster-reproject-in-r.html",
   "dateCreated": "2015-10-22",
   "dateModified": "2023-05-05",
-  "datePublished": "2023-05-16"
+  "datePublished": "2023-05-19"
 }
 
   </script><script>
