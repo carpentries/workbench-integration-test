@@ -1,6 +1,6 @@
 ---
 source: Rmd
-title: Experimental design
+title: Extra exploration of design matrices
 teaching: XX
 exercises: XX
 editor_options:
@@ -158,14 +158,14 @@ vd$cooccurrenceplots
 $`tissue = Cerebellum`
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 ```{.output}
 
 $`tissue = Spinalcord`
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-5-2.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-5-2.png" style="display: block; margin: auto;" />
 
 ## Compare males and females, non-infected spinal cord
 
@@ -223,7 +223,7 @@ vd$plotlist
 [[1]]
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -299,7 +299,7 @@ vd$plotlist
 [[1]]
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::
 
@@ -381,7 +381,7 @@ vd$plotlist
 [[1]]
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 ## Factorial design with interactions
 
@@ -459,7 +459,7 @@ vd$plotlist
 [[1]]
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 ## Paired design
 
@@ -521,7 +521,7 @@ vd$plotlist
 [[1]]
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
 
 ## Within- and between-subject comparisons
 
@@ -638,14 +638,14 @@ vd$plotlist
 $`time = Day0`
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
 ```{.output}
 
 $`time = Day4`
 ```
 
-<img src="fig/04-experimental-design-rendered-unnamed-chunk-11-2.png" style="display: block; margin: auto;" />
+<img src="fig/08-extra-design-rendered-unnamed-chunk-11-2.png" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
