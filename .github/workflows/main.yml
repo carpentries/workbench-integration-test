@@ -9,6 +9,14 @@ on:
         required: false
         default: false
         type: boolean
+      varnish: 
+        description: 'Varnish version to test'
+        required: false
+        default: 'carpentries/varnish'
+      sandpaper: 
+        description: 'Sandpaper version to test'
+        required: false
+        default: 'carpentries/sandpaper'
 jobs:
   check-template:
     permissions:
@@ -56,7 +64,7 @@ jobs:
           cp -r lesson/* .
           sed -i "/sandpaper\:/d" config.yaml
           sed -i "/varnish\:/d" config.yaml
-          printf "sandpaper: carpentries/sandpaper\nvarnish: carpentries/varnish\npegboard: carpentries/pegboard\n" >> config.yaml
+          printf "sandpaper: ${{ github.event.inputs.sandpaper }}\nvarnish: ${{ github.event.inputs.varnish }}\npegboard: carpentries/pegboard\n" >> config.yaml
 
       - name: "Set up R"
         uses: r-lib/actions/setup-r@v2
