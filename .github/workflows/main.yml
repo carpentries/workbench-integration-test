@@ -11,11 +11,11 @@ on:
         type: boolean
       varnish: 
         description: 'Varnish version to test'
-        required: false
+        required: true
         default: 'carpentries/varnish'
       sandpaper: 
         description: 'Sandpaper version to test'
-        required: false
+        required: true
         default: 'carpentries/sandpaper'
 jobs:
   check-template:
