@@ -6,10 +6,6 @@ exercises: XX
 ---
 
 
-```{.warning}
-Warning: replacing previous import 'S4Arrays::read_block' by
-'DelayedArray::read_block' when loading 'SummarizedExperiment'
-```
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
@@ -134,7 +130,7 @@ sessionInfo()
 ```
 
 ```{.output}
-R version 4.3.0 (2023-04-21)
+R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu 22.04.2 LTS
 
@@ -164,7 +160,7 @@ other attached packages:
 [11] BiocGenerics_0.46.0        
 
 loaded via a namespace (and not attached):
- [1] Matrix_1.5-4            bit_4.0.5               compiler_4.3.0         
+ [1] Matrix_1.5-4            bit_4.0.5               compiler_4.3.1         
  [4] BiocManager_1.30.20     renv_0.17.3             crayon_1.5.2           
  [7] blob_1.2.4              Biostrings_2.68.0       bitops_1.0-7           
 [10] png_0.1-8               fastmap_1.1.1           lattice_0.21-8         
@@ -173,9 +169,9 @@ loaded via a namespace (and not attached):
 [19] DBI_1.1.3               rlang_1.1.1             KEGGREST_1.40.0        
 [22] cachem_1.0.8            xfun_0.39               bit64_4.0.5            
 [25] RSQLite_2.3.1           memoise_2.0.1           cli_3.6.1              
-[28] zlibbioc_1.46.0         grid_4.3.0              vctrs_0.6.2            
+[28] zlibbioc_1.46.0         grid_4.3.1              vctrs_0.6.2            
 [31] evaluate_0.21           RCurl_1.98-1.12         httr_1.4.6             
-[34] pkgconfig_2.0.3         tools_4.3.0            
+[34] pkgconfig_2.0.3         tools_4.3.1            
 ```
 
 :::::::::::::::::::::::::::::::::::::::: keypoints

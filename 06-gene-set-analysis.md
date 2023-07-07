@@ -6,10 +6,6 @@ exercises: XX
 ---
 
 
-```{.warning}
-Warning: replacing previous import 'S4Arrays::read_block' by
-'DelayedArray::read_block' when loading 'SummarizedExperiment'
-```
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
