@@ -47,12 +47,6 @@ New trainings are added to this calendar on a quarterly basis.
 <hr>
 
 
-#### [July 10-13, 2023](https://www.eventbrite.com/e/online-instructor-training-july-10-13-2023-tickets-649114588207)
-
-**Four 4-hour days:**  9 am to 1 pm N. America Pacific time / 12 noon to 4 pm N. America Eastern Time / 5 pm to 9 pm British Summer Time [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+Event&iso=20230710T09&p1=137&ah=4)
-
-<hr>
-
 #### [July 18-21, 2023](https://www.eventbrite.com/e/online-instructor-training-july-18-21-tickets-649118951257)
 
 **Four 4-hour days:**  9 am to 1 pm Australia Eastern Standard Time / 4 pm to 8 pm **PREVIOUS DAY** N. America Pacific Time /  [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+Event&iso=20230718T09&p1=152&ah=4)
@@ -80,6 +74,12 @@ New trainings are added to this calendar on a quarterly basis.
 #### [August 23-24, 2023](https://www.eventbrite.com/e/online-instructor-training-august-23-24-2023-tickets-649138620087)
 
 **Two 8-hour days:** 9 am to 5 pm Central European Standard Time / 12:30 pm to 8:30 pm India Standard Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+Event&iso=20230823T09&p1=187&ah=8)
+
+<hr>
+
+#### [September 19-22, 2023](https://www.eventbrite.com/e/online-instructor-training-19-22-september-2023-tickets-669387976457)
+
+**Four 4-hour days:**  9 am to 1 pm British Summer Time / 6 pm to 10 pm Australia Eastern Standard Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+Event&iso=20230919T09&p1=1358&ah=4)
 
 <hr>
 
