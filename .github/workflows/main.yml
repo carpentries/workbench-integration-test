@@ -62,9 +62,17 @@ jobs:
       - name: "Copy and setup lesson"
         run: |
           cp -r lesson/* .
+          SANDY="${{ github.event.inputs.sandpaper }}"
+          VARNY="${{ github.event.inputs.varnish }}"
+          if [ -z ${SANDY} ]; then
+            SANDY="carpentries/sandpaper"
+          fi
+          if [-z ${VARNY}]; then
+            VARNY="carpentries/varnish"
+          fi
           sed -i "/sandpaper\:/d" config.yaml
           sed -i "/varnish\:/d" config.yaml
-          printf "sandpaper: ${{ github.event.inputs.sandpaper }}\nvarnish: ${{ github.event.inputs.varnish }}\npegboard: carpentries/pegboard\n" >> config.yaml
+          printf "sandpaper: ${SANDY}\nvarnish: ${VARNY}\npegboard: carpentries/pegboard\n" >> config.yaml
 
       - name: "Set up R"
         uses: r-lib/actions/setup-r@v2
