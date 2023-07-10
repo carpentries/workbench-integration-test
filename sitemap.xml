@@ -37,16 +37,10 @@
     <loc>https://datacarpentry.org/r-socialsciR-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciaio.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-socialscidata-visualisation-handout.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-socialscidata-wrangling-handout.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-socialsciimages.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-socialsciindex.html</loc>
@@ -88,28 +82,16 @@
     <loc>https://datacarpentry.org/r-socialsciinstructor/R-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/aio.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-socialsciinstructor/data-visualisation-handout.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-socialsciinstructor/data-wrangling-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/images.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-socialsciinstructor/index.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/instructor-notes.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-socialsciinstructor/intro-R-handout.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-socialsciinstructor/profiles.html</loc>
@@ -121,13 +103,7 @@
     <loc>https://datacarpentry.org/r-socialsciinstructor/starting-with-data-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor-notes.html</loc>
-  </url>
-  <url>
     <loc>https://datacarpentry.org/r-socialsciintro-R-handout.html</loc>
-  </url>
-  <url>
-    <loc>https://datacarpentry.org/r-socialscikey-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-socialsciprofiles.html</loc>
