@@ -64,10 +64,10 @@ jobs:
           cp -r lesson/* .
           SANDY="${{ github.event.inputs.sandpaper }}"
           VARNY="${{ github.event.inputs.varnish }}"
-          if [ -z ${SANDY} ]; then
+          if [[ -z ${SANDY} ]]; then
             SANDY="carpentries/sandpaper"
           fi
-          if [-z ${VARNY}]; then
+          if [[ -z ${VARNY} ]]; then
             VARNY="carpentries/varnish"
           fi
           sed -i "/sandpaper\:/d" config.yaml
