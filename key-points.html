@@ -240,7 +240,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-gene-set-analysis.html">6. Gene set analysis</a>
+        <a href="06-gene-set-analysis.html">6. Gene set enrichment analysis</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -386,21 +386,22 @@ work directly on the raw counts.</li>
 statistics) are wrapped in a single function: DESeq().</li>
 <li>Independent filtering of lowly expressed genes is often
 beneficial.</li>
-</ul></section><section id="06-gene-set-analysis"><h2 class="section-heading"><a href="06-gene-set-analysis.html">Gene set analysis</a></h2>
+</ul></section><section id="06-gene-set-analysis"><h2 class="section-heading"><a href="06-gene-set-analysis.html">Gene set enrichment analysis</a></h2>
 <hr class="half-width">
 <ul>
-<li>Gene set enrichment analysis helps to answer “what are the common
-biological functions affected in the experiment”.</li>
-<li>Gene sets can be retrieved from several online resources, including
-mSigDB, KEGG, reactome, Gene Ontology.</li>
-<li>A rich set of gene set analysis methods are available. Some methods
-require genes to be classified into ‘significant’ and ‘non-significant’
-before the gene set analysis, while others ingest the full ranking of
-genes.</li>
+<li>ORA analysis is based on the gene counts and it is based on Fisher’s
+exact test or the hypergeometric distribution.</li>
+<li>In R, it is easy to obtain gene sets from a large number of
+sources.</li>
 </ul></section><section id="07-next-steps"><h2 class="section-heading"><a href="07-next-steps.html">Next steps</a></h2>
 <hr class="half-width">
-<ul><li>
-</li></ul></section><section id="08-extra-design"><h2 class="section-heading"><a href="08-extra-design.html">Extra exploration of design matrices</a></h2>
+<ul>
+<li>RNA-seq data is very versatile and can be used for a number of
+different purposes. It is important, however, to carefully plan one’s
+analyses, to make sure that enough data is available and that abundances
+for appropriate features (e.g., genes, transcripts, or exons) are
+quantified.</li>
+</ul></section><section id="08-extra-design"><h2 class="section-heading"><a href="08-extra-design.html">Extra exploration of design matrices</a></h2>
 <hr class="half-width">
 <ul>
 <li>The formula framework in R allows creation of design matrices, which
@@ -434,7 +435,7 @@ linear combinations of the model coefficients.</li>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/4b2a219522a30132e33fb05aea2bf37bcb9a7f32" class="external-link">sandpaper (0.12.5)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/3b06f4559892e31ff0a6bae1d838cd1ba6fd94fb" class="external-link">pegboard (0.5.3)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/dbc40280b29c85d25654735767c682e2f64f28a5" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/05491120472f179fc93fb3acb3ac2bb331c190a8" class="external-link">varnish (0.2.17)</a>.</p>
 			</div>
 		</footer>
@@ -457,8 +458,8 @@ linear combinations of the model coefficients.</li>
   "url": "https://carpentries-incubator.github.io/bioc-rnaseqkey-points.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseqkey-points.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2023-07-17",
-  "datePublished": "2023-07-17"
+  "dateModified": "2023-07-24",
+  "datePublished": "2023-07-24"
 }
 
   </script><script>
