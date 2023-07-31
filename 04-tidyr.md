@@ -118,16 +118,16 @@ interviews %>%
 # A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1      9 Chirodzo 2016-11-16 00:00:00 uuid:846103d2-b1db-4055-b502-9cd510bb7b37
- 2     57 Chirodzo 2016-11-16 00:00:00 uuid:a7184e55-0615-492d-9835-8f44f3b03a71
- 3     52 Chirodzo 2016-11-16 00:00:00 uuid:6db55cb4-a853-4000-9555-757b7fae2bcf
- 4      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
- 5     60 Chirodzo 2016-11-16 00:00:00 uuid:85465caf-23e4-4283-bb72-a0ef30e30176
- 6     21 Chirodzo 2016-11-16 00:00:00 uuid:cc7f75c5-d13e-43f3-97e5-4f4c03cb4b12
- 7     59 Chirodzo 2016-11-16 00:00:00 uuid:1936db62-5732-45dc-98ff-9b3ac7a22518
- 8     45 Chirodzo 2016-11-17 00:00:00 uuid:e3554d22-35b1-4fb9-b386-dd5866ad5792
- 9     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
-10     37 Chirodzo 2016-11-17 00:00:00 uuid:408c6c93-d723-45ef-8dee-1b1bd3fe20cd
+ 1    192 Chirodzo 2017-06-03 00:00:00 uuid:f94409a6-e461-4e4c-a6fb-0072d3d58b00
+ 2     64 Chirodzo 2016-11-16 00:00:00 uuid:28cfd718-bf62-4d90-8100-55fafbe45d06
+ 3     43 Chirodzo 2016-11-17 00:00:00 uuid:b4dff49f-ef27-40e5-a9d1-acf287b47358
+ 4     44 Chirodzo 2016-11-17 00:00:00 uuid:f9fadf44-d040-4fca-86c1-2835f79c4952
+ 5     35 Chirodzo 2016-11-17 00:00:00 uuid:ff7496e7-984a-47d3-a8a1-13618b5683ce
+ 6     54 Chirodzo 2016-11-16 00:00:00 uuid:273ab27f-9be3-4f3b-83c9-d3e1592de919
+ 7     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
+ 8     59 Chirodzo 2016-11-16 00:00:00 uuid:1936db62-5732-45dc-98ff-9b3ac7a22518
+ 9     58 Chirodzo 2016-11-16 00:00:00 uuid:a7a3451f-cd0d-4027-82d9-8dcd1234fcca
+10     50 Chirodzo 2016-11-16 00:00:00 uuid:4267c33c-53a7-46d9-8bd6-b96f58a4f92c
 ```
 
 We notice that the layout or format of the `interviews` data is in a format that
@@ -330,7 +330,7 @@ we did previously with `wall_type`).
 
 ```r
 interviews_items_owned <- interviews %>%
-  separate_rows(items_owned, sep = ";") %>%
+  separate_longer_delim(items_owned, delim = ";") %>%
   replace_na(list(items_owned = "no_listed_items")) %>%
   mutate(items_owned_logical = TRUE) %>%
     pivot_wider(names_from = items_owned,
@@ -353,7 +353,7 @@ the `interviews` dataframe.
 interviews_items_owned <- interviews %>%
 ```
 
-Then we use the new function `separate_rows()` from the **`tidyr`** package to
+Then we use the new function `separate_longer_delim()` from the **`tidyr`** package to
 separate the values of `items_owned` based on the presence of semi-colons (`;`).
 The values of this variable were multiple items separated by semi-colons, so
 this action creates a row for each item listed in a household's possession.
@@ -364,16 +364,16 @@ other with "solar panel" in the `items_owned` column.
 
 
 ```r
-separate_rows(items_owned, sep = ";") %>%
+separate_longer_delim(items_owned, delim = ";") %>%
 ```
 
-You may notice that one of the columns is called `´NA´`. This is because some
-of the respondents did not own any of the items that was in the interviewer's
-list. We can use the `replace_na()` function to change these `NA` values to
-something more meaningful. The `replace_na()` function expects for you to give
-it a `list()` of columns that you would like to replace the `NA` values in,
-and the value that you would like to replace the `NA`s. This ends up looking
-like this:
+You may notice that the `items_owned` column contains `NA` values. 
+This is because some of the respondents did not own any of the items that was in
+the interviewer's list. We can use the `replace_na()` function to change these
+`NA` values to something more meaningful. The `replace_na()` function expects
+for you to give it a `list()` of columns that you would like to replace the `NA`
+values in, and the value that you would like to replace the `NA`s. This ends up
+looking like this:
 
 
 ```r
@@ -470,7 +470,7 @@ interviews_items_owned %>%
 
 ```r
 interviews_months_lack_food <- interviews %>%
-  separate_rows(months_lack_food, sep = ";") %>%
+  separate_longer_delim(months_lack_food, delim = ";") %>%
   mutate(months_lack_food_logical  = TRUE) %>%
   pivot_wider(names_from = months_lack_food,
               values_from = months_lack_food_logical,
@@ -534,7 +534,7 @@ this, we will use `pivot_wider` to expand the `months_lack_food` and
 ```r
 interviews_plotting <- interviews %>%
   ## pivot wider by items_owned
-  separate_rows(items_owned, sep = ";") %>%
+  separate_longer_delim(items_owned, delim = ";") %>%
   ## if there were no items listed, changing NA to no_listed_items
   replace_na(list(items_owned = "no_listed_items")) %>%
   mutate(items_owned_logical = TRUE) %>%
@@ -542,7 +542,7 @@ interviews_plotting <- interviews %>%
               values_from = items_owned_logical,
               values_fill = list(items_owned_logical = FALSE)) %>%
   ## pivot wider by months_lack_food
-  separate_rows(months_lack_food, sep = ";") %>%
+  separate_longer_delim(months_lack_food, delim = ";") %>%
   mutate(months_lack_food_logical = TRUE) %>%
   pivot_wider(names_from = months_lack_food,
               values_from = months_lack_food_logical,
