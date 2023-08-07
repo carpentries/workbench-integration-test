@@ -1,8 +1,8 @@
 ---
 source: Rmd
 title: Exploratory analysis and quality control
-teaching: XX
-exercises: XX
+teaching: 60
+exercises: 45
 editor_options:
   chunk_output_type: console
 ---
@@ -287,7 +287,7 @@ other attached packages:
  [3] ComplexHeatmap_2.16.0       ggplot2_3.4.2              
  [5] vsn_3.68.0                  DESeq2_1.40.2              
  [7] SummarizedExperiment_1.30.2 Biobase_2.60.0             
- [9] MatrixGenerics_1.12.2       matrixStats_1.0.0          
+ [9] MatrixGenerics_1.12.3       matrixStats_1.0.0          
 [11] GenomicRanges_1.52.0        GenomeInfoDb_1.36.1        
 [13] IRanges_2.34.1              S4Vectors_0.38.1           
 [15] BiocGenerics_0.46.0        
