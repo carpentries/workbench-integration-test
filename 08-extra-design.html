@@ -86,11 +86,11 @@
   RNA-seq analysis with Bioconductor
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 79%" class="percentage">
-    79%
+<aside class="col-md-12 lesson-progress"><div style="width: 89%" class="percentage">
+    89%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 79%" aria-valuenow="79" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 89%" aria-valuenow="89" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -281,7 +281,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Extra exploration of design matrices</h1>
-        <p> Last updated on 2023-07-24 | 
+        <p> Last updated on 2023-08-07 | 
         
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/08-extra-design.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -333,13 +333,16 @@ fashion, for easier interpretation.</p>
 <span>    <span class="kw">library</span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Next, we read the metadata table for our data set. As seen in
-previous episodes, the metadata contains information about the age, sex,
-infection status, time of measurement and tissue of the collected
-samples. Note that Day0 always corresponds to non-infected samples, and
-that infected samples are collected on days 4 and 8. Moreover, all mice
-have the same age (8 weeks). Hence, in the first part of this episode we
-consider only the sex, tissue and time variables further.</p>
+<p>Next, we read the metadata table for our data set. Because we want to
+explore many different design matrices, we will read in the 4th file we
+downloaded but haven’t used yet: that for both Cerebellum and Spinal
+Cord samples (45 samples total). As seen in previous episodes, the
+metadata contains information about the age, sex, infection status, time
+of measurement and tissue of the collected samples. Note that Day0
+always corresponds to non-infected samples, and that infected samples
+are collected on days 4 and 8. Moreover, all mice have the same age (8
+weeks). Hence, in the first part of this episode we consider only the
+sex, tissue and time variables further.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -486,13 +489,13 @@ combination of the three predictor variables.</p>
 </h3>
 <pre class="output" tabindex="0"><code>$`tissue = Cerebellum`</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper">
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>
 $`tissue = Spinalcord`</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-5-2.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge" class="callout discussion">
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-6-2.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -584,7 +587,7 @@ GSM2545367           1       1</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[[1]]</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb17">
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-7-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -645,7 +648,7 @@ mean expression of a gene between male and female mice?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -709,7 +712,7 @@ GSM2545367         0       1</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[[1]]</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-7-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-8-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
@@ -734,7 +737,7 @@ Day4, Day8) in the male spinal cord samples, and visualize it using
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -808,7 +811,7 @@ GSM2545379           1        0        1</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[[1]]</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-8-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
@@ -900,7 +903,7 @@ GSM2545367           1       1                1</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[[1]]</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="factorial-design-with-interactions"><h2 class="section-heading">Factorial design with interactions<a class="anchor" aria-label="anchor" href="#factorial-design-with-interactions"></a>
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-10-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="factorial-design-with-interactions"><h2 class="section-heading">Factorial design with interactions<a class="anchor" aria-label="anchor" href="#factorial-design-with-interactions"></a>
 </h2>
 <hr class="half-width"><p>In the previous model, we assumed that the tissue differences were
 the same for both male and female mice. To allow for the estimation of
@@ -992,7 +995,7 @@ GSM2545367           1       1                1                        1</code><
 </h3>
 <pre class="output" tabindex="0"><code>[[1]]</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-10-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="paired-design"><h2 class="section-heading">Paired design<a class="anchor" aria-label="anchor" href="#paired-design"></a>
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-11-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="paired-design"><h2 class="section-heading">Paired design<a class="anchor" aria-label="anchor" href="#paired-design"></a>
 </h2>
 <hr class="half-width"><p>In this particular data set the samples are paired - the same mice
 have contributed both the cerebellum and spinal cord samples. This
@@ -1068,7 +1071,7 @@ GSM2545366           1      0      0       1                1</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[[1]]</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-11-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="within--and-between-subject-comparisons"><h2 class="section-heading">Within- and between-subject comparisons<a class="anchor" aria-label="anchor" href="#within--and-between-subject-comparisons"></a>
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-12-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="within--and-between-subject-comparisons"><h2 class="section-heading">Within- and between-subject comparisons<a class="anchor" aria-label="anchor" href="#within--and-between-subject-comparisons"></a>
 </h2>
 <hr class="half-width"><p>In some situations, we need to combine the types of models considered
 above. For example, let’s say that we want to investigate if the tissue
@@ -1241,13 +1244,13 @@ GSM2545377        0        1</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>$`time = Day0`</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-12-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper">
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-13-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>
 $`time = Day4`</code></pre>
 </div>
-<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-12-2.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="keypoints1" class="callout keypoints">
+<figure><img src="fig/08-extra-design-rendered-unnamed-chunk-13-2.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -1316,8 +1319,8 @@ linear combinations of the model coefficients.</li>
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq08-extra-design.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq08-extra-design.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2023-07-24",
-  "datePublished": "2023-07-31"
+  "dateModified": "2023-08-07",
+  "datePublished": "2023-08-07"
 }
 
   </script><script>
