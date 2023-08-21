@@ -311,11 +311,15 @@
       "Package": "curl",
       "Version": "5.0.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "https://carpentries.r-universe.dev",
+      "RemoteType": "repository",
+      "RemoteUrl": "https://github.com/jeroen/curl",
+      "RemoteRef": "v5.0.1",
+      "RemoteSha": "ffd6536ef3732b924e141afbc6d2fd5a85a58f18",
       "Requirements": [
         "R"
       ],
-      "Hash": "2118af9cb164c8d2dddc7b89eaf732d9"
+      "Hash": "771ee5b6b9166e2baaa68e77fa11977b"
     },
     "data.table": {
       "Package": "data.table",
