@@ -42,7 +42,7 @@ Welcome sessions are a specific type of Community Session. While you can attend 
 for this step. If you see another session you would like to attend, you may choose to apply that to fulfil your [Get Involved step](#getinvolved). 
 
 Sign up on the [Community Welcome Sessions Etherpad][welcome]. Other types of sessions can be accessed from the [Community Sessions Etherpad][discussion].
-Welcome session. **Take care to double check
+**Take care to double check
 the time zone**, and mark your calendar after signing up! At the time of the event, the Zoom link may be found at the top
 of that Etherpad.
 
@@ -74,7 +74,7 @@ other people there who also want to hear the answer! Some themes to guide your t
 
 ### In-Person and Virtual Alternatives
 
-Occasionally, a special in-person Welcome Session may be approved to occur in-person. This is most common in areas with limited internet
+Occasionally, a Welcome Session may be approved to occur in-person. This is most common in areas with limited internet
 access or in association with larger events like conferences or extended workshops. 
 
 ### Getting Credit
@@ -177,6 +177,7 @@ after you have attended your teaching demonstration.
 The purpose of this step is to encourage you to take a first step towards further engagement with 
 The Carpentries, choosing a path that works well for you. Any participation in Carpentries activities 
 or processes may be submitted to satisfy this requirement! We have a few suggestions to get you started:
+
 - Serve as an Instructor or a Helper at a workshop
 - Attend a regional call, skill-up session, or other community programming
 - Submit a contribution to a Lesson, Glossario, or other Carpentries repository
