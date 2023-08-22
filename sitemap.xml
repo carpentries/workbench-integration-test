@@ -1,141 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://datacarpentry.org/r-socialsci00-intro.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/00-intro.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci01-intro-to-r.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/01-intro-to-r.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci02-starting-with-data.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/02-starting-with-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci03-dplyr.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/03-dplyr.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci04-tidyr.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/04-tidyr.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci05-ggplot2.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/05-ggplot2.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci06-rmarkdown.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/06-rmarkdown.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci07-json.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/07-json.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsci404.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/404.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciCODE_OF_CONDUCT.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciLICENSE.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciR-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/R-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciaio.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/aio.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialscidata-visualisation-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/data-visualisation-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialscidata-wrangling-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/data-wrangling-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciimages.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/images.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciindex.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/index.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/00-intro.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/00-intro.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/01-intro-to-r.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/01-intro-to-r.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/02-starting-with-data.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/02-starting-with-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/03-dplyr.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/03-dplyr.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/04-tidyr.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/04-tidyr.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/05-ggplot2.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/05-ggplot2.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/06-rmarkdown.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/06-rmarkdown.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/07-json.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/07-json.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/404.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/LICENSE.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/R-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/R-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/aio.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/data-visualisation-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/data-visualisation-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/data-wrangling-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/data-wrangling-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/images.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/index.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/instructor-notes.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/intro-R-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/intro-R-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/key-points.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/profiles.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/reference.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor/starting-with-data-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor/starting-with-data-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciinstructor-notes.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciintro-R-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/intro-R-handout.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialscikey-points.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/key-points.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialsciprofiles.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/profiles.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialscireference.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/reference.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.org/r-socialscistarting-with-data-handout.html</loc>
+    <loc>https://datacarpentry.org/r-socialsci/starting-with-data-handout.html</loc>
   </url>
 </urlset>
