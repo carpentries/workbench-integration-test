@@ -17,6 +17,10 @@ on:
         description: 'Sandpaper version to test'
         required: true
         default: 'carpentries/sandpaper'
+      pegboard:
+        description: 'Pegboard version to test'
+        required: true
+        default: 'carpentries/pegboard'
 jobs:
   check-template:
     permissions:
@@ -64,15 +68,20 @@ jobs:
           cp -r lesson/* .
           SANDY="${{ github.event.inputs.sandpaper }}"
           VARNY="${{ github.event.inputs.varnish }}"
+          PEGGY="${{ github.event.inputs.pegboard }}"
           if [[ -z ${SANDY} ]]; then
             SANDY="carpentries/sandpaper"
           fi
           if [[ -z ${VARNY} ]]; then
             VARNY="carpentries/varnish"
           fi
+          if [[ -z ${PEGGY} ]]; then
+            VARNY="carpentries/pegboard"
+          fi
           sed -i "/sandpaper\:/d" config.yaml
           sed -i "/varnish\:/d" config.yaml
-          printf "sandpaper: ${SANDY}\nvarnish: ${VARNY}\npegboard: carpentries/pegboard\n" >> config.yaml
+          sed -i "/pegboard\:/d" config.yaml
+          printf "sandpaper: ${SANDY}\nvarnish: ${VARNY}\npegboard: ${PEGGY}\n" >> config.yaml
 
       - name: "Set up R"
         uses: r-lib/actions/setup-r@v2
