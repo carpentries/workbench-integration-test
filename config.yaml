@@ -85,4 +85,4 @@ profiles:
 url: https://carpentries-incubator.github.io/bioc-rnaseq
 sandpaper: carpentries/sandpaper
 varnish: carpentries/varnish
-pegboard: carpentries/pegboard
+pegboard: carpentries/pegboard#132
