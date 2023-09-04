@@ -196,7 +196,7 @@ plot(venn(list("sexDEgenes"  = sexDEgenes,
 title(paste0("|universe| = ", length(totalGenes)))
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 In the Venn diagram, we can observe that around 1.1% (13/1134) of genes in the
 _XY gene set_ are DE. Compared to the global fraction of DE genes (54/21198 =
@@ -380,7 +380,7 @@ genes are marked as non-DE genes (in blue). We grab $n_{+1}$ genes (the size
 of the gene set) from the box and we want to ask **what is the probability of
 having $n_{11}$ DE genes in our hand?**
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-15-1.png" width="80%" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-15-1.png" width="80%" style="display: block; margin: auto;" />
 
 We first calculate the total number of ways of picking $n_{+1}$ genes from
 total $n$ genes, without distinguishing whether they are DE or not:
@@ -501,9 +501,9 @@ microbenchmark(
 
 ```{.output}
 Unit: microseconds
-   expr min     lq    mean median     uq   max neval
- fisher 443 480.55 536.079 519.75 569.35 784.0   100
-  hyper   2   2.95   5.211   6.00   6.65  30.5   100
+   expr   min    lq    mean median     uq   max neval
+ fisher 314.2 324.2 341.096 333.80 348.85 566.1   100
+  hyper   1.7   2.2   3.332   3.15   4.00  20.5   100
 ```
 
 It is very astonishing that `phyper()` is hundreds of times faster than
@@ -1231,7 +1231,7 @@ resTimeGO = enrichGO(gene = timeDEgenes,
 ```
 
 ```{.output}
---> Expected input gene ID: 73463,15235,110355,18776,51885,23980
+--> Expected input gene ID: 12918,68193,77424,50505,387153,24061
 ```
 
 ```{.output}
@@ -1472,12 +1472,12 @@ mmu00591                                      Linoleic acid metabolism - Mus mus
 mmu04913                                       Ovarian steroidogenesis - Mus musculus (house mouse)
 mmu04061 Viral protein interaction with cytokine and cytokine receptor - Mus musculus (house mouse)
          GeneRatio BgRatio       pvalue     p.adjust       qvalue
-mmu00590    16/452 85/9327 2.536407e-06 0.0007761404 0.0006861647
-mmu00565    11/452 48/9327 1.358365e-05 0.0015199802 0.0013437733
-mmu00592     8/452 25/9327 1.490177e-05 0.0015199802 0.0013437733
-mmu00591    11/452 50/9327 2.056762e-05 0.0015734230 0.0013910207
-mmu04913    12/452 63/9327 4.053030e-05 0.0024804542 0.0021929024
-mmu04061    14/452 95/9327 1.785817e-04 0.0081798521 0.0072315858
+mmu00590    16/452 85/9334 2.512075e-06 0.0007686949 0.0006795824
+mmu00565    11/452 48/9334 1.348878e-05 0.0015117273 0.0013364772
+mmu00592     8/452 25/9334 1.482086e-05 0.0015117273 0.0013364772
+mmu00591    11/452 50/9334 2.042533e-05 0.0015625374 0.0013813971
+mmu04913    12/452 63/9334 4.023622e-05 0.0024624567 0.0021769913
+mmu04061    14/452 95/9334 1.772022e-04 0.0081077454 0.0071678382
                                                                                                        geneID
 mmu00590 18783/19215/211429/329502/78390/19223/67103/242546/13118/18781/18784/11689/232889/15446/237625/11687
 mmu00565                               18783/211429/329502/78390/22239/18781/18784/232889/320981/237625/53897
@@ -1744,7 +1744,7 @@ legend("topleft", legend = c("all protein-coding genes as universe", "all genes 
     pch = 16, col = c(2, 4))
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-48-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-48-1.png" style="display: block; margin: auto;" />
 
 It is very straightforward to see, with a larger universe, there are more
 significant gene sets, which may produce potentially more false positives.
@@ -1822,13 +1822,13 @@ Note the two functions are directly applied on `resTimeGO` returned by `enrichGO
 barplot(resTimeGO, showCategory = 20)
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-50-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-50-1.png" style="display: block; margin: auto;" />
 
 ```r
 dotplot(resTimeGO, showCategory = 20)
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-50-2.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-50-2.png" style="display: block; margin: auto;" />
 
 Barplots can map two variables to the plot, one to the height of bars and the
 other to the colors of bars; while for dotplot, sizes of dots can be mapped to
@@ -1941,7 +1941,7 @@ ggplot(resTimeGOTable[1:10, ],
     ylab("")
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-55-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-55-1.png" style="display: block; margin: auto;" />
 
 In the next example, we use _z_-score as the primary variable to map to the
 offset to origin, `DE_Ratio` and `Count` to map to dot colors and sizes.
@@ -1955,7 +1955,7 @@ ggplot(resTimeGOTable[1:10, ],
     ylab("")
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-56-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-56-1.png" style="display: block; margin: auto;" />
 
 Both plots can highlight the gene set "leukocyte migration involved in
 inflammatory response" is relatively small but highly enriched.
@@ -1981,7 +1981,7 @@ ggplot(resTimeGOTable,
     geom_vline(xintercept = 1.5, lty = 2, col = "#444444")
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-57-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-57-1.png" style="display: block; margin: auto;" />
 
 In the "volcano plot", we can observe the plot is composed by a list of
 curves. The trends are especially clear in the right bottom of the plot.
@@ -2058,7 +2058,7 @@ ggplot(rbind(resTimeGOupTable[1:5, ],
     ylab("")
 ```
 
-<img src="fig/06-gene-set-analysis-rendered-unnamed-chunk-59-1.png" style="display: block; margin: auto;" />
+<img src="fig/07-gene-set-analysis-rendered-unnamed-chunk-59-1.png" style="display: block; margin: auto;" />
 
 
 Specifically for GO enrichment, it is often that GO enrichment returns a long

@@ -150,7 +150,7 @@ As a reminder, let's take a look at the figure below representing the anatomy of
 
 <img src="https://uclouvain-cbio.github.io/WSBIM1322/figs/SE.svg" width="80%" style="display: block; margin: auto;" />
 
-It is designed to hold any type of quantitative 'omics data (`assays`) along with linked sample annotations (`colData`) and feature annotations with (`rowRanges`) or without (`rowData`) chromosome, start and stop positions. Once these three tables are (correctly!) linked, subsetting either samples and/or features will correctly subset the `assay`, `colData` and `rowRanges`. Additionally, most Bioconductor packages are built around the same core data infrastructure so they will recognize and be able to manipulate `SummarizedExperiment` objects. Two of the most popular RNA-seq statistical analysis packages have their own extended S4 classes similar to a `SummarizedExperiment` with the additional slots for statistical results: [DESeq2](http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#the-deseqdataset)'s `DESeqDataSet` and [edgeR](https://www.rdocumentation.org/packages/edgeR/versions/3.14.0/topics/DGEList-class)'s `DGEList`. No matter which one you end up using for statistical analysis, you can start by putting your data in a `SummarizedExperiment`. 
+It is designed to hold any type of quantitative 'omics data (`assays`) along with linked sample annotations (`colData`) and feature annotations with (`rowRanges`) or without (`rowData`) chromosome, start and stop positions. Once these three tables are (correctly!) linked, subsetting either samples and/or features will correctly subset the `assay`, `colData` and `rowRanges`. Additionally, most Bioconductor packages are built around the same core data infrastructure so they will recognize and be able to manipulate `SummarizedExperiment` objects. Two of the most popular RNA-seq statistical analysis packages have their own extended S4 classes similar to a `SummarizedExperiment` with the additional slots for statistical results: [DESeq2](https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#the-deseqdataset)'s `DESeqDataSet` and [edgeR](https://www.rdocumentation.org/packages/edgeR/versions/3.14.0/topics/DGEList-class)'s `DGEList`. No matter which one you end up using for statistical analysis, you can start by putting your data in a `SummarizedExperiment`. 
 
 ## Assemble SummarizedExperiment
 We will create a `SummarizedExperiment` from these objects:
@@ -730,9 +730,8 @@ loaded via a namespace (and not attached):
 [22] KEGGREST_1.40.0         cachem_1.0.8            xfun_0.39              
 [25] bit64_4.0.5             RSQLite_2.3.1           memoise_2.0.1          
 [28] cli_3.6.1               zlibbioc_1.46.0         grid_4.3.1             
-[31] rstudioapi_0.14         vctrs_0.6.3             evaluate_0.21          
-[34] RCurl_1.98-1.12         httr_1.4.6              pkgconfig_2.0.3        
-[37] tools_4.3.1            
+[31] vctrs_0.6.3             evaluate_0.21           RCurl_1.98-1.12        
+[34] httr_1.4.6              pkgconfig_2.0.3         tools_4.3.1            
 ```
 
 ::: keypoints
