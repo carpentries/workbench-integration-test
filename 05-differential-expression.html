@@ -86,11 +86,11 @@
   RNA-seq analysis with Bioconductor
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 49%" class="percentage">
-    49%
+<aside class="col-md-12 lesson-progress"><div style="width: 53%" class="percentage">
+    53%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 49%" aria-valuenow="49" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 53%" aria-valuenow="53" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -210,7 +210,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-gene-set-analysis.html">6. Gene set enrichment analysis</a>
+        <a href="06-extra-design.html">6. Extra exploration of design matrices</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -219,7 +219,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-next-steps.html">7. Next steps</a>
+        <a href="07-gene-set-analysis.html">7. Gene set enrichment analysis</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -228,7 +228,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-extra-design.html">8. Extra exploration of design matrices</a>
+        <a href="08-next-steps.html">8. Next steps</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -277,7 +277,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="04-exploratory-qc.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="06-gene-set-analysis.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="06-extra-design.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -285,14 +285,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Exploratory analysis
         </a>
-        <a class="chapter-link float-end" href="06-gene-set-analysis.html" rel="next">
-          Next: Gene set enrichment... 
+        <a class="chapter-link float-end" href="06-extra-design.html" rel="next">
+          Next: Extra exploration of... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Differential expression analysis</h1>
-        <p> Last updated on 2023-08-25 | 
+        <p> Last updated on 2023-09-04 | 
         
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/05-differential-expression.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -359,7 +359,7 @@ count assay(s) and feature (here gene) and sample metadata. The
 modeling. These are typically the variable of interest (group variable)
 and other variables you want to account for (e.g., batch effect
 variables). A detailed explanation of <em>design formulas</em> and
-related <em>design matrices</em> will follow in the section about <a href="08-extra-design.html">extra exploration of design matrices</a>.
+related <em>design matrices</em> will follow in the section about <a href="06-extra-design.html">extra exploration of design matrices</a>.
 Objects of the <code>DESeqDataSet</code> class can be build from <a href="https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#countmat" class="external-link">count
 matrices</a>, <a href="https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#se" class="external-link">SummarizedExperiment
 objects</a>, <a href="https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#tximport" class="external-link">transcript
@@ -559,7 +559,7 @@ combinations of the model coefficients (equivalent to combinations of
 columns within the <em>design matrix</em>) and thus directly related to
 the design formular. A detailed explanation of design matrices and how
 to use them to specify different contrasts of interest can be found in
-the section on the <a href="08-extra-design.html">exploration of design
+the section on the <a href="06-extra-design.html">exploration of design
 matrices</a>. In the <code>results()</code> function a contrast can be
 represented by the variable of interest (reference variable) and the
 related level to compare using the <code>contrast</code> argument. By
@@ -903,7 +903,7 @@ experiment-wide false positive rate.</p>
 can still be hard to interpret with regards to an experimental question.
 Visualizing gene expression can help to detect expression pattern or
 group of genes with related functions. We will perform systematic
-detection of over represented groups of genes in the <a href="06-gene-set-analysis.html">next section</a>. Before this
+detection of over represented groups of genes in a <a href="07-gene-set-analysis.html">later section</a>. Before this
 visualization can already help us to get a good intuition about what to
 expect.</p>
 <p>We will use transformed data (see <a href="04-exploratory-qc.html">exploratory data analysis</a>) and the top
@@ -1049,7 +1049,7 @@ beneficial.</li>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="04-exploratory-qc.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="06-gene-set-analysis.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="06-extra-design.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -1057,8 +1057,8 @@ beneficial.</li>
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Exploratory analysis
         </a>
-        <a class="chapter-link float-end" href="06-gene-set-analysis.html" rel="next">
-          Next: Gene set enrichment... 
+        <a class="chapter-link float-end" href="06-extra-design.html" rel="next">
+          Next: Extra exploration of... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -1082,7 +1082,7 @@ beneficial.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/allow-overview-lessons" class="external-link">sandpaper (0.13.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/783486f8a2360694b2c7f3b41e27b347cfcfbf00" class="external-link">sandpaper (0.13.0)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/94b6d596cc29d75ee70348c21baf62e9ffee491d" class="external-link">pegboard (0.6.1)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/8b930523e56f4003b381353d6f945228664584a4" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
@@ -1105,8 +1105,8 @@ beneficial.</li>
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/05-differential-expression.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/05-differential-expression.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2023-08-25",
-  "datePublished": "2023-09-01"
+  "dateModified": "2023-09-04",
+  "datePublished": "2023-09-04"
 }
 
   </script><script>

@@ -239,7 +239,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-gene-set-analysis.html">6. Gene set enrichment analysis</a>
+        <a href="06-extra-design.html">6. Extra exploration of design matrices</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -251,7 +251,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-next-steps.html">7. Next steps</a>
+        <a href="07-gene-set-analysis.html">7. Gene set enrichment analysis</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -263,7 +263,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-extra-design.html">8. Extra exploration of design matrices</a>
+        <a href="08-next-steps.html">8. Next steps</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -326,7 +326,7 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="01-intro-to-rnaseq"><h2 class="section-heading"><a href="01-intro-to-rnaseq.html">Introduction to RNA-seqRNA-seq quantification: from reads to count matrix<a class="anchor" aria-label="anchor" href="#rna-seq-quantification-from-reads-to-count-matrix"></a></a></h2>
+<section id="01-intro-to-rnaseq"><h2 class="section-heading"><a href="01-intro-to-rnaseq.html">Introduction to RNA-seqWhat are we measuring in an RNA-seq experiment?<a class="anchor" aria-label="anchor" href="#what-are-we-measuring-in-an-rna-seq-experiment"></a>Experimental design considerations<a class="anchor" aria-label="anchor" href="#experimental-design-considerations"></a>RNA-seq quantification: from reads to count matrix<a class="anchor" aria-label="anchor" href="#rna-seq-quantification-from-reads-to-count-matrix"></a>Finding the reference sequences<a class="anchor" aria-label="anchor" href="#finding-the-reference-sequences"></a>Where are we heading towards in this workshop?<a class="anchor" aria-label="anchor" href="#where-are-we-heading-towards-in-this-workshop"></a></a></h2>
 <hr class="half-width">
 <ul>
 <li>RNA-seq is a technique of measuring the amount of RNA expressed
@@ -344,9 +344,6 @@ use a probabilistic approach to estimate the abundance of each gene or
 transcript.</li>
 <li>Information about annotated genes can be accessed via several
 sources, including Ensembl, UCSC and GENCODE.</li>
-<li>The most commonly used Bioconductor packages for statistical
-analysis of RNA-seq data are <code>DESeq2</code>, <code>edgeR</code> and
-<code>limma</code>.</li>
 </ul></section><section id="02-setup"><h2 class="section-heading"><a href="02-setup.html">RStudio Project and Experimental Data</a></h2>
 <hr class="half-width">
 <ul>
@@ -385,22 +382,7 @@ work directly on the raw counts.</li>
 statistics) are wrapped in a single function: DESeq().</li>
 <li>Independent filtering of lowly expressed genes is often
 beneficial.</li>
-</ul></section><section id="06-gene-set-analysis"><h2 class="section-heading"><a href="06-gene-set-analysis.html">Gene set enrichment analysis</a></h2>
-<hr class="half-width">
-<ul>
-<li>ORA analysis is based on the gene counts and it is based on Fisher’s
-exact test or the hypergeometric distribution.</li>
-<li>In R, it is easy to obtain gene sets from a large number of
-sources.</li>
-</ul></section><section id="07-next-steps"><h2 class="section-heading"><a href="07-next-steps.html">Next steps</a></h2>
-<hr class="half-width">
-<ul>
-<li>RNA-seq data is very versatile and can be used for a number of
-different purposes. It is important, however, to carefully plan one’s
-analyses, to make sure that enough data is available and that abundances
-for appropriate features (e.g., genes, transcripts, or exons) are
-quantified.</li>
-</ul></section><section id="08-extra-design"><h2 class="section-heading"><a href="08-extra-design.html">Extra exploration of design matrices</a></h2>
+</ul></section><section id="06-extra-design"><h2 class="section-heading"><a href="06-extra-design.html">Extra exploration of design matrices</a></h2>
 <hr class="half-width">
 <ul>
 <li>The formula framework in R allows creation of design matrices, which
@@ -408,6 +390,21 @@ details the variables expected to be associated with systematic
 differences in gene expression levels.</li>
 <li>Comparisons of interest can be defined using contrasts, which are
 linear combinations of the model coefficients.</li>
+</ul></section><section id="07-gene-set-analysis"><h2 class="section-heading"><a href="07-gene-set-analysis.html">Gene set enrichment analysis</a></h2>
+<hr class="half-width">
+<ul>
+<li>ORA analysis is based on the gene counts and it is based on Fisher’s
+exact test or the hypergeometric distribution.</li>
+<li>In R, it is easy to obtain gene sets from a large number of
+sources.</li>
+</ul></section><section id="08-next-steps"><h2 class="section-heading"><a href="08-next-steps.html">Next steps</a></h2>
+<hr class="half-width">
+<ul>
+<li>RNA-seq data is very versatile and can be used for a number of
+different purposes. It is important, however, to carefully plan one’s
+analyses, to make sure that enough data is available and that abundances
+for appropriate features (e.g., genes, transcripts, or exons) are
+quantified.</li>
 </ul></section>
 </div>
     </main>
@@ -433,7 +430,7 @@ linear combinations of the model coefficients.</li>
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/allow-overview-lessons" class="external-link">sandpaper (0.13.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/783486f8a2360694b2c7f3b41e27b347cfcfbf00" class="external-link">sandpaper (0.13.0)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/94b6d596cc29d75ee70348c21baf62e9ffee491d" class="external-link">pegboard (0.6.1)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/8b930523e56f4003b381353d6f945228664584a4" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
@@ -457,8 +454,8 @@ linear combinations of the model coefficients.</li>
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/key-points.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/key-points.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2023-09-01",
-  "datePublished": "2023-09-01"
+  "dateModified": "2023-09-04",
+  "datePublished": "2023-09-04"
 }
 
   </script><script>
