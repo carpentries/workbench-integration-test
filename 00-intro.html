@@ -284,7 +284,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Before we Start</h1>
-        <p> Last updated on 2023-08-24 | 
+        <p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/00-intro.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -579,18 +579,20 @@ interface by clicking on the “New Folder” button in the file pane
 <span><span class="fu">dir.create</span><span class="op">(</span><span class="st">"data_output"</span><span class="op">)</span></span>
 <span><span class="fu">dir.create</span><span class="op">(</span><span class="st">"fig_output"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Go to the Figshare page for this curriculum and download the dataset
-called “<code>SAFI_clean.csv</code>”. The direct download link is: <a href="https://ndownloader.figshare.com/files/11492171" class="external-link">https://ndownloader.figshare.com/files/11492171</a>.
-Place this downloaded file in the <code>data/</code> you just created.
-You can do this directly from R by copying and pasting this in your
-terminal (your instructor can place this chunk of code in the
-Etherpad):</p>
+<p>You can either download the data used for this lesson from GitHub or
+with R. You can copy the data from this <a href="https://github.com/datacarpentry/r-socialsci/blob/main/episodes/data/SAFI_clean.csv" class="external-link">GitHub
+link</a> and paste it into a file called <code>SAFI_clean.csv</code> in
+the <code>data/</code> directory you just created. Or you can do this
+directly from R by copying and pasting this in your terminal (your
+instructor can place this chunk of code in the Etherpad):</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">download.file</span><span class="op">(</span><span class="st">"https://ndownloader.figshare.com/files/11492171"</span>,</span>
-<span>              <span class="st">"data/SAFI_clean.csv"</span>, mode <span class="op">=</span> <span class="st">"wb"</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">download.file</span><span class="op">(</span></span>
+<span>  <span class="st">"https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/episodes/data/SAFI_clean.csv"</span>,</span>
+<span>  <span class="st">"data/SAFI_clean.csv"</span>, mode <span class="op">=</span> <span class="st">"wb"</span></span>
+<span>  <span class="op">)</span></span></code></pre>
 </div>
 </div>
 </section><section id="interacting-with-r"><h2 class="section-heading">Interacting with R<a class="anchor" aria-label="anchor" href="#interacting-with-r"></a>
@@ -728,6 +730,16 @@ messages.</p>
 <p>You could also have installed the
 <strong><code>tidyverse</code></strong> packages by running this command
 directly at the R terminal.</p>
+<p>We will be using another package called
+<strong><code>here</code></strong> throughout the workshop to manage
+paths and directories. We will discuss it more detail in a later
+episode, but we will install it now in the console:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"here"</span><span class="op">)</span></span></code></pre>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -778,8 +790,8 @@ directly at the R terminal.</p>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/783486f8a2360694b2c7f3b41e27b347cfcfbf00" class="external-link">sandpaper (0.13.0)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/94b6d596cc29d75ee70348c21baf62e9ffee491d" class="external-link">pegboard (0.6.1)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/a587d5dddbb68fab5419e8566d4a414a405342ab" class="external-link">sandpaper (0.13.0)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/06b4151b469d910becc209e94654ef043863535e" class="external-link">pegboard (0.6.1)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/8b930523e56f4003b381353d6f945228664584a4" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
@@ -801,8 +813,8 @@ directly at the R terminal.</p>
   "url": "https://datacarpentry.org/r-socialsci/00-intro.html",
   "identifier": "https://datacarpentry.org/r-socialsci/00-intro.html",
   "dateCreated": "2017-05-25",
-  "dateModified": "2023-08-24",
-  "datePublished": "2023-09-04"
+  "dateModified": "2023-09-13",
+  "datePublished": "2023-09-13"
 }
 
   </script><script>

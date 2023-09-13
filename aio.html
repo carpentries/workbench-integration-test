@@ -325,7 +325,7 @@
         
 <section id="aio-00-intro"><p>Content from <a href="00-intro.html">Before we Start</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/00-intro.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -644,18 +644,20 @@ interface by clicking on the “New Folder” button in the file pane
 <span><span class="fu">dir.create</span><span class="op">(</span><span class="st">"data_output"</span><span class="op">)</span></span>
 <span><span class="fu">dir.create</span><span class="op">(</span><span class="st">"fig_output"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Go to the Figshare page for this curriculum and download the dataset
-called “<code>SAFI_clean.csv</code>”. The direct download link is: <a href="https://ndownloader.figshare.com/files/11492171" class="external-link">https://ndownloader.figshare.com/files/11492171</a>.
-Place this downloaded file in the <code>data/</code> you just created.
-You can do this directly from R by copying and pasting this in your
-terminal (your instructor can place this chunk of code in the
-Etherpad):</p>
+<p>You can either download the data used for this lesson from GitHub or
+with R. You can copy the data from this <a href="https://github.com/datacarpentry/r-socialsci/blob/main/episodes/data/SAFI_clean.csv" class="external-link">GitHub
+link</a> and paste it into a file called <code>SAFI_clean.csv</code> in
+the <code>data/</code> directory you just created. Or you can do this
+directly from R by copying and pasting this in your terminal (your
+instructor can place this chunk of code in the Etherpad):</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">download.file</span><span class="op">(</span><span class="st">"https://ndownloader.figshare.com/files/11492171"</span>,</span>
-<span>              <span class="st">"data/SAFI_clean.csv"</span>, mode <span class="op">=</span> <span class="st">"wb"</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">download.file</span><span class="op">(</span></span>
+<span>  <span class="st">"https://raw.githubusercontent.com/datacarpentry/r-socialsci/main/episodes/data/SAFI_clean.csv"</span>,</span>
+<span>  <span class="st">"data/SAFI_clean.csv"</span>, mode <span class="op">=</span> <span class="st">"wb"</span></span>
+<span>  <span class="op">)</span></span></code></pre>
 </div>
 </div>
 </section><section id="interacting-with-r"><h2 class="section-heading">Interacting with R<a class="anchor" aria-label="anchor" href="#interacting-with-r"></a>
@@ -796,6 +798,16 @@ messages.</p>
 <p>You could also have installed the
 <strong><code>tidyverse</code></strong> packages by running this command
 directly at the R terminal.</p>
+<p>We will be using another package called
+<strong><code>here</code></strong> throughout the workshop to manage
+paths and directories. We will discuss it more detail in a later
+episode, but we will install it now in the console:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"here"</span><span class="op">)</span></span></code></pre>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -814,7 +826,7 @@ directly at the R terminal.</p>
 </div>
 </section></section><section id="aio-01-intro-to-r"><p>Content from <a href="01-intro-to-r.html">Introduction to R</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/01-intro-to-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1047,7 +1059,7 @@ acres in a new object, <code>area_acres</code>:</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The value of <code>area_acres</code> is still 6.175 because you have
 not re-run the line <code>area_acres &lt;- 2.47 * area_hectares</code>
@@ -1116,7 +1128,7 @@ of <code>r_area</code>.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1474,7 +1486,7 @@ types in a single vector?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>R implicitly converts them to all be the same type.</p>
 </div>
@@ -1511,7 +1523,7 @@ types in a single vector?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Vectors can be of only one data type. R tries to convert (coerce) the
 content of this vector to find a “common denominator” that doesn’t lose
@@ -1548,7 +1560,7 @@ any information.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>Only one. There is no memory of past data types, and the coercion
 happens the first time the vector is evaluated. Therefore, the
@@ -1907,7 +1919,7 @@ the <code>rooms</code> vector.</p></li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb95">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1964,7 +1976,7 @@ data.</li>
 </div>
 </section></section><section id="aio-02-starting-with-data"><p>Content from <a href="02-starting-with-data.html">Starting with Data</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/02-starting-with-data.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2234,7 +2246,7 @@ can see the contents of the data frame by typing its name:
    key_ID village  interview_date      no_membrs years_liv respondent_wall_type
     &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
  1      1 God      2016-11-17 00:00:00         3         4 muddaub             
- 2      1 God      2016-11-17 00:00:00         7         9 muddaub             
+ 2      2 God      2016-11-17 00:00:00         7         9 muddaub             
  3      3 God      2016-11-17 00:00:00        10        15 burntbricks         
  4      4 God      2016-11-17 00:00:00         7         6 burntbricks         
  5      5 God      2016-11-17 00:00:00         7        40 burntbricks         
@@ -2414,9 +2426,9 @@ Reproducible Scientific Analysis</a>.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>  [1]   1   1   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
+<pre class="output" tabindex="0"><code>  [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
  [19]  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36
- [37]  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  21  54
+ [37]  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54
  [55]  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71 127
  [73] 133 152 153 155 178 177 180 181 182 186 187 195 196 197 198 201 202  72
  [91]  73  76  83  85  89 101 103 102  78  80 104 105 106 109 110 113 118 125
@@ -2437,7 +2449,7 @@ Reproducible Scientific Analysis</a>.</p>
    key_ID
     &lt;dbl&gt;
  1      1
- 2      1
+ 2      2
  3      3
  4      4
  5      5
@@ -2535,7 +2547,7 @@ integers in increasing or decreasing order, test <code>1:10</code> and
   key_ID village interview_date      no_membrs years_liv respondent_wall_type
    &lt;dbl&gt; &lt;chr&gt;   &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
 1      1 God     2016-11-17 00:00:00         3         4 muddaub             
-2      1 God     2016-11-17 00:00:00         7         9 muddaub             
+2      2 God     2016-11-17 00:00:00         7         9 muddaub             
 3      3 God     2016-11-17 00:00:00        10        15 burntbricks         
 4      4 God     2016-11-17 00:00:00         7         6 burntbricks         
 5      5 God     2016-11-17 00:00:00         7        40 burntbricks         
@@ -2610,7 +2622,7 @@ dataset.</p></li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2994,7 +3006,7 @@ you recreate the barplot such that “Undetermined” is last (after
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb56">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3083,7 +3095,7 @@ columns in our data frame to store it:</p>
    key_ID village  interview_date      no_membrs years_liv respondent_wall_type
     &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
  1      1 God      2016-11-17 00:00:00         3         4 muddaub             
- 2      1 God      2016-11-17 00:00:00         7         9 muddaub             
+ 2      2 God      2016-11-17 00:00:00         7         9 muddaub             
  3      3 God      2016-11-17 00:00:00        10        15 burntbricks         
  4      4 God      2016-11-17 00:00:00         7         6 burntbricks         
  5      5 God      2016-11-17 00:00:00         7        40 burntbricks         
@@ -3202,7 +3214,7 @@ cannot be parsed.</p>
 </div>
 </section></section><section id="aio-03-dplyr"><p>Content from <a href="03-dplyr.html">Data Wrangling with dplyr</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/03-dplyr.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3545,10 +3557,16 @@ filtering, then selecting).</p>
 <p>The last option, <em>pipes</em>, are a recent addition to R. Pipes
 let you take the output of one function and send it directly to the
 next, which is useful when you need to do many things to the same
-dataset. Pipes in R look like <code>%&gt;%</code> and are made available
-via the <strong><code>magrittr</code></strong> package, installed
-automatically with <strong><code>dplyr</code></strong>. If you use
-RStudio, you can type the pipe with:</p>
+dataset. There are two Pipes in R: 1) <code>%&gt;%</code> (called
+magrittr pipe; made available via the
+<strong><code>magrittr</code></strong> package, installed automatically
+with <strong><code>dplyr</code></strong>) or 2) <code>|&gt;</code>
+(called native R pipe and it comes preinstalled with R v4.1.0 onwards).
+Both the pipes are, by and large, function similarly with a few
+differences (For more information, check: <a href="https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/" class="external-link uri">https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/</a>).
+The choice of which pipe to be used can be changed in the Global
+settings in R studio and once that is done, you can type the pipe
+with:</p>
 <ul>
 <li>
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> if you have a PC
@@ -3559,7 +3577,8 @@ Mac.</li>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">interviews</span> <span class="op">%&gt;%</span></span>
+<code class="sourceCode R"><span><span class="co"># the following example is run using magrittr pipe but the output will be same with the native pipe</span></span>
+<span><span class="va">interviews</span> <span class="op">%&gt;%</span></span>
 <span>    <span class="fu">filter</span><span class="op">(</span><span class="va">village</span> <span class="op">==</span> <span class="st">"Chirodzo"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>    <span class="fu">select</span><span class="op">(</span><span class="va">village</span><span class="op">:</span><span class="va">respondent_wall_type</span><span class="op">)</span></span></code></pre>
 </div>
@@ -3581,6 +3600,14 @@ Mac.</li>
 10 Chirodzo 2016-11-17 00:00:00         9         7 muddaub             
 # ℹ 29 more rows</code></pre>
 </div>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#interviews |&gt;</span></span>
+<span><span class="co">#   filter(village == "Chirodzo") |&gt;</span></span>
+<span><span class="co">#   select(village:respondent_wall_type)</span></span></code></pre>
+</div>
 <p>In the above code, we use the pipe to send the
 <code>interviews</code> dataset first through <code>filter()</code> to
 keep rows where <code>village</code> is “Chirodzo”, then through
@@ -3600,7 +3627,7 @@ somewhat simple, but by combining them into linear workflows with the
 pipe, we can accomplish more complex data wrangling operations.</p>
 <p>If we want to create a new object with this smaller version of the
 data, we can assign it a new name:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3653,9 +3680,9 @@ interviews where respondents were members of an irrigation association
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3694,7 +3721,7 @@ ratio of values in two columns. For this we’ll use
 <code>mutate()</code>.</p>
 <p>We might be interested in the ratio of number of household members to
 rooms used for sleeping (i.e. avg number of people per room):</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3708,7 +3735,7 @@ rooms used for sleeping (i.e. avg number of people per room):</p>
    key_ID village  interview_date      no_membrs years_liv respondent_wall_type
     &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
  1      1 God      2016-11-17 00:00:00         3         4 muddaub             
- 2      1 God      2016-11-17 00:00:00         7         9 muddaub             
+ 2      2 God      2016-11-17 00:00:00         7         9 muddaub             
  3      3 God      2016-11-17 00:00:00        10        15 burntbricks         
  4      4 God      2016-11-17 00:00:00         7         6 burntbricks         
  5      5 God      2016-11-17 00:00:00         7        40 burntbricks         
@@ -3730,7 +3757,7 @@ they were a member of an irrigation association. These cases are
 recorded as “NULL” in the dataset.</p>
 <p>To remove these cases, we could insert a <code>filter()</code> in the
 chain:</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3744,7 +3771,7 @@ chain:</p>
 <pre class="output" tabindex="0"><code># A tibble: 92 × 15
    key_ID village  interview_date      no_membrs years_liv respondent_wall_type
     &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;               
- 1      1 God      2016-11-17 00:00:00         7         9 muddaub             
+ 1      2 God      2016-11-17 00:00:00         7         9 muddaub             
  2      7 God      2016-11-17 00:00:00         6        38 muddaub             
  3      8 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
  4      9 Chirodzo 2016-11-16 00:00:00         8         6 burntbricks         
@@ -3792,9 +3819,9 @@ to produce this data frame!</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3824,7 +3851,7 @@ summary of that group. <code>group_by()</code> takes as arguments the
 column names that contain the <strong>categorical</strong> variables for
 which you want to calculate the summary statistics. So to compute the
 average household size by village:</p>
-<div class="codewrapper sourceCode" id="cb24">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3846,7 +3873,7 @@ average household size by village:</p>
 run off the screen anymore. It’s one of the advantages of
 <code>tbl_df</code> over dataframe.</p>
 <p>You can also group by multiple columns:</p>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3879,7 +3906,7 @@ run off the screen anymore. It’s one of the advantages of
 </div>
 <p>Note that the output is a grouped tibble. To obtain an ungrouped
 tibble, use the <code>ungroup</code> function:</p>
-<div class="codewrapper sourceCode" id="cb29">
+<div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3914,7 +3941,7 @@ tibble, use the <code>ungroup</code> function:</p>
 <code>membr_assoc</code>, we see rows in our table for respondents who
 did not specify whether they were a member of an irrigation association.
 We can exclude those data from our table using a filter step.</p>
-<div class="codewrapper sourceCode" id="cb32">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3948,7 +3975,7 @@ at the same time (and not necessarily on the same variable). For
 instance, we could add a column indicating the minimum household size
 for each village for each group (members of an irrigation association vs
 not):</p>
-<div class="codewrapper sourceCode" id="cb35">
+<div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -3981,7 +4008,7 @@ not):</p>
 <p>It is sometimes useful to rearrange the result of a query to inspect
 the values. For instance, we can sort on <code>min_membrs</code> to put
 the group with the smallest household first:</p>
-<div class="codewrapper sourceCode" id="cb38">
+<div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4015,7 +4042,7 @@ the group with the smallest household first:</p>
 <p>To sort in descending order, we need to add the <code>desc()</code>
 function. If we want to sort the results by decreasing order of minimum
 household size:</p>
-<div class="codewrapper sourceCode" id="cb41">
+<div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4055,7 +4082,7 @@ observations found for each factor or combination of factors. For this
 task, <strong><code>dplyr</code></strong> provides <code>count()</code>.
 For example, if we wanted to count the number of rows of data for each
 village, we would do:</p>
-<div class="codewrapper sourceCode" id="cb44">
+<div class="codewrapper sourceCode" id="cb45">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4074,7 +4101,7 @@ village, we would do:</p>
 </div>
 <p>For convenience, <code>count()</code> provides the <code>sort</code>
 argument to get results in decreasing order:</p>
-<div class="codewrapper sourceCode" id="cb46">
+<div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4112,9 +4139,9 @@ represented?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb48">
+<div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4155,9 +4182,9 @@ add the number of observations (hint: see <code>?n</code>).</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb50">
+<div class="codewrapper sourceCode" id="cb51">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4203,9 +4230,9 @@ add the number of observations (hint: see <code>?n</code>).</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb52">
+<div class="codewrapper sourceCode" id="cb53">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -4263,7 +4290,7 @@ with subsets of data.</li>
 </div>
 </section></section><section id="aio-04-tidyr"><p>Content from <a href="04-tidyr.html">Data Wrangling with tidyr</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/04-tidyr.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4376,7 +4403,7 @@ However, the <code>instanceID</code>s associated with these duplicate
    key_ID village  interview_date      instanceID                               
     &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;              &lt;chr&gt;                                    
  1      1 God      2016-11-17 00:00:00 uuid:ec241f2c-0609-46ed-b5e8-fe575f6cefef
- 2      1 God      2016-11-17 00:00:00 uuid:099de9c9-3e5e-427b-8452-26250e840d6e
+ 2      2 God      2016-11-17 00:00:00 uuid:099de9c9-3e5e-427b-8452-26250e840d6e
  3      3 God      2016-11-17 00:00:00 uuid:193d7daf-9582-409b-bf09-027dd36f9007
  4      4 God      2016-11-17 00:00:00 uuid:148d1105-778a-4755-aa71-281eadd4a973
  5      5 God      2016-11-17 00:00:00 uuid:2c867811-9696-4966-9866-f35c3e97d02d
@@ -4406,16 +4433,16 @@ row in the dataframe.</p>
 <pre class="output" tabindex="0"><code># A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     &lt;dbl&gt; &lt;chr&gt;    &lt;dttm&gt;              &lt;chr&gt;                                    
- 1     55 Chirodzo 2016-11-16 00:00:00 uuid:883c0433-9891-4121-bc63-744f082c1fa0
- 2     68 Chirodzo 2016-11-16 00:00:00 uuid:ef04b3eb-b47d-412e-9b09-4f5e08fc66f9
- 3     56 Chirodzo 2016-11-16 00:00:00 uuid:973c4ac6-f887-48e7-aeaf-4476f2cfab76
- 4    192 Chirodzo 2017-06-03 00:00:00 uuid:f94409a6-e461-4e4c-a6fb-0072d3d58b00
- 5     69 Chirodzo 2016-11-16 00:00:00 uuid:f86933a5-12b8-4427-b821-43c5b039401d
- 6     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
+ 1     51 Chirodzo 2016-11-16 00:00:00 uuid:18ac8e77-bdaf-47ab-85a2-e4c947c9d3ce
+ 2      9 Chirodzo 2016-11-16 00:00:00 uuid:846103d2-b1db-4055-b502-9cd510bb7b37
+ 3     53 Chirodzo 2016-11-16 00:00:00 uuid:cc7f75c5-d13e-43f3-97e5-4f4c03cb4b12
+ 4    200 Chirodzo 2017-06-04 00:00:00 uuid:aa77a0d7-7142-41c8-b494-483a5b68d8a7
+ 5     52 Chirodzo 2016-11-16 00:00:00 uuid:6db55cb4-a853-4000-9555-757b7fae2bcf
+ 6     60 Chirodzo 2016-11-16 00:00:00 uuid:85465caf-23e4-4283-bb72-a0ef30e30176
  7     48 Chirodzo 2016-11-16 00:00:00 uuid:e180899c-7614-49eb-a97c-40ed013a38a2
- 8     64 Chirodzo 2016-11-16 00:00:00 uuid:28cfd718-bf62-4d90-8100-55fafbe45d06
+ 8     57 Chirodzo 2016-11-16 00:00:00 uuid:a7184e55-0615-492d-9835-8f44f3b03a71
  9     45 Chirodzo 2016-11-17 00:00:00 uuid:e3554d22-35b1-4fb9-b386-dd5866ad5792
-10     51 Chirodzo 2016-11-16 00:00:00 uuid:18ac8e77-bdaf-47ab-85a2-e4c947c9d3ce</code></pre>
+10     44 Chirodzo 2016-11-17 00:00:00 uuid:f9fadf44-d040-4fca-86c1-2835f79c4952</code></pre>
 </div>
 <p>We notice that the layout or format of the <code>interviews</code>
 data is in a format that adheres to rules 1-3, where</p>
@@ -4924,7 +4951,7 @@ dataframes.</li>
 </div>
 </section></section><section id="aio-05-ggplot2"><p>Content from <a href="05-ggplot2.html">Data Visualisation with ggplot2</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/05-ggplot2.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -5979,7 +6006,7 @@ categorical variable.</li>
 </div>
 </section></section><section id="aio-06-rmarkdown"><p>Content from <a href="06-rmarkdown.html">Getting started with R Markdown (Optional)</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/06-rmarkdown.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -6569,7 +6596,7 @@ chunk is the number of backticks. In-line R code uses one backtick
 (<code>r</code>), whereas code chunks use three backticks
 (<code>r</code>).</p>
 <p>For example, today’s date is <code>`r Sys.Date()`</code>, will be
-rendered as: today’s date is 2023-08-24.<br>
+rendered as: today’s date is 2023-09-13.<br>
 The code will display today’s date in the output document (well,
 technically the date the document was last knitted).</p>
 <p>The best way to use in-line R code, is to minimise the amount of code
@@ -6798,7 +6825,7 @@ document</li>
 </div>
 </section></section><section id="aio-07-json"><p>Content from <a href="07-json.html">Processing JSON data (Optional)</a></p>
 <hr>
-<p> Last updated on 2023-08-24 | 
+<p> Last updated on 2023-09-13 | 
         
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/07-json.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -7251,8 +7278,8 @@ csv file</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/783486f8a2360694b2c7f3b41e27b347cfcfbf00" class="external-link">sandpaper (0.13.0)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/94b6d596cc29d75ee70348c21baf62e9ffee491d" class="external-link">pegboard (0.6.1)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/a587d5dddbb68fab5419e8566d4a414a405342ab" class="external-link">sandpaper (0.13.0)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/06b4151b469d910becc209e94654ef043863535e" class="external-link">pegboard (0.6.1)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/8b930523e56f4003b381353d6f945228664584a4" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
 		</footer>
@@ -7275,8 +7302,8 @@ csv file</li>
   "url": "https://datacarpentry.org/r-socialsci/aio.html",
   "identifier": "https://datacarpentry.org/r-socialsci/aio.html",
   "dateCreated": "2017-05-25",
-  "dateModified": "2023-09-04",
-  "datePublished": "2023-09-04"
+  "dateModified": "2023-09-13",
+  "datePublished": "2023-09-13"
 }
 
   </script><script>
