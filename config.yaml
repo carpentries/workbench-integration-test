@@ -64,9 +64,9 @@ episodes:
 - 03-import-annotate.Rmd
 - 04-exploratory-qc.Rmd
 - 05-differential-expression.Rmd
-- 06-gene-set-analysis.Rmd
-- 07-next-steps.Rmd
-- 08-extra-design.Rmd
+- 06-extra-design.Rmd
+- 07-gene-set-analysis.Rmd
+- 08-next-steps.Rmd
 
 # Information for Learners
 learners: 
@@ -83,6 +83,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 url: https://carpentries-incubator.github.io/bioc-rnaseq
-sandpaper: carpentries/sandpaper#496
+sandpaper: carpentries/sandpaper#513
 varnish: carpentries/varnish
-pegboard: carpentries/pegboard
+pegboard: carpentries/pegboard#137
