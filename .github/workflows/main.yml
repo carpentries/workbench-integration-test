@@ -31,9 +31,6 @@ jobs:
       checks: write
       contents: write
       pages: write
-    name: ${{ matrix.lesson-name }}
-    runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
@@ -52,8 +49,11 @@ jobs:
             lesson-name: Raster and Vector Geospatial Data with R
             experimental: true
           - lesson: "${{ github.event.inputs.test-lesson }}"
-            lesson-name: TEST LESSON
+            lesson-name: "USER TEST ${{ github.event.inputs.test-lesson }}"
             experimental: true
+    name: ${{ matrix.lesson-name }}
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
     defaults:
       run:
         shell: bash # forces 'Git for Windows' on Windows
