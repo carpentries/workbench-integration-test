@@ -21,7 +21,8 @@ on:
         description: 'Pegboard version to test'
         required: true
         default: 'carpentries/pegboard'
-      test-lesson: 'An additional lesson to test'
+      test-lesson: 
+        description: 'An additional lesson to test'
         required: false
         default: 'carpentries-incubator/managing-computational-projects'
 jobs:
