@@ -34,6 +34,7 @@ gh workflow run main.yml \
 -f sandpaper='carpentries/sandpaper' \
 -f pegboard='carpentries/pegboard' \
 -f varnish='carpentries/varnish' \
+-f test-lesson='LibraryCarpentry/lc-git' \
 -f reset=false
 ```
 
@@ -41,6 +42,10 @@ gh workflow run main.yml \
 
 To reset the cached markdown files (e.g. rebuild everything from scratch,
 you can use `reset: true`). This will be a checkbox in the GitHub interface.
+
+You can choose a specific lesson to test by supplying it in the "additional 
+lesson to test" box. This defaults to 
+carpentries-incubator/managing-computational-projects
 
 One feature of this test is that you can choose which versions of The Workbench
 packages you would like to test with. If you want to test specific versions of
