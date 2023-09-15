@@ -76,7 +76,7 @@ jobs:
             VARNY="carpentries/varnish"
           fi
           if [[ -z ${PEGGY} ]]; then
-            VARNY="carpentries/pegboard"
+            PEGGY="carpentries/pegboard"
           fi
           sed -i "/sandpaper\:/d" config.yaml
           sed -i "/varnish\:/d" config.yaml
