@@ -49,16 +49,43 @@
     <loc>https://preview.carpentries.org/ecology-workshop/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/ecology-workshop/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/ecology-workshop/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-data.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-openrefine.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-overview.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-python-workshop.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-python.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-r-workshop.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-r.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-spreadsheet.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor/setup-sql.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/instructor-notes.html</loc>
   </url>
   <url>
     <loc>https://preview.carpentries.org/ecology-workshop/profiles.html</loc>
@@ -67,9 +94,30 @@
     <loc>https://preview.carpentries.org/ecology-workshop/reference.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-data.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-openrefine.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-overview.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/ecology-workshop/setup-python-workshop.html</loc>
   </url>
   <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-python.html</loc>
+  </url>
+  <url>
     <loc>https://preview.carpentries.org/ecology-workshop/setup-r-workshop.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-r.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-spreadsheet.html</loc>
+  </url>
+  <url>
+    <loc>https://preview.carpentries.org/ecology-workshop/setup-sql.html</loc>
   </url>
 </urlset>
