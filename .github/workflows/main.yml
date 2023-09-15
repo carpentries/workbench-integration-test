@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lesson: [carpentries-incubator/bioc-rnaseq, carpentries/instructor-training, datacarpentry/r-socialsci, carpentries/sandpaper-docs, datacarpentry/r-raster-vector-geospatial, ${{ inputs.test-lesson }}]
+        lesson: [carpentries-incubator/bioc-rnaseq, carpentries/instructor-training, datacarpentry/r-socialsci, carpentries/sandpaper-docs, datacarpentry/r-raster-vector-geospatial, ${{ github.event.inputs.test-lesson }}]
         experimental: [false]
         include:
           - lesson: carpentries-incubator/bioc-rnaseq
@@ -51,7 +51,7 @@ jobs:
           - lesson: datacarpentry/r-raster-vector-geospatial
             lesson-name: Raster and Vector Geospatial Data with R
             experimental: true
-          - lesson: ${{ inputs.test-lesson }}
+          - lesson: ${{ github.event.inputs.test-lesson }}
             lesson-name: TEST LESSON
             experimental: true
     defaults:
