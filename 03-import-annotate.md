@@ -40,7 +40,7 @@ If you get any error messages about `there is no package called 'XXXX'` it means
 
 ## Load data
 
-In the last episode, we used R to download 4 files from the internet and saved them on our computer. But we do not have these files loaded into R yet so that we can work with them. The original experimental design in [Blackmore et al. 2017](https://pubmed.ncbi.nlm.nih.gov/28696309/) was fairly complex: 8-12 weeks old male and female mice, with two different genetic backgrounds (wild-type and D2D), were collected at Day 0 (before influenza infection), Day 4 and Day 8 after influenza infection. From each mouse, cerebellum and spinal cord tissues were taken for RNA-seq. There were originally 4 mice per 'Sex X Day x Genotype' group, but a few were lost along the way resulting in a total of 45 samples. For this workshop, we are going to simplify the analysis by only using the 22 cerebellum samples. Expression quantification was done using STAR to align to the mouse genome and then counting reads that map to genes. In addition to the counts per gene per sample, we also need information on which sample belongs to which Sex/Time point/Replicate. And for the genes, it is helpful to have extra information called annotation.
+In the last episode, we used R to download 4 files from the internet and saved them on our computer. But we do not have these files loaded into R yet so that we can work with them. The original experimental design in [Blackmore et al. 2017](https://pubmed.ncbi.nlm.nih.gov/28696309/) was fairly complex: 8 week old male and female C57BL/6 mice were collected at Day 0 (before influenza infection), Day 4 and Day 8 after influenza infection. From each mouse, cerebellum and spinal cord tissues were taken for RNA-seq. There were originally 4 mice per 'Sex x Time x Tissue' group, but a few were lost along the way resulting in a total of 45 samples. For this workshop, we are going to simplify the analysis by only using the 22 cerebellum samples. Expression quantification was done using STAR to align to the mouse genome and then counting reads that map to genes. In addition to the counts per gene per sample, we also need information on which sample belongs to which Sex/Time point/Replicate. And for the genes, it is helpful to have extra information called annotation.
 Let's read in the data files that we downloaded in the last episode and start to explore them:
 
 
@@ -61,7 +61,7 @@ dim(counts)
 # View(counts)
 ```
 
-Genes are in rows and samples are in columns, so we have counts for 41,786 genes and 22 samples. The `View()` command has been comment out for the website, but running it will open a tab in RStudio that lets us look at the data and even sort the table by a particular column. However, the viewer cannot change the data inside the `counts` object, so we can only look, not permanently sort nor edit the entries. When finished, close the viewer using the X in the tab. Looks like the rownames are gene symbols and the column names are the GEO sample IDs, which are not very informative for telling us which sample is what.
+Genes are in rows and samples are in columns, so we have counts for 41,786 genes and 22 samples. The `View()` command has been commented out for the website, but running it will open a tab in RStudio that lets us look at the data and even sort the table by a particular column. However, the viewer cannot change the data inside the `counts` object, so we can only look, not permanently sort nor edit the entries. When finished, close the viewer using the X in the tab. Looks like the rownames are gene symbols and the column names are the GEO sample IDs, which are not very informative for telling us which sample is what.
 
 ### Sample annotations
 
@@ -519,6 +519,68 @@ Male_Day8_24          24   Male_Day8_24 Male_Day8
 se$Label <- factor(se$Label, levels = se$Label)
 ```
 
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+1. How many samples are there for each level of the `Infection` variable?
+2. Create 2 objects named `se_infected` and `se_noninfected` containing
+a subset of `se` with only infected and non-infected samples, respectively.
+Then, calculate the mean expression levels of the first 500 genes for each
+object, and use the `summary()` function to explore the distribution
+of expression levels for infected and non-infected samples based on these genes.
+3. How many samples represent female mice infected with Influenza A on day 8?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::: solution
+
+
+```r
+# 1
+table(se$infection)
+```
+
+```{.output}
+
+ InfluenzaA NonInfected 
+         15           7 
+```
+
+```r
+# 2
+se_infected <- se[se$infection == "InfluenzaA", ]
+se_noninfected <- se[se$infection == "NonInfected", ]
+
+means_infected <- rowMeans(assay(se_infected)[1:500, ])
+means_noninfected <- rowMeans(assay(se_noninfected)[1:500, ])
+
+summary(means_infected)
+```
+
+```{.output}
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+    0.000     0.136     2.114   667.037   334.568 18810.409 
+```
+
+```r
+summary(means_noninfected)
+```
+
+```{.output}
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+    0.000     0.273     7.523  1003.466   558.477 25190.455 
+```
+
+```r
+# 3
+ncol(se[se$sex == "Female" & se$infection == "InfluenzaA" & se$time == "Day8", ])
+```
+
+```{.output}
+[1] 22
+```
+
+:::::::::::::::::::::::::::::::::::
 
 
 ## Save SummarizedExperiment
@@ -579,7 +641,7 @@ manual curation.
 You can find more information in Bioconductor [Annotation Workshop](https://jmacdon.github.io/Bioc2022Anno/articles/AnnotationWorkshop.html)
 material.
 
-Bioconductor has many packages and functions that can help you to get additional annotation information for your genes. The available resources are covered in more detail in [Episode 6 Gene set enrichment analysis](https://carpentries-incubator.github.io/bioc-rnaseq/06-gene-set-analysis.html#gene-set-resources). 
+Bioconductor has many packages and functions that can help you to get additional annotation information for your genes. The available resources are covered in more detail in [Episode 7 Gene set enrichment analysis](https://carpentries-incubator.github.io/bioc-rnaseq/07-gene-set-analysis.html#gene-set-resources). 
 
 Here, we will introduce one of the gene ID mapping functions, `mapIds`:
 ```
@@ -587,6 +649,7 @@ mapIds(annopkg, keys, column, keytype, ..., multiVals)
 ```
 
 Where 
+
 - *annopkg* is the annotation package        
 - *keys* are the IDs that we **know**       
 - *column* is the value we **want**    
