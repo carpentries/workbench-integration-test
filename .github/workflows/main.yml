@@ -34,6 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        lesson: [carpentries-incubator/bioc-rnaseq, carpentries/instructor-training, datacarpentry/r-socialsci, carpentries/sandpaper-docs, datacarpentry/r-raster-vector-geospatial, datacarpentry/ecology-workshop, "${{ github.event.inputs.test-lesson }}"]
         experimental: [false]
         include:
           - lesson: carpentries-incubator/bioc-rnaseq
