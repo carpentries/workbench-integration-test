@@ -372,7 +372,19 @@ Useful tools for interactive exploratory data analysis for RNA-seq are [Glimma](
 
 
 ```r
-app <- iSEE(se)
+## Convert DESeqDataSet object to a SingleCellExperiment object, in order to 
+## be able to store the PCA representation
+sce <- as(dds, "SingleCellExperiment")
+
+## Add PCA to the 'reducedDim' slot
+stopifnot(rownames(pcaData) == colnames(sce))
+reducedDim(sce, "PCA") <- as.matrix(pcaData[, c("PC1", "PC2")])
+
+## Add variance-stabilized data as a new assay
+stopifnot(colnames(vsd) == colnames(sce))
+assay(sce, "vsd") <- assay(vsd)
+
+app <- iSEE(sce)
 shiny::runApp(app)
 ```
 
@@ -440,7 +452,7 @@ loaded via a namespace (and not attached):
 [49] miniUI_0.1.1.1          lattice_0.21-8          tibble_3.2.1           
 [52] shiny_1.7.5             withr_2.5.0             evaluate_0.21          
 [55] circlize_0.4.15         pillar_1.9.0            affyio_1.70.0          
-[58] BiocManager_1.30.22     renv_1.0.2              DT_0.29                
+[58] BiocManager_1.30.22     renv_1.0.3              DT_0.29                
 [61] foreach_1.5.2           shinyjs_2.1.0           generics_0.1.3         
 [64] RCurl_1.98-1.12         munsell_0.5.0           scales_1.2.1           
 [67] xtable_1.8-4            glue_1.6.2              tools_4.3.1            
