@@ -58,10 +58,31 @@
     <loc>https://datacarpentry.github.io/ecology-workshop/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-data.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-openrefine.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-overview.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-python-workshop.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-python.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-r-workshop.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-r.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-spreadsheet.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/instructor/setup-sql.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.github.io/ecology-workshop/instructor-notes.html</loc>
@@ -73,9 +94,30 @@
     <loc>https://datacarpentry.github.io/ecology-workshop/reference.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-data.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-openrefine.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-overview.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/ecology-workshop/setup-python-workshop.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-python.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/ecology-workshop/setup-r-workshop.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-r.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-spreadsheet.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/ecology-workshop/setup-sql.html</loc>
   </url>
 </urlset>
