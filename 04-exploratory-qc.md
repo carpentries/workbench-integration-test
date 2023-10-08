@@ -1,8 +1,8 @@
 ---
 source: Rmd
 title: Exploratory analysis and quality control
-teaching: 60
-exercises: 45
+teaching: 120
+exercises: 60
 editor_options:
   chunk_output_type: console
 ---
@@ -326,16 +326,16 @@ Compare before and after variance stabilizing transformation.
 
 
 ```r
-pcaData <- DESeq2::plotPCA(vsd, intgroup = c("libSize"),
-                           returnData = TRUE)
-percentVar <- round(100 * attr(pcaData, "percentVar"))
-ggplot(pcaData, aes(x = PC1, y = PC2)) +
-    geom_point(aes(color = libSize/ 1e6), size = 5) +
+pcaDataVst <- DESeq2::plotPCA(vsd, intgroup = c("libSize"),
+                              returnData = TRUE)
+percentVar <- round(100 * attr(pcaDataVst, "percentVar"))
+ggplot(pcaDataVst, aes(x = PC1, y = PC2)) +
+    geom_point(aes(color = libSize / 1e6), size = 5) +
     theme_minimal() +
     xlab(paste0("PC1: ", percentVar[1], "% variance")) +
     ylab(paste0("PC2: ", percentVar[2], "% variance")) +
     coord_fixed() + 
-    scale_color_continuous("Total count in millions", type ="viridis")
+    scale_color_continuous("Total count in millions", type = "viridis")
 ```
 
 <img src="fig/04-exploratory-qc-rendered-pca-lib-1.png" style="display: block; margin: auto;" />
@@ -343,16 +343,16 @@ ggplot(pcaData, aes(x = PC1, y = PC2)) +
 
 
 ```r
-pcaData <- DESeq2::plotPCA(DESeqTransform(se), intgroup = c("libSize"),
-                           returnData = TRUE)
-percentVar <- round(100 * attr(pcaData, "percentVar"))
-ggplot(pcaData, aes(x = PC1, y = PC2)) +
-    geom_point(aes(color = libSize/ 1e6), size = 5) +
+pcaDataCts <- DESeq2::plotPCA(DESeqTransform(se), intgroup = c("libSize"),
+                              returnData = TRUE)
+percentVar <- round(100 * attr(pcaDataCts, "percentVar"))
+ggplot(pcaDataCts, aes(x = PC1, y = PC2)) +
+    geom_point(aes(color = libSize / 1e6), size = 5) +
     theme_minimal() +
     xlab(paste0("PC1: ", percentVar[1], "% variance")) +
     ylab(paste0("PC2: ", percentVar[2], "% variance")) +
     coord_fixed() + 
-    scale_color_continuous("Total count in millions", type ="viridis")
+    scale_color_continuous("Total count in millions", type = "viridis")
 ```
 
 <img src="fig/04-exploratory-qc-rendered-pca-lib-vst-1.png" style="display: block; margin: auto;" />
