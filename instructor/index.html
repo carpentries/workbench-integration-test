@@ -73,7 +73,8 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html"></a></li><li><a class="dropdown-item" href="setup.html">Setup</a></li>
+          </ul></li>
       </ul></div>
     <form class="d-flex col-md-2 search-form">
       <fieldset disabled><input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"><button class="btn btn-outline-success tablet-search-button" type="submit">
@@ -241,7 +242,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      
+                      <li><a href="discuss.html">Discussion</a></li><li><a href="reference.html"></a></li><li><a href="setup.html">Setup</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -317,7 +318,7 @@ information about annotated genes for a given organism?<br>What are the
 typical steps in an RNA-seq analysis?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 15m
+<span class="visually-hidden">Duration: </span>01h 40m
 </td>
 <td>
  2. <a href="02-setup.html">RStudio Project and Experimental Data</a>
@@ -329,7 +330,7 @@ project?<br>How to download a dataset from the internet and save it as
 a file.
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 55m
+<span class="visually-hidden">Duration: </span>02h 10m
 </td>
 <td>
  3. <a href="03-import-annotate.html">Importing and annotating
@@ -342,7 +343,7 @@ gene identifiers are typically used, and how are mappings between them
 done?<br>::::::::::::::::::::::::::::::::::::::::::::::::::
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>03h 40m
+<span class="visually-hidden">Duration: </span>04h 10m
 </td>
 <td>
  4. <a href="04-exploratory-qc.html">Exploratory analysis and quality
@@ -355,7 +356,7 @@ exploratory analysis?<br>Are two dimensions sufficient to represent
 your data?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>05h 25m
+<span class="visually-hidden">Duration: </span>07h 10m
 </td>
 <td>
  5. <a href="05-differential-expression.html">Differential expression
@@ -366,7 +367,7 @@ What are the steps performed in a typical differential expression
 analysis?<br>How does one interpret the output of DESeq2?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>07h 10m
+<span class="visually-hidden">Duration: </span>08h 55m
 </td>
 <td>
  6. <a href="06-extra-design.html">Extra exploration of design
@@ -377,7 +378,7 @@ How can one translate biological questions and comparisons to
 statistical terms suitable for use with RNA-seq analysis packages?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>08h 10m
+<span class="visually-hidden">Duration: </span>09h 55m
 </td>
 <td>
  7. <a href="07-gene-set-analysis.html">Gene set enrichment analysis</a>
@@ -388,7 +389,7 @@ the method of over-representation analysis?<br>What are the
 commonly-used gene set databases?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>09h 55m
+<span class="visually-hidden">Duration: </span>11h 40m
 </td>
 <td>
  8. <a href="08-next-steps.html">Next steps</a>
@@ -398,7 +399,7 @@ How to go further from here?<br>What other types of analyses can be
 done with RNA-seq data?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>10h 15m
+<span class="visually-hidden">Duration: </span>12h 00m
 </td>
 <td>
 Finish
@@ -420,7 +421,7 @@ that will be used throughout the lesson.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"BiocManager"</span>, <span class="st">"remotes"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"tidyverse"</span>, <span class="st">"SummarizedExperiment"</span>,</span>
 <span>                       <span class="st">"ExploreModelMatrix"</span>, <span class="st">"AnnotationDbi"</span>, <span class="st">"org.Hs.eg.db"</span>, </span>
 <span>                       <span class="st">"org.Mm.eg.db"</span>, <span class="st">"csoneson/ConfoundingExplorer"</span>,</span>
@@ -428,7 +429,8 @@ that will be used throughout the lesson.</p>
 <span>                       <span class="st">"RColorBrewer"</span>, <span class="st">"hexbin"</span>, <span class="st">"cowplot"</span>, <span class="st">"iSEE"</span>,</span>
 <span>                       <span class="st">"clusterProfiler"</span>, <span class="st">"enrichplot"</span>, <span class="st">"kableExtra"</span>,</span>
 <span>                       <span class="st">"msigdbr"</span>, <span class="st">"gplots"</span>, <span class="st">"ggplot2"</span>, <span class="st">"simplifyEnrichment"</span>,</span>
-<span>                       <span class="st">"apeglm"</span>, <span class="st">"microbenchmark"</span>, <span class="st">"Biostrings"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<span>                       <span class="st">"apeglm"</span>, <span class="st">"microbenchmark"</span>, <span class="st">"Biostrings"</span>,</span>
+<span>                       <span class="st">"SingleCellExperiment"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <p><em>If you are attending a workshop, please complete all of the above
 before the workshop. Should you need help, an instructor will be
@@ -462,8 +464,8 @@ available 30 minutes before the workshop commences to assist.</em></p>
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/132a935208eb0dc4049617882125f4f17b5c3843" class="external-link">sandpaper (0.14.0)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/no-bad-children-fix-139" class="external-link">pegboard (0.7.0.9000)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/394-expand-instructor-extras" class="external-link">sandpaper (0.14.0)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/ceff74340e5f621b76844e4f1b40eacb125da39f" class="external-link">pegboard (0.7.1)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/8b930523e56f4003b381353d6f945228664584a4" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
@@ -485,8 +487,8 @@ available 30 minutes before the workshop commences to assist.</em></p>
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/index.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/index.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2023-10-03",
-  "datePublished": "2023-10-03"
+  "dateModified": "2023-10-08",
+  "datePublished": "2023-10-08"
 }
 
   </script><script>
