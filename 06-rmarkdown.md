@@ -10,6 +10,14 @@ source: Rmd
 
 
 
+:::: instructor
+
+- This is an optional lesson intended to introduce learners to R Markdown.
+- While it is listed after the core lessons, some instructors may prefer to teach it early
+  in the workshop, depending on the audience.
+
+::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Create a .Rmd document containing R code, text, and plots
@@ -382,7 +390,7 @@ uses one backtick (`r`), whereas code chunks use three backticks
 (``` r ```).
 
 For example, today's date is ``` `r Sys.Date()` ```, will be rendered as:
-today's date is 2023-09-25.  
+today's date is 2023-10-23.  
 The code will display today's date in the output document (well, technically the
 date the document was last knitted).
 
