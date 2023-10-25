@@ -71,10 +71,10 @@ episodes:
 # Information for Learners
 learners: 
 - reference.md
-- R-handout.Rmd
 
 # Information for Instructors
 instructors: 
+- instructor-notes.md
 
 # Learner Profiles
 profiles: 
@@ -86,6 +86,6 @@ profiles:
 
 
 url: 'https://datacarpentry.org/r-socialsci'
-sandpaper: carpentries/sandpaper
+sandpaper: carpentries/sandpaper#533
 varnish: carpentries/varnish
 pegboard: carpentries/pegboard
