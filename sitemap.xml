@@ -19,16 +19,7 @@
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/06-extra-design.html</loc>
   </url>
   <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/06-gene-set-analysis.html</loc>
-  </url>
-  <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/07-gene-set-analysis.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/07-next-steps.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/08-extra-design.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/08-next-steps.html</loc>
@@ -43,13 +34,7 @@
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/aio.html</loc>
-  </url>
-  <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/discuss.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/index.html</loc>
@@ -73,16 +58,7 @@
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/06-extra-design.html</loc>
   </url>
   <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/06-gene-set-analysis.html</loc>
-  </url>
-  <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/07-gene-set-analysis.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/07-next-steps.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/08-extra-design.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/08-next-steps.html</loc>
@@ -97,34 +73,16 @@
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/aio.html</loc>
-  </url>
-  <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/discuss.html</loc>
   </url>
   <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/images.html</loc>
-  </url>
-  <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/index.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/instructor-notes.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor/reference.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/instructor-notes.html</loc>
-  </url>
-  <url>
-    <loc>https://carpentries-incubator.github.io/bioc-rnaseq/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/bioc-rnaseq/profiles.html</loc>
