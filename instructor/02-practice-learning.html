@@ -65,7 +65,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="icebreakers.html">Icebreakers</a></li><li><a class="dropdown-item" href="additional_exercises.html">Additional Exercises</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="icebreakers.html">Icebreakers</a></li><li><a class="dropdown-item" href="additional_exercises.html">Additional Exercises</a></li><hr><li><a class="dropdown-item" href="training_calendar.html">Instructor Training Calendar</a></li><li><a class="dropdown-item" href="checkout.html">Checkout Instructions</a></li><li><a class="dropdown-item" href="demo_lessons.html">Lessons for Teaching Demonstrations</a></li><li><a class="dropdown-item" href="demos_rubric.html">Suggested Rubric for Teaching Demonstrations</a></li><li><a class="dropdown-item" href="members.html">Information for Member Organizations</a></li><li><a class="dropdown-item" href="fromthelearners.html">From the Learners</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li>
           </ul></li>
       </ul></div>
     <form class="d-flex col-md-2 search-form">
@@ -399,7 +399,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      <li><a href="icebreakers.html">Icebreakers</a></li><li><a href="additional_exercises.html">Additional Exercises</a></li>
+                      <li><a href="icebreakers.html">Icebreakers</a></li><li><a href="additional_exercises.html">Additional Exercises</a></li><hr><li><a class="dropdown-item" href="training_calendar.html">Instructor Training Calendar</a></li><li><a class="dropdown-item" href="checkout.html">Checkout Instructions</a></li><li><a class="dropdown-item" href="demo_lessons.html">Lessons for Teaching Demonstrations</a></li><li><a class="dropdown-item" href="demos_rubric.html">Suggested Rubric for Teaching Demonstrations</a></li><li><a class="dropdown-item" href="members.html">Information for Member Organizations</a></li><li><a class="dropdown-item" href="fromthelearners.html">From the Learners</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -408,6 +408,12 @@
             
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
+            
+              <form method="get" action="../~">
+                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
+              </form>
+              <!-- TODO: Generate Slides -->
+              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
             
             </div>
           </div><!-- /div.accordion -->
@@ -435,7 +441,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Building Skill With Practice</h1>
-        <p> Last updated on 2023-10-25 | 
+        <p> Last updated on 2023-10-30 | 
         
         <a href="https://github.com/carpentries/instructor-training/edit/main/episodes/02-practice-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -449,9 +455,6 @@
 
         
 
-<p>We will now get started with a discussion of how learning works. We
-will begin with some key concepts from educational research and identify
-how these principles are put into practice in Carpentries workshops.</p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -482,6 +485,9 @@ model.</li>
 </div>
 </div>
 </div>
+<p>We will now get started with a discussion of how learning works. We
+will begin with some key concepts from educational research and identify
+how these principles are put into practice in Carpentries workshops.</p>
 <section id="the-carpentries-pedagogical-model"><h2 class="section-heading">The Carpentries Pedagogical Model<a class="anchor" aria-label="anchor" href="#the-carpentries-pedagogical-model"></a>
 </h2>
 <hr class="half-width"><p>The Carpentries aims to teach computational competence to learners.
@@ -567,12 +573,12 @@ practitioners in a more useful and visual way. This, in turn, will have
 implications for how we teach.</p>
 </section><section id="building-a-mental-model"><h2 class="section-heading">Building a Mental Model<a class="anchor" aria-label="anchor" href="#building-a-mental-model"></a>
 </h2>
-<hr class="half-width"><div id="testimonial1" class="callout testimonial">
+<hr class="half-width"><div id="callout1" class="callout callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="heart"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Testimonial<a class="anchor" aria-label="anchor" href="#testimonial1"></a>
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
 </h3>
 <div class="callout-content">
 <p>All models are wrong, but some are useful.</p>
@@ -676,7 +682,7 @@ other features unique to their own mental model.</li>
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>People often request to see more examples of concept maps. These are
 some examples linked from a previous version of the curriculum:</p>
@@ -895,7 +901,7 @@ is associated with that wrong answer. This discussion should take about
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>If the child answers 32, they are throwing away the carry
 completely.</li>
@@ -953,7 +959,7 @@ it in the Etherpad.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>If the majority of the class votes for a single wrong answer, you
 have a widespread misconception and can stop to examine and correct that
@@ -1000,12 +1006,12 @@ other words, our goal is to teach people <strong>how to think</strong>
 about programming and data management in a way that will allow them to
 learn more easily on their own or understand what they might find
 online.</p>
-<div id="testimonial2" class="callout testimonial">
+<div id="testimonial1" class="callout testimonial">
 <div class="callout-square">
 <i class="callout-icon" data-feather="heart"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Testimonial<a class="anchor" aria-label="anchor" href="#testimonial2"></a>
+<h3 class="callout-title">Testimonial<a class="anchor" aria-label="anchor" href="#testimonial1"></a>
 </h3>
 <div class="callout-content">
 <p>If someone feels it is too slow, they will be a bit bored. If they
@@ -1119,7 +1125,7 @@ learners and instructors.</li>
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/patch-renv-github-bug" class="external-link">sandpaper (0.14.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/fbf1fa2f2e55ef8fb3fee05e13fce7db60ab1065" class="external-link">sandpaper (0.14.0.9000)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e7e5c4555e13a09bf9f53ec903dc9c0a462ed789" class="external-link">pegboard (0.7.1.9000)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/b013dd85b88e654d78e4c6278cea19d699a2f94b" class="external-link">varnish (0.3.1)</a>.</p>
 			</div>
@@ -1142,8 +1148,8 @@ learners and instructors.</li>
   "url": "https://carpentries.github.io/instructor-training/instructor/02-practice-learning.html",
   "identifier": "https://carpentries.github.io/instructor-training/instructor/02-practice-learning.html",
   "dateCreated": "2014-11-16",
-  "dateModified": "2023-10-25",
-  "datePublished": "2023-10-25"
+  "dateModified": "2023-10-30",
+  "datePublished": "2023-10-30"
 }
 
   </script><script>
