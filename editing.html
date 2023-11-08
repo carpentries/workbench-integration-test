@@ -270,6 +270,12 @@
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
             
+              <form method="get" action="~">
+                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
+              </form>
+              <!-- TODO: Generate Slides -->
+              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
+            
             </div>
           </div><!-- /div.accordion -->
         </div><!-- /div.sidebar-inner -->
@@ -296,7 +302,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Editing a {sandpaper} lesson</h1>
-        <p> Last updated on 2023-10-25 | 
+        <p> Last updated on 2023-11-08 | 
         
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/editing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -349,6 +355,9 @@ your fork of the lesson (e.g. <code>~/Documents/Lessons/</code>) and
 make sure that folder exists.</p></li>
 <li><p>Go to <a href="https://github.com/carpentries/sandpaper-docs/fork/" class="external-link uri">https://github.com/carpentries/sandpaper-docs/fork/</a> to
 fork the repository to your account</p></li>
+<li><p>(recommended) When creating your fork, you should
+<strong>uncheck</strong> “Copy the <code>main</code> branch only”
+checkbox. <img src="fig/fork-dialogue.png" alt="screenshot of the 'create a new fork' page with the 'Copy the main branch only' checkbox highlighted in yellow" class="figure"></p></li>
 <li>
 <p>In the shell and use this command to clone this repository to
 your working directory, replacing <code>&lt;USERNAME&gt;</code> with
@@ -409,7 +418,7 @@ preview the lesson again.</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>What you should notice is that the only file updated when you
 re-render the lesson is the file you changed
@@ -558,7 +567,7 @@ change?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The episodes appear in the same order as the configuration file and
 the timings have rearranged themselves to reflect that.</p>
@@ -749,9 +758,9 @@ Markdown</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/patch-renv-github-bug" class="external-link">sandpaper (0.14.1)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/fbf1fa2f2e55ef8fb3fee05e13fce7db60ab1065" class="external-link">sandpaper (0.14.0.9000)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e7e5c4555e13a09bf9f53ec903dc9c0a462ed789" class="external-link">pegboard (0.7.1.9000)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/b013dd85b88e654d78e4c6278cea19d699a2f94b" class="external-link">varnish (0.3.1)</a>.</p>
+      and <a href="https://github.com/carpentries/varnish/tree/frog-code-bg-colour-99" class="external-link">varnish (0.3.1.9000)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -772,8 +781,8 @@ Markdown</li>
   "url": "https://carpentries.github.io/sandpaper-docs/editing.html",
   "identifier": "https://carpentries.github.io/sandpaper-docs/editing.html",
   "dateCreated": "2023-11-06",
-  "dateModified": "2023-10-25",
-  "datePublished": "2023-11-06"
+  "dateModified": "2023-11-08",
+  "datePublished": "2023-11-08"
 }
 
   </script><script>
