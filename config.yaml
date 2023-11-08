@@ -90,5 +90,5 @@ profiles:
 workbench-beta: yes
 
 sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish#101
+varnish: carpentries/varnish#103
 pegboard: carpentries/pegboard
