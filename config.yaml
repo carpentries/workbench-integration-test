@@ -111,6 +111,6 @@ profiles:
 
 
 url: 'https://carpentries.github.io/instructor-training'
-sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish#103
+sandpaper: carpentries/sandpaper#539
+varnish: carpentries/varnish
 pegboard: carpentries/pegboard
