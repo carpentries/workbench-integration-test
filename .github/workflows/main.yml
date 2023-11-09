@@ -79,6 +79,7 @@ jobs:
         if: "${{ matrix.lesson != '' }}"
         run: |
           cp -r lesson/* .
+          rm -rf lesson/
           SANDY="${{ github.event.inputs.sandpaper }}"
           VARNY="${{ github.event.inputs.varnish }}"
           PEGGY="${{ github.event.inputs.pegboard }}"
