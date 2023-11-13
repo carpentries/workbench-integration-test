@@ -18,10 +18,10 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
       <div class="large-logo">
-        <img alt="Carpentries Incubator" src="../assets/images/incubator-logo.svg"><abbr class="icon" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="text-decoration: unset">
-           
-          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link" style="color: #383838">Pre-Alpha
-            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="color: #FF4955; border-radius: 5px"></i>
+        <img alt="Carpentries Incubator" src="../assets/images/incubator-logo.svg"><abbr class="badge badge-light" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="background-color: #FF4955; border-radius: 5px">
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link" style="color: #000">
+            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
+            Pre-Alpha
           </a>
           <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
         </abbr>
@@ -73,7 +73,8 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html"></a></li>
+          </ul></li>
       </ul></div>
     <form class="d-flex col-md-2 search-form">
       <fieldset disabled><input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"><button class="btn btn-outline-success tablet-search-button" type="submit">
@@ -237,7 +238,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      
+                      <hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html"></a></li>
                     </ul></div>
                 </div>
               </div>
@@ -246,6 +247,12 @@
             
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
+            
+              <form method="get" action="../~">
+                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
+              </form>
+              <!-- TODO: Generate Slides -->
+              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
             
             </div>
           </div><!-- /div.accordion -->
@@ -325,9 +332,9 @@
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/fix-mailto-538" class="external-link">sandpaper (0.14.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/795ea75a63687af719ec928a615c7f0946795787" class="external-link">sandpaper (0.14.1.9000)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e7e5c4555e13a09bf9f53ec903dc9c0a462ed789" class="external-link">pegboard (0.7.1.9000)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/fc5a780d97f4067ed1a82fc4b5403481660c5972" class="external-link">varnish (0.3.3)</a>.</p>
+      and <a href="https://github.com/carpentries/varnish/tree/c59c9ed79746d6d490486f0ebd3245f9edeb7f3a" class="external-link">varnish (0.3.3.9000)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -349,7 +356,7 @@
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/reference.html",
   "dateCreated": "2020-09-15",
   "dateModified": "2023-11-09",
-  "datePublished": "2023-11-09"
+  "datePublished": "2023-11-13"
 }
 
   </script><script>
