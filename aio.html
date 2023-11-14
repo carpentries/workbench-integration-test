@@ -33,10 +33,10 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
       <div class="large-logo">
-        <img alt="Library Carpentry" src="assets/images/library-logo.svg"><abbr class="icon" title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback." style="text-decoration: unset">
-           
-          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="external-link alert-link" style="color: #383838">Alpha
-            <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="background: #FFC700; border-radius: 5px"></i>
+        <img alt="Library Carpentry" src="assets/images/library-logo.svg"><abbr class="badge badge-light" title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback." style="background-color: #FFC700; border-radius: 5px">
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="external-link alert-link" style="color: #383838">
+            <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+            Alpha
           </a>
           <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
         </abbr>
@@ -277,6 +277,12 @@
             <hr class="d-none d-sm-block d-md-none">
 <div class="d-grid gap-1">
             
+              <form method="get" action="~">
+                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
+              </form>
+              <!-- TODO: Generate Slides -->
+              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
+            
             </div>
           </div>
 <!-- /div.accordion -->
@@ -296,7 +302,7 @@
         
 <section id="aio-00-before-we-start"><p>Content from <a href="00-before-we-start.html">Before we Start</a></p>
 <hr>
-<p> Last updated on 2023-10-25 | 
+<p> Last updated on 2023-11-14 | 
         
         <a href="https://github.com/librarycarpentry/lc-r/edit/main/episodes/00-before-we-start.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -717,7 +723,7 @@ that this happens.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>From the packages tab, click ‘Install’ from the toolbar and type
 ‘tidyverse’ into the textbox, then click ‘install’. The ‘tidyverse’
@@ -884,7 +890,7 @@ R Bootcamp</a>
 </div>
 </section></section><section id="aio-01-intro-to-r"><p>Content from <a href="01-intro-to-r.html">Introduction to R</a></p>
 <hr>
-<p> Last updated on 2023-10-25 | 
+<p> Last updated on 2023-11-14 | 
         
         <a href="https://github.com/librarycarpentry/lc-r/edit/main/episodes/01-intro-to-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2210,7 +2216,7 @@ and logical. Create vectors with c(). Use <span class="math display">\[
 </div>
 </section></section><section id="aio-02-starting-with-data"><p>Content from <a href="02-starting-with-data.html">Starting with Data</a></p>
 <hr>
-<p> Last updated on 2023-10-25 | 
+<p> Last updated on 2023-11-14 | 
         
         <a href="https://github.com/librarycarpentry/lc-r/edit/main/episodes/02-starting-with-data.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2978,7 +2984,7 @@ logic). Use <code>help(Logic)</code> to read the help file.</p>
 </div>
 </section></section><section id="aio-03-data-cleaning-and-transformation"><p>Content from <a href="03-data-cleaning-and-transformation.html">Data cleaning &amp; transformation with dplyr</a></p>
 <hr>
-<p> Last updated on 2023-10-25 | 
+<p> Last updated on 2023-11-14 | 
         
         <a href="https://github.com/librarycarpentry/lc-r/edit/main/episodes/03-data-cleaning-and-transformation.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3276,7 +3282,7 @@ end of the <code>CALL...ITEM.</code> value</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3483,7 +3489,7 @@ for the <code>booksJuv</code> data frame.</p></li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3712,7 +3718,7 @@ the <code>booksKids</code> data frame.</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4009,7 +4015,7 @@ with subsets of data.</li>
 </div>
 </section></section><section id="aio-04-data-viz-ggplot"><p>Content from <a href="04-data-viz-ggplot.html">Data Visualisation with ggplot2</a></p>
 <hr>
-<p> Last updated on 2023-10-25 | 
+<p> Last updated on 2023-11-14 | 
         
         <a href="https://github.com/librarycarpentry/lc-r/edit/main/episodes/04-data-viz-ggplot.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -5143,9 +5149,9 @@ categorical variable.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/patch-renv-github-bug" class="external-link">sandpaper (0.14.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/df58cbde8f1b5add942ef55e150abe166035c855" class="external-link">sandpaper (0.14.1.9000)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e7e5c4555e13a09bf9f53ec903dc9c0a462ed789" class="external-link">pegboard (0.7.1.9000)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/b013dd85b88e654d78e4c6278cea19d699a2f94b" class="external-link">varnish (0.3.1)</a>.</p>
+      and <a href="https://github.com/carpentries/varnish/tree/c59c9ed79746d6d490486f0ebd3245f9edeb7f3a" class="external-link">varnish (0.3.3.9000)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -5167,8 +5173,8 @@ categorical variable.</li>
   "url": "https://librarycarpentry.github.io/lc-r/aio.html",
   "identifier": "https://librarycarpentry.github.io/lc-r/aio.html",
   "dateCreated": "2019-05-30",
-  "dateModified": "2023-10-25",
-  "datePublished": "2023-10-25"
+  "dateModified": "2023-11-14",
+  "datePublished": "2023-11-14"
 }
 
   </script><script>
