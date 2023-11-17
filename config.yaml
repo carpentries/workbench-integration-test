@@ -91,5 +91,5 @@ url: 'https://librarycarpentry.github.io/lc-sql'
 analytics: carpentries
 lang: en
 sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish#101
+varnish: carpentries/varnish
 pegboard: carpentries/pegboard
