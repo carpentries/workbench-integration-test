@@ -118,16 +118,16 @@ interviews %>%
 # A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1     43 Chirodzo 2016-11-17 00:00:00 uuid:b4dff49f-ef27-40e5-a9d1-acf287b47358
- 2     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
- 3    200 Chirodzo 2017-06-04 00:00:00 uuid:aa77a0d7-7142-41c8-b494-483a5b68d8a7
- 4      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
- 5     49 Chirodzo 2016-11-16 00:00:00 uuid:2303ebc1-2b3c-475a-8916-b322ebf18440
- 6    127 Chirodzo 2016-11-16 00:00:00 uuid:f6d04b41-b539-4e00-868a-0f62b427587d
- 7     59 Chirodzo 2016-11-16 00:00:00 uuid:1936db62-5732-45dc-98ff-9b3ac7a22518
- 8     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
- 9     60 Chirodzo 2016-11-16 00:00:00 uuid:85465caf-23e4-4283-bb72-a0ef30e30176
-10     64 Chirodzo 2016-11-16 00:00:00 uuid:28cfd718-bf62-4d90-8100-55fafbe45d06
+ 1     48 Chirodzo 2016-11-16 00:00:00 uuid:e180899c-7614-49eb-a97c-40ed013a38a2
+ 2    192 Chirodzo 2017-06-03 00:00:00 uuid:f94409a6-e461-4e4c-a6fb-0072d3d58b00
+ 3     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
+ 4     57 Chirodzo 2016-11-16 00:00:00 uuid:a7184e55-0615-492d-9835-8f44f3b03a71
+ 5     68 Chirodzo 2016-11-16 00:00:00 uuid:ef04b3eb-b47d-412e-9b09-4f5e08fc66f9
+ 6     70 Chirodzo 2016-11-16 00:00:00 uuid:1feb0108-4599-4bf9-8a07-1f5e66a50a0a
+ 7     35 Chirodzo 2016-11-17 00:00:00 uuid:ff7496e7-984a-47d3-a8a1-13618b5683ce
+ 8      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
+ 9     37 Chirodzo 2016-11-17 00:00:00 uuid:408c6c93-d723-45ef-8dee-1b1bd3fe20cd
+10     61 Chirodzo 2016-11-16 00:00:00 uuid:2401cf50-8859-44d9-bd14-1bf9128766f2
 ```
 
 We notice that the layout or format of the `interviews` data is in a format that
