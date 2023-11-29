@@ -83,6 +83,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 url: https://carpentries-incubator.github.io/bioc-rnaseq
-sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish
+sandpaper: carpentries/sandpaper#550
+varnish: carpentries/varnish#106
 pegboard: carpentries/pegboard
