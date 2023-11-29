@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.3.2",
     "Repositories": [
       {
         "Name": "carpentries",
@@ -1261,7 +1261,7 @@
       "Package": "stringi",
       "Version": "1.7.12",
       "Source": "Repository",
-      "Repository": "https://carpentries.r-universe.dev",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "stats",
