@@ -89,6 +89,6 @@ profiles:
 # sandpaper and varnish versions) should live
 workbench-beta: yes
 
-sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish
+sandpaper: carpentries/sandpaper#550
+varnish: carpentries/varnish#106
 pegboard: carpentries/pegboard
