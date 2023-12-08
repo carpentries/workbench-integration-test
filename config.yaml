@@ -92,6 +92,6 @@ profiles:
 url: 'https://swcarpentry.github.io/git-novice-es'
 analytics: carpentries
 lang: 'es'
-sandpaper: carpentries/sandpaper#546
-varnish: carpentries/varnish#105
+sandpaper: carpentries/sandpaper#552
+varnish: carpentries/varnish
 pegboard: carpentries/pegboard
