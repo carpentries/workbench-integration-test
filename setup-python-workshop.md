@@ -15,7 +15,7 @@ title: Setup for Python workshops
   Installing all of its scientific packages individually can be
   a bit difficult, so we recommend an all-in-one installer.
   We will use Anaconda or Miniconda.
-  They both use [Conda](https://conda.io/en/latest/), the main difference is
+  They both use [Conda](https://conda.io/en/latest/). The main difference is
   that Anaconda comes with a lot of packages pre-installed.
   With Miniconda you will need to install the required packages.
   We recommend using the Anaconda installation instructions.
@@ -24,7 +24,7 @@ title: Setup for Python workshops
 
 ## Anaconda installation
 
-Download and install [Anaconda](https://www.anaconda.com/distribution/#download-section).
+Download and install [Anaconda](https://www.anaconda.com/download).
 Remember to choose the installer for Python 3.x.
 Anaconda does not include the plotting package plotnine.  To install this package, open your terminal application and
 type:
