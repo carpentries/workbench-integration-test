@@ -288,7 +288,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Gene set enrichment analysis</h1>
-        <p>Last updated on 2024-02-12 |
+        <p>Last updated on 2024-03-04 |
         
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/07-gene-set-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -653,13 +653,12 @@ n_{21}}
 <p>If there is no association between DE genes and the gene set, odds
 ratio is expected to be 1. And it is larger than 1 if there is an
 over-representation of DE genes on the gene set.</p>
-<div id="further-reading" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="further-reading" class="callout-inner">
-<h3 class="callout-title">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a></h3>
 <div class="callout-content">
 <p>The 2x2 contingency table can be transposed and it does not affect
 the Fisher’s exact test. E.g. let’s put whether genes are in the gene
@@ -845,22 +844,21 @@ distribution of its statistic.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>Unit: microseconds
-   expr     min       lq      mean   median       uq      max neval
- fisher 239.557 244.4615 266.09100 247.3415 254.2095 1685.266   100
-  hyper   1.322   1.4930   2.43649   2.1040   2.8650   18.214   100</code></pre>
+   expr     min       lq      mean   median      uq      max neval
+ fisher 238.665 244.0810 263.91365 246.7905 251.469 1630.163   100
+  hyper   1.332   1.5285   2.35175   1.8890   2.805   18.584   100</code></pre>
 </div>
 <p>It is very astonishing that <code>phyper()</code> is hundreds of
 times faster than <code>fisher.test()</code>. Main reason is in
 <code>fisher.test()</code>, there are many additional calculations
 besides calculating the <em>p</em>-value. So if you want to implement
 ORA analysis by yourself, always consider to use <code>phyper()</code><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
-<div id="further-reading-1" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="further-reading-1" class="callout-inner">
-<h3 class="callout-title">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="further-reading-1">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-1"></a></h3>
 <div class="callout-content">
 <p>Current tools also use Binomial distribution or chi-square test for
 ORA analysis. These two are just approximations. Please refer to <a href="https://doi.org/10.1093/bioinformatics/btl633" class="external-link">Rivals et al.,
@@ -1222,13 +1220,12 @@ $`GO:0001869`
 data structure, most tools can automatically construct GO gene sets
 internally. There is no need for users to touch such low-level
 processings.</p>
-<div id="further-reading-2" class="callout callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="further-reading-2" class="callout-inner">
-<h3 class="callout-title">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-2"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="further-reading-2">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-2"></a></h3>
 <div class="callout-content">
 <p>Mapping between various databases can also be done with the general
 <code>select()</code> interface. If the <code>OrgDb</code> object is
@@ -1338,13 +1335,12 @@ found from the <a href="https://www.genome.jp/kegg/" class="external-link">KEGG 
 <p>Keep in mind, KEGG pathways are only free for academic users. If you
 use it for commercial purposes, <a href="https://www.kegg.jp/kegg/legal.html" class="external-link">please contact the KEGG team
 to get a licence</a>.</p>
-<div id="further-reading-3" class="callout callout">
+<div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="further-reading-3" class="callout-inner">
-<h3 class="callout-title">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-3"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="further-reading-3">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-3"></a></h3>
 <div class="callout-content">
 <p>Instead directly reading from the URLs, there are also R packages
 which help to obtain data from the KEGG database, such as the
@@ -1628,7 +1624,7 @@ sets are automatically retrieved and processed from
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 387218,666173,12235,52864,751535,671564</code></pre>
+<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 67077,14453,21923,52683,19242,380654</code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1806,13 +1802,12 @@ GO:0060326    39
 GO:0035456    17
 GO:0097529    31</code></pre>
 </div>
-<div id="perform-go-enrichment-on-other-organisms" class="callout callout">
+<div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="perform-go-enrichment-on-other-organisms" class="callout-inner">
-<h3 class="callout-title">Perform GO enrichment on other organisms<a class="anchor" aria-label="anchor" href="#perform-go-enrichment-on-other-organisms"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="perform-go-enrichment-on-other-organisms">Perform GO enrichment on other organisms<a class="anchor" aria-label="anchor" href="#perform-go-enrichment-on-other-organisms"></a></h3>
 <div class="callout-content">
 <p>Gene sets are provided as an <code>OrgDb</code> object in
 <code>enrichGO()</code>, thus you can perform ORA analysis on any
@@ -1899,12 +1894,12 @@ mmu00591                                      Linoleic acid metabolism - Mus mus
 mmu04913                                       Ovarian steroidogenesis - Mus musculus (house mouse)
 mmu04061 Viral protein interaction with cytokine and cytokine receptor - Mus musculus (house mouse)
          GeneRatio BgRatio       pvalue     p.adjust       qvalue
-mmu00590    16/454 85/9467 2.217966e-06 0.0006809156 0.0005930141
-mmu00565    11/454 48/9467 1.231965e-05 0.0014134739 0.0012310042
-mmu00592     8/454 25/9467 1.381245e-05 0.0014134739 0.0012310042
-mmu00591    11/454 50/9467 1.867087e-05 0.0014329892 0.0012480002
-mmu04913    12/454 63/9467 3.661862e-05 0.0022483832 0.0019581324
-mmu04061    14/454 95/9467 1.602808e-04 0.0072537406 0.0063173328
+mmu00590    16/454 85/9465 2.224011e-06 0.0006827712 0.0005946302
+mmu00565    11/454 48/9465 1.234403e-05 0.0014156451 0.0012328951
+mmu00592     8/454 25/9465 1.383367e-05 0.0014156451 0.0012328951
+mmu00591    11/454 50/9465 1.870748e-05 0.0014357990 0.0012504473
+mmu04913    12/454 63/9465 3.669398e-05 0.0022530101 0.0019621620
+mmu04061    14/454 95/9465 1.606325e-04 0.0072719317 0.0063331756
                                                                                                        geneID
 mmu00590 18783/19215/211429/329502/78390/19223/67103/242546/13118/18781/18784/11689/232889/15446/237625/11687
 mmu00565                               18783/211429/329502/78390/22239/18781/18784/232889/320981/237625/53897
@@ -1920,14 +1915,13 @@ mmu00591    11
 mmu04913    12
 mmu04061    14</code></pre>
 </div>
-<div id="perform-kegg-pathway-enrichment-on-other-organisms" class="callout callout">
+<div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="perform-kegg-pathway-enrichment-on-other-organisms" class="callout-inner">
-<h3 class="callout-title">Perform KEGG pathway enrichment on other
-organisms<a class="anchor" aria-label="anchor" href="#perform-kegg-pathway-enrichment-on-other-organisms"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="perform-kegg-pathway-enrichment-on-other-organisms">Perform KEGG pathway enrichment on other
+organisms<a class="anchor" aria-label="anchor" href="#perform-kegg-pathway-enrichment-on-other-organisms"></a></h3>
 <div class="callout-content">
 <p>Extending ORA to other organisms is rather simple.</p>
 <ol style="list-style-type: decimal"><li>Make sure the DE genes are Entrez IDs.</li>
@@ -2021,13 +2015,12 @@ HALLMARK_ALLOGRAFT_REJECTION       23
 HALLMARK_ESTROGEN_RESPONSE_LATE    23
 HALLMARK_INFLAMMATORY_RESPONSE     22</code></pre>
 </div>
-<div id="further-reading-4" class="callout callout">
+<div id="callout7" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="further-reading-4" class="callout-inner">
-<h3 class="callout-title">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-4"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="further-reading-4">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-4"></a></h3>
 <div class="callout-content">
 <p>Implementing ORA is rather simple. The following function
 <code>ora()</code> performs ORA on a list of gene sets. Try to read and
@@ -2520,13 +2513,12 @@ visualization.</p>
 <!-- Carpentry CI cannot install RcppParallel which is indirectly depended by simplifyenrichment,
     so the plot is not generated on the fly.
  -->
-<figure><img src="fig/simplifyEnrichment.png" class="figure mx-auto d-block"></figure><div id="further-reading-5" class="callout callout">
+<figure><img src="fig/simplifyEnrichment.png" class="figure mx-auto d-block"></figure><div id="callout8" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="further-reading-5" class="callout-inner">
-<h3 class="callout-title">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-5"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="further-reading-5">Further reading<a class="anchor" aria-label="anchor" href="#further-reading-5"></a></h3>
 <div class="callout-content">
 <p>ORA analysis actually applies a binary conversion on genes where
 genes pass the cutoff are set as 1 (DE gene) and others are set as 0
@@ -2654,8 +2646,8 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/07-gene-set-analysis.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/07-gene-set-analysis.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2024-02-12",
-  "datePublished": "2024-02-19"
+  "dateModified": "2024-03-04",
+  "datePublished": "2024-03-04"
 }
 
   </script><script>

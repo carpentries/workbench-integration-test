@@ -292,7 +292,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Differential expression analysis</h1>
-        <p>Last updated on 2024-02-12 |
+        <p>Last updated on 2024-03-04 |
         
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/05-differential-expression.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -565,13 +565,12 @@ error and tested for being significantly different from 0 using the
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu">nbinomWaldTest</span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span></code></pre>
 </div>
-<div id="note" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h3>
 <div class="callout-content">
 <p>Standard differential expression analysis as performed above is
 wrapped into a single function, <code>DESeq()</code>. Running the first
@@ -818,13 +817,12 @@ LOC105243748  1.11194e-48</code></pre>
 </div>
 </div>
 </div>
-<div id="multiple-testing-correction" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="multiple-testing-correction" class="callout-inner">
-<h3 class="callout-title">Multiple testing correction<a class="anchor" aria-label="anchor" href="#multiple-testing-correction"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="multiple-testing-correction">Multiple testing correction<a class="anchor" aria-label="anchor" href="#multiple-testing-correction"></a></h3>
 <div class="callout-content">
 <p>Due to the high number of tests (one per gene) our DE results will
 contain a substantial number of <strong>false positives</strong>. For
@@ -1099,8 +1097,8 @@ beneficial.</li>
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/05-differential-expression.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/05-differential-expression.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2024-02-12",
-  "datePublished": "2024-02-19"
+  "dateModified": "2024-03-04",
+  "datePublished": "2024-03-04"
 }
 
   </script><script>
