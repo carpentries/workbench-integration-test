@@ -20,7 +20,7 @@ keywords: 'static site, lesson template, markdown, R, software'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha'
+life_cycle: 'beta'
 
 # License of the lesson
 license: 'CC-BY 4.0'
@@ -72,6 +72,7 @@ learners:
 - setup.md
 - github-pat.md
 - component-guide.md
+- migrating-from-styles.md
 - style.md
 
 # Information for Instructors
