@@ -403,13 +403,12 @@ trees) and the Digital Terrain Model (DTM, ground level). The resulting
 dataset is referred to as a Canopy Height Model (CHM) and represents the
 actual height of trees, buildings, etc. with the influence of ground
 elevation removed.</p>
-<figure><img src="fig/dc-spatial-raster/lidarTree-height.png" alt="Source: National Ecological Observatory Network (NEON)" class="figure mx-auto d-block"></figure><div id="more-resources" class="callout callout">
+<figure><img src="fig/dc-spatial-raster/lidarTree-height.png" alt="Source: National Ecological Observatory Network (NEON)" class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="more-resources" class="callout-inner">
-<h3 class="callout-title">More Resources<a class="anchor" aria-label="anchor" href="#more-resources"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="more-resources">More Resources<a class="anchor" aria-label="anchor" href="#more-resources"></a></h3>
 <div class="callout-content">
 <ul><li>Check out more on LiDAR CHM, DTM and DSM in this NEON Data Skills
 overview tutorial: <a href="https://www.neonscience.org/chm-dsm-dtm-gridded-lidar-data" class="external-link">What
@@ -442,7 +441,7 @@ maximum values?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -703,7 +702,7 @@ title and no axes ticks / labels.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Answers</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>There are missing values in our data, so we need to specify
 <code>na.rm = TRUE</code>.</li>
@@ -790,13 +789,12 @@ syntax is</p>
 <p><code>outputRaster &lt;- lapp(x, fun=functionName)</code></p>
 <p>In which raster can be either a SpatRaster or a SpatRasterDataset
 which is an object that holds rasters. See <code>help(sds)</code>.</p>
-<div id="data-tip" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="data-tip" class="callout-inner">
-<h3 class="callout-title">Data Tip<a class="anchor" aria-label="anchor" href="#data-tip"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="data-tip">Data Tip<a class="anchor" aria-label="anchor" href="#data-tip"></a></h3>
 <div class="callout-content">
 <p>To create a SpatRasterDataset, we call the function <code>sds</code>
 which can take a list of raster objects (each one created by calling
@@ -806,13 +804,12 @@ which can take a list of raster objects (each one created by calling
 </div>
 <p>Let’s perform the same subtraction calculation that we calculated
 above using raster math, using the <code>lapp()</code> function.</p>
-<div id="data-tip-1" class="callout callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="data-tip-1" class="callout-inner">
-<h3 class="callout-title">Data Tip<a class="anchor" aria-label="anchor" href="#data-tip-1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="data-tip-1">Data Tip<a class="anchor" aria-label="anchor" href="#data-tip-1"></a></h3>
 <div class="callout-content">
 <p>A custom function consists of a defined set of commands performed on
 a input object. Custom functions are particularly useful for tasks that
@@ -922,7 +919,7 @@ Joaquin Experimental Range.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Answers</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Use the <code>lapp()</code> function to subtract the two rasters
 &amp; create the CHM.</li>
@@ -1085,7 +1082,7 @@ data to a file.</li>
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/04-raster-calculations-in-r.html",
   "dateCreated": "2015-10-22",
   "dateModified": "2023-11-27",
-  "datePublished": "2024-02-26"
+  "datePublished": "2024-03-04"
 }
 
   </script><script>
