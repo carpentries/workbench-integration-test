@@ -338,7 +338,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Intro to Raster Data</h1>
-        <p>Last updated on 2023-11-27 |
+        <p>Last updated on 2024-03-06 |
         
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/01-raster-structure.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -352,6 +352,20 @@
 
         
 
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning in
+download.file("https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_graticules_all.zip",
+: cannot open URL
+'https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_graticules_all.zip':
+HTTP status was '500 Internal Server Error'</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error in download.file("https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_graticules_all.zip", : cannot open URL 'https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_graticules_all.zip'</code></pre>
+</div>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -406,7 +420,7 @@ for Geospatial Data</a> lesson. We will use two additional packages in
 this episode to work with raster data - the <code>terra</code> and
 <code>sf</code> packages. Make sure that you have these packages
 loaded.</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -414,12 +428,13 @@ loaded.</p>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span></code></pre>
 </div>
-<div id="callout1" class="callout">
+<div id="introduce-the-data" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="introduce-the-data">Introduce the Data<a class="anchor" aria-label="anchor" href="#introduce-the-data"></a></h3>
+<div id="introduce-the-data" class="callout-inner">
+<h3 class="callout-title">Introduce the Data<a class="anchor" aria-label="anchor" href="#introduce-the-data"></a>
+</h3>
 <div class="callout-content">
 <p>If not already discussed, introduce the datasets that will be used in
 this lesson. A brief introduction to the datasets can be found on the <a href="https://datacarpentry.org/geospatial-workshop/#data" class="external-link">Geospatial
@@ -436,7 +451,7 @@ GeoTIFF format contains a set of embedded tags with metadata about the
 raster data. We can use the function <code>describe()</code> to get
 information about our raster data before we read that data into R. It is
 ideal to do this before importing your data.</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -513,7 +528,7 @@ ideal to do this before importing your data.</p>
 </div>
 <p>If you wish to store this information in R, you can do the
 following:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -531,12 +546,13 @@ above.</p>
 <hr class="half-width"><p>Now that we’ve previewed the metadata for our GeoTIFF, let’s import
 this raster dataset into R and explore its metadata more closely. We can
 use the <code>rast()</code> function to open a raster in R.</p>
-<div id="callout2" class="callout">
+<div id="data-tip---object-names" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="data-tip---object-names">Data Tip - Object names<a class="anchor" aria-label="anchor" href="#data-tip---object-names"></a></h3>
+<div id="data-tip---object-names" class="callout-inner">
+<h3 class="callout-title">Data Tip - Object names<a class="anchor" aria-label="anchor" href="#data-tip---object-names"></a>
+</h3>
 <div class="callout-content">
 <p>To improve code readability, file and object names should be used
 that make it clear what is in the file. The data for this episode were
@@ -547,7 +563,7 @@ collected from Harvard Forest so we’ll use a naming convention of
 </div>
 <p>First we will load our raster file into R and view the data
 structure.</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -573,7 +589,7 @@ max value   :       416.07 </code></pre>
 other data range statistics. Similar to other R data structures like
 vectors and data frame columns, descriptive statistics for raster data
 can be retrieved like</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -599,7 +615,7 @@ can be retrieved like</p>
 statistics using every cell in the raster, it will take a random sample
 of 100,000 cells and calculate from that instead. To force calculation
 all the values, you can use the function <code>values</code>:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -620,7 +636,7 @@ all the values, you can use the function <code>values</code>:</p>
 convert it to a dataframe. We learned about dataframes in <a href="https://datacarpentry.org/r-intro-geospatial/04-data-structures-part2/index.html" class="external-link">an
 earlier lesson</a>. The <code>terra</code> package has an built-in
 function for conversion to a plotable dataframe.</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -628,7 +644,7 @@ function for conversion to a plotable dataframe.</p>
 </div>
 <p>Now when we view the structure of our data, we will see a standard
 dataframe format.</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -650,7 +666,7 @@ projection for our plots. This approximation is suitable for small areas
 that are not too close to the poles. Other coordinate systems are
 available in ggplot2 if needed, you can learn about them at their help
 page <code>?coord_map</code>.</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -661,12 +677,13 @@ page <code>?coord_map</code>.</p>
 </div>
 <figure style="text-align: center"><img src="../fig/01-raster-structure-rendered-ggplot-raster-1.png" alt="Raster plot with ggplot2 using the viridis color scale" class="figure mx-auto d-block"><figcaption>
 Raster plot with ggplot2 using the viridis color scale
-</figcaption></figure><div id="callout3" class="callout">
+</figcaption></figure><div id="plotting-tip" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="plotting-tip">Plotting Tip<a class="anchor" aria-label="anchor" href="#plotting-tip"></a></h3>
+<div id="plotting-tip" class="callout-inner">
+<h3 class="callout-title">Plotting Tip<a class="anchor" aria-label="anchor" href="#plotting-tip"></a>
+</h3>
 <div class="callout-content">
 <p>More information about the Viridis palette used above at <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" class="external-link">R
 Viridis package documentation</a>.</p>
@@ -691,10 +708,10 @@ from the <code>terra</code> package.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show plot</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>See <code>?plot</code> for more arguments to customize the plot</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -717,7 +734,7 @@ what meanings they have.</p>
 <h3 id="view-raster-coordinate-reference-system-crs-in-r">View Raster Coordinate Reference System (CRS) in R<a class="anchor" aria-label="anchor" href="#view-raster-coordinate-reference-system-crs-in-r"></a></h3>
 <p>We can view the CRS string associated with our R object using
 the<code>crs()</code> function.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -745,7 +762,7 @@ the<code>crs()</code> function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Answers</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><code>+units=m</code> tells us that our data is in meters.</p>
 </div>
@@ -797,7 +814,7 @@ dataset. In this case, given we are working with elevation data, these
 values represent the min/max elevation range at our site.</p>
 <p>Raster statistics are often calculated and embedded in a GeoTIFF for
 us. We can view these values:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -810,7 +827,7 @@ us. We can view these values:</p>
 min       305.07
 max       416.07</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -821,7 +838,7 @@ max       416.07</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[1] 305.07</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -832,16 +849,17 @@ max       416.07</code></pre>
 </h3>
 <pre class="output" tabindex="0"><code>[1] 416.07</code></pre>
 </div>
-<div id="callout4" class="callout">
+<div id="data-tip---set-min-and-max-values" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="data-tip---set-min-and-max-values">Data Tip - Set min and max values<a class="anchor" aria-label="anchor" href="#data-tip---set-min-and-max-values"></a></h3>
+<div id="data-tip---set-min-and-max-values" class="callout-inner">
+<h3 class="callout-title">Data Tip - Set min and max values<a class="anchor" aria-label="anchor" href="#data-tip---set-min-and-max-values"></a>
+</h3>
 <div class="callout-content">
 <p>If the minimum and maximum values haven’t already been calculated, we
 can calculate them using the <code>setMinMax()</code> function.</p>
-<div class="codewrapper sourceCode" id="cb25">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -862,7 +880,7 @@ time period.</p>
 <code>rast()</code> function to import one single band from a single or
 multi-band raster. We can view the number of bands in a raster using the
 <code>nly()</code> function.</p>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -961,9 +979,9 @@ dataset.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Answers</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb29">
+<div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1074,7 +1092,7 @@ colour.</p>
 using the <code>geom_histogram()</code> function which produces a
 histogram. Histograms are often useful in identifying outliers and bad
 data values in our raster data.</p>
-<div class="codewrapper sourceCode" id="cb31">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1095,7 +1113,7 @@ value with <code>binwidth</code>.</p>
 data. We can define the number of bins we want in the histogram by using
 the <code>bins</code> value in the <code>geom_histogram()</code>
 function.</p>
-<div class="codewrapper sourceCode" id="cb33">
+<div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1134,9 +1152,9 @@ in R</a> episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Answers</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb34">
+<div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1223,12 +1241,13 @@ resolution of 1x1 and units in meters, therefore resolution of 5x5 means
 </div>
 </div>
 </div>
-<div id="callout5" class="callout">
+<div id="more-resources" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="more-resources">More Resources<a class="anchor" aria-label="anchor" href="#more-resources"></a></h3>
+<div id="more-resources" class="callout-inner">
+<h3 class="callout-title">More Resources<a class="anchor" aria-label="anchor" href="#more-resources"></a>
+</h3>
 <div class="callout-content">
 <ul><li><a href="https://cran.r-project.org/package=terra" class="external-link">Read more about
 the <code>terra</code> package in R.</a></li>
@@ -1288,7 +1307,7 @@ to convert it to a dataframe.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/eb009faca249bac5b999ac5449990329d3eb7d0d" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/1bc5753e917d515c3d888ce6cc013c0a680eacfc" class="external-link">pegboard (0.7.3)</a>, and <a href="https://github.com/carpentries/varnish/tree/1a863b61af402d1d244833e7dccb67894067b0e3" class="external-link">varnish (1.0.1.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0deb88aff2c8a917211d7915cacf56583a8807be" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/release-0.7.4" class="external-link">pegboard (0.7.4.9000)</a>, and <a href="https://github.com/carpentries/varnish/tree/b8306721bf9c022b13a1925acb808e14d63acbf5" class="external-link">varnish (1.0.1.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1310,8 +1329,8 @@ to convert it to a dataframe.</li>
   "url": "https://datacarpentry.org/r-raster-vector-geospatial/instructor/01-raster-structure.html",
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/instructor/01-raster-structure.html",
   "dateCreated": "2015-10-22",
-  "dateModified": "2023-11-27",
-  "datePublished": "2024-03-04"
+  "dateModified": "2024-03-06",
+  "datePublished": "2024-03-06"
 }
 
   </script><script>
