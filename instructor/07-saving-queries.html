@@ -127,16 +127,14 @@
               <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
 
                 <div class="accordion-body">
-                  <?xml version="1.0" encoding="UTF-8"?><div class="accordion accordion-flush" id="accordionFlush1">
+                  <div class="accordion accordion-flush" id="accordionFlush1">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading1">
-      <a href="index.html">Summary and Schedule</a>
-    </div>
-    <!--/div.accordion-header-->
-  </div>
-  <!--/div.accordion-item-->
-</div>
-<!--/div.accordion-flush-->
+        <a href="index.html">Summary and Schedule</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
 
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
@@ -315,7 +313,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Saving queries</h1>
-        <p>Last updated on 2023-09-19 |
+        <p>Last updated on 2024-03-06 |
         
         <a href="https://github.com/librarycarpentry/lc-sql/edit/main/episodes/07-saving-queries.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -366,25 +364,25 @@ view, we can write:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">SQL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> journal_counts <span class="kw">AS</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> ISSNs, <span class="fu">COUNT</span>(<span class="op">*</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> articles</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> ISSNs;</span></code></pre>
+<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> journal_counts <span class="kw">AS</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="kw">SELECT</span> ISSNs, <span class="fu">COUNT</span>(<span class="op">*</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="kw">FROM</span> articles</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> ISSNs;</span></code></pre>
 </div>
 <p>Now, we will be able to access these results with a much shorter
 notation:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">SQL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> journal_counts;</span></code></pre>
+<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="kw">FROM</span> journal_counts;</span></code></pre>
 </div>
 <p>Assuming we do not need this view anymore, we can remove it from the
 database.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">SQL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">VIEW</span> journal_counts;</span></code></pre>
+<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">VIEW</span> journal_counts;</span></code></pre>
 </div>
 <p>In DBBrowser for SQLite, you can also create a view from any query by
 omitting the <code>CREATE VIEW viewname AS</code> statement and instead,
@@ -418,13 +416,13 @@ order.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">SQL<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> journal_counts <span class="kw">AS</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> journals.Journal_Title, <span class="fu">COUNT</span>(<span class="op">*</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> articles</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> journals</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">ON</span> articles.ISSNs <span class="op">=</span> journals.ISSNs</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Journal_Title</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">DESC</span></span></code></pre>
+<pre class="sourceCode sql" tabindex="0"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> journal_counts <span class="kw">AS</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="kw">SELECT</span> journals.Journal_Title, <span class="fu">COUNT</span>(<span class="op">*</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">FROM</span> articles</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="kw">JOIN</span> journals</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="kw">ON</span> articles.ISSNs <span class="op">=</span> journals.ISSNs</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Journal_Title</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">DESC</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -479,7 +477,7 @@ repeating the same operation more than once.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/joelnitta/sandpaper/tree/translate" class="external-link">sandpaper (0.15.0.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/1bc5753e917d515c3d888ce6cc013c0a680eacfc" class="external-link">pegboard (0.7.3)</a>, and <a href="https://github.com/carpentries/varnish/tree/add-l10n-support" class="external-link">varnish (0.4.0.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0deb88aff2c8a917211d7915cacf56583a8807be" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/release-0.7.4" class="external-link">pegboard (0.7.4.9000)</a>, and <a href="https://github.com/carpentries/varnish/tree/b8306721bf9c022b13a1925acb808e14d63acbf5" class="external-link">varnish (1.0.1.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -492,6 +490,7 @@ repeating the same operation more than once.</li>
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
   "@id": "https://librarycarpentry.github.io/lc-sql/instructor/07-saving-queries.html",
+  "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
@@ -500,8 +499,8 @@ repeating the same operation more than once.</li>
   "url": "https://librarycarpentry.github.io/lc-sql/instructor/07-saving-queries.html",
   "identifier": "https://librarycarpentry.github.io/lc-sql/instructor/07-saving-queries.html",
   "dateCreated": "2018-04-12",
-  "dateModified": "2023-09-19",
-  "datePublished": "2023-12-07"
+  "dateModified": "2024-03-06",
+  "datePublished": "2024-03-06"
 }
 
   </script><script>
