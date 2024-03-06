@@ -277,7 +277,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Migrating lessons from the previous infrastructure</h1>
-        <p>Last updated on 2024-02-26 |
+        <p>Last updated on 2024-03-06 |
         
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/learners/migrating-from-styles.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -305,8 +305,9 @@ same lesson content.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
 <div class="callout-content">
 <p><strong><em>We strongly recommend that you create a backup of your
 lesson repository before you follow this workflow.</em></strong></p>
@@ -354,8 +355,9 @@ transitioned lesson</a></li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
 <div class="callout-content">
 <p>Note: these steps assume your lesson exists in The Carpentries
 Incubator i.e. under the <code>carpentries-incubator</code> organisation
@@ -463,8 +465,9 @@ yourself some work:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
+</h3>
 <div class="callout-content">
 <p>Notes:</p>
 <ul><li>the <code>YOUR-LESSON-NAME.json</code> file does not need to exist
@@ -521,12 +524,13 @@ Bash, run:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">git</span> remote set-url origin ADDRESS-OF-YOUR-REMOTE <span class="co"># replace ADDRESS-OF-YOUR-REMOTE to set origin to the correct address for your lesson repository on GitHub</span></span></code></pre>
 </div>
 </li>
-</ol><div id="callout4" class="callout">
+</ol><div id="custom-workflows" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="custom-workflows">Custom workflow files<a class="anchor" aria-label="anchor" href="#custom-workflows"></a></h3>
+<div id="custom-workflows" class="callout-inner">
+<h3 class="callout-title">Custom workflow files<a class="anchor" aria-label="anchor" href="#custom-workflows"></a>
+</h3>
 <div class="callout-content">
 <p>The contents of the <code>.github</code> folder are not preserved by
 the transition tool. If you had any custom workflow files in your lesson
@@ -594,8 +598,9 @@ lesson<a class="anchor" aria-label="anchor" href="#github"></a></h3>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout5"></a>
+</h3>
 <div class="callout-content">
 <p><strong>We recommend that you try these steps out on a fork of your
 lesson first</strong>, so that you can be certain everything works
@@ -757,7 +762,7 @@ review and merge your changes.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/eb009faca249bac5b999ac5449990329d3eb7d0d" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/1bc5753e917d515c3d888ce6cc013c0a680eacfc" class="external-link">pegboard (0.7.3)</a>, and <a href="https://github.com/carpentries/varnish/tree/1a863b61af402d1d244833e7dccb67894067b0e3" class="external-link">varnish (1.0.1.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0deb88aff2c8a917211d7915cacf56583a8807be" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/release-0.7.4" class="external-link">pegboard (0.7.4.9000)</a>, and <a href="https://github.com/carpentries/varnish/tree/b8306721bf9c022b13a1925acb808e14d63acbf5" class="external-link">varnish (1.0.1.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -779,8 +784,8 @@ review and merge your changes.</li>
   "url": "https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html",
   "identifier": "https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html",
   "dateCreated": "2023-11-09",
-  "dateModified": "2024-02-26",
-  "datePublished": "2024-03-04"
+  "dateModified": "2024-03-06",
+  "datePublished": "2024-03-06"
 }
 
   </script><script>
