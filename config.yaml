@@ -80,6 +80,6 @@ url: 'https://datacarpentry.github.io/ecology-workshop'
 analytics: 'carpentries'
 lang: 'en'
 overview: true
-sandpaper: carpentries/sandpaper
+sandpaper: carpentries/sandpaper#576
 varnish: carpentries/varnish
-pegboard: carpentries/pegboard#152
+pegboard: carpentries/pegboard
