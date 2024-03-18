@@ -55,7 +55,13 @@
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/about.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/aio.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/images.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/index.html</loc>
@@ -115,16 +121,34 @@
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/about.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.org/r-raster-vector-geospatial/key-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.org/r-raster-vector-geospatial/profiles.html</loc>
