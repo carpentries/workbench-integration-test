@@ -337,7 +337,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Convert from .csv to a Vector Layer</h1>
-        <p>Last updated on 2024-03-12 |
+        <p>Last updated on 2024-03-25 |
         
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/10-vector-csv-to-shapefile-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -561,14 +561,14 @@ information that helps us determine the CRS:</p>
 <code>geodeticDa</code>: WGS84 – this is geodetic datum WGS84</li>
 <li>
 <code>utmZone</code>: 18</li>
-</ul><p>In <a href="09-vector-when-data-dont-line-up-crs/">When Vector Data
-Don’t Line Up - Handling Spatial Projection &amp; CRS in R</a> we
+</ul><p>In <a href="09-vector-when-data-dont-line-up-crs.html">When Vector
+Data Don’t Line Up - Handling Spatial Projection &amp; CRS in R</a> we
 learned about the components of a <code>proj4</code> string. We have
 everything we need to assign a CRS to our data frame.</p>
 <p>To create the <code>proj4</code> associated with UTM Zone 18 WGS84 we
-can look up the projection on the <a href="https://www.spatialreference.org/ref/epsg/wgs-84-utm-zone-18n/" class="external-link">Spatial
-Reference website</a>, which contains a list of CRS formats for each
-projection. From here, we can extract the <a href="https://www.spatialreference.org/ref/epsg/wgs-84-utm-zone-18n/proj4/" class="external-link">proj4
+can look up the projection on the <a href="https://spatialreference.org/ref/epsg/32618/" class="external-link">Spatial Reference
+website</a>, which contains a list of CRS formats for each projection.
+From here, we can extract the <a href="https://spatialreference.org/ref/epsg/32618/proj4.txt" class="external-link">proj4
 string for UTM Zone 18N WGS84</a>.</p>
 <p>However, if we have other data in the UTM Zone 18N projection, it’s
 much easier to use the <code>st_crs()</code> function to extract the CRS
@@ -766,7 +766,7 @@ object.</p>
 </div>
 <figure><img src="fig/10-vector-csv-to-shapefile-in-r-rendered-plot-data-points-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="plot-extent"><h2 class="section-heading">Plot Extent<a class="anchor" aria-label="anchor" href="#plot-extent"></a>
 </h2>
-<hr class="half-width"><p>In <a href="06-vector-open-shapefile-in-r/">Open and Plot Vector
+<hr class="half-width"><p>In <a href="06-vector-open-shapefile-in-r.html">Open and Plot Vector
 Layers in R</a> we learned about spatial object extent. When we plot
 several spatial layers in R using <code>ggplot</code>, all of the layers
 of the plot are considered in setting the boundaries of the plot. To
@@ -1005,7 +1005,7 @@ to a spatial object.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/50fc36868153a0d863504d3131304a6b1f8f478f" class="external-link">sandpaper (0.16.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/e9ca729c7db3ca97f016480679f9f58d115d2721" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/9573b87e7ea2eab4a19e5aa95c5eb5edf5af4121" class="external-link">varnish (1.0.1.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/915ad12f3b239b405d83b1fe2aaa09b8107b127d" class="external-link">sandpaper (0.16.4.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/e9ca729c7db3ca97f016480679f9f58d115d2721" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/a7e7e561a87d890a8b7b9fd2ce2880b28058e3ff" class="external-link">varnish (1.0.2.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1027,8 +1027,8 @@ to a spatial object.</li>
   "url": "https://datacarpentry.org/r-raster-vector-geospatial/10-vector-csv-to-shapefile-in-r.html",
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/10-vector-csv-to-shapefile-in-r.html",
   "dateCreated": "2015-10-22",
-  "dateModified": "2024-03-12",
-  "datePublished": "2024-03-18"
+  "dateModified": "2024-03-25",
+  "datePublished": "2024-03-25"
 }
 
   </script><script>

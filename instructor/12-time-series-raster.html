@@ -336,7 +336,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Raster Time Series Data</h1>
-        <p>Last updated on 2024-03-12 |
+        <p>Last updated on 2024-03-25 |
         
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/12-time-series-raster.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -509,7 +509,8 @@ make sure they meet our expectations.</p>
 [13] "data/NEON-DS-Landsat-NDVI/HARV/2011/NDVI/309_HARV_ndvi_crop.tif"</code></pre>
 </div>
 <p>Now we have a list of all GeoTIFF files in the NDVI directory for
-Harvard Forest. Next, we will create a stack of rasters from this list
+Harvard Forest. The number at the start of the filenames represents the
+julilan day. Next, we will create a stack of rasters from this list
 using the <code>rast()</code> function. We worked with the
 <code>rast()</code> function in <a href="05-raster-multi-band-in-r/">an
 earlier episode</a>.</p>
@@ -613,16 +614,16 @@ questions.</p>
 can use the <code>ggplot()</code> command to create a multi-panelled
 plot showing each band in our RasterStack. First we need to create a
 data frame object. Because there are multiple columns in our data that
-are not variables, we will tidy (or “gather”) the data so that we have a
+are not variables, we will tidy (or “pivot”) the data so that we have a
 single column with the NDVI observations. We will use the function
-<code>gather()</code> from the <code>tidyr</code> package to do
+<code>pivot_longer()</code> from the <code>tidyr</code> package to do
 this:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">NDVI_HARV_stack_df</span> <span class="op">&lt;-</span> <span class="fu">as.data.frame</span><span class="op">(</span><span class="va">NDVI_HARV_stack</span>, xy <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>    <span class="fu">gather</span><span class="op">(</span><span class="va">variable</span>, <span class="va">value</span>, <span class="op">-</span><span class="op">(</span><span class="va">x</span><span class="op">:</span><span class="va">y</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<span>    <span class="fu">pivot_longer</span><span class="op">(</span><span class="op">-</span><span class="op">(</span><span class="va">x</span><span class="op">:</span><span class="va">y</span><span class="op">)</span>, names_to <span class="op">=</span> <span class="st">"variable"</span>, values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Now we can plot our data using <code>ggplot()</code>. We want to
 create a separate panel for each time point in our time series, so we
@@ -661,7 +662,7 @@ same code we used above.</p>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">NDVI_HARV_stack_df</span> <span class="op">&lt;-</span> <span class="fu">as.data.frame</span><span class="op">(</span><span class="va">NDVI_HARV_stack</span>, xy <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>    <span class="fu">gather</span><span class="op">(</span><span class="va">variable</span>, <span class="va">value</span>, <span class="op">-</span><span class="op">(</span><span class="va">x</span><span class="op">:</span><span class="va">y</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu">pivot_longer</span><span class="op">(</span><span class="op">-</span><span class="op">(</span><span class="va">x</span><span class="op">:</span><span class="va">y</span><span class="op">)</span>, names_to <span class="op">=</span> <span class="st">"variable"</span>, values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_raster</span><span class="op">(</span>data <span class="op">=</span> <span class="va">NDVI_HARV_stack_df</span> , <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span>, fill <span class="op">=</span> <span class="va">value</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -978,7 +979,7 @@ format.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/50fc36868153a0d863504d3131304a6b1f8f478f" class="external-link">sandpaper (0.16.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/e9ca729c7db3ca97f016480679f9f58d115d2721" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/9573b87e7ea2eab4a19e5aa95c5eb5edf5af4121" class="external-link">varnish (1.0.1.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/915ad12f3b239b405d83b1fe2aaa09b8107b127d" class="external-link">sandpaper (0.16.4.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/e9ca729c7db3ca97f016480679f9f58d115d2721" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/a7e7e561a87d890a8b7b9fd2ce2880b28058e3ff" class="external-link">varnish (1.0.2.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1000,8 +1001,8 @@ format.</li>
   "url": "https://datacarpentry.org/r-raster-vector-geospatial/instructor/12-time-series-raster.html",
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/instructor/12-time-series-raster.html",
   "dateCreated": "2015-10-22",
-  "dateModified": "2024-03-12",
-  "datePublished": "2024-03-18"
+  "dateModified": "2024-03-25",
+  "datePublished": "2024-03-25"
 }
 
   </script><script>
