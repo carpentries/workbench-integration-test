@@ -70,36 +70,41 @@ how they relate to these different types of data formats.
 ### Long and wide data formats
 
 In the `interviews` data, each row contains the values of variables associated
-with each record collected (each interview in the villages), where it is stated
+with each record collected (each interview in the villages). It is stated
 that the `key_ID` was "added to provide a unique Id for each observation"
-and the `instance_ID` "does this as well but it is not as convenient to use."
+and the `instanceID` "does this as well but it is not as convenient to use."
 
-However, with some inspection, we notice that there are more than one row in the
-dataset with the same `key_ID` (as seen below). However, the `instanceID`s
-associated with these duplicate `key_ID`s are not the same. Thus, we should
-think of `instanceID` as the unique identifier for observations!
+Once we have established that `key_ID` and `instanceID` are both unique we can use 
+either variable as an identifier corresponding to the 131 interview records.
 
 
 ```r
-interviews %>%
-  select(key_ID, village, interview_date, instanceID)
+interviews %>% 
+  select(key_ID) %>% 
+  distinct() %>% 
+  count()
 ```
 
 ```{.output}
-# A tibble: 131 × 4
-   key_ID village  interview_date      instanceID                               
-    <dbl> <chr>    <dttm>              <chr>                                    
- 1      1 God      2016-11-17 00:00:00 uuid:ec241f2c-0609-46ed-b5e8-fe575f6cefef
- 2      2 God      2016-11-17 00:00:00 uuid:099de9c9-3e5e-427b-8452-26250e840d6e
- 3      3 God      2016-11-17 00:00:00 uuid:193d7daf-9582-409b-bf09-027dd36f9007
- 4      4 God      2016-11-17 00:00:00 uuid:148d1105-778a-4755-aa71-281eadd4a973
- 5      5 God      2016-11-17 00:00:00 uuid:2c867811-9696-4966-9866-f35c3e97d02d
- 6      6 God      2016-11-17 00:00:00 uuid:daa56c91-c8e3-44c3-a663-af6a49a2ca70
- 7      7 God      2016-11-17 00:00:00 uuid:ae20a58d-56f4-43d7-bafa-e7963d850844
- 8      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
- 9      9 Chirodzo 2016-11-16 00:00:00 uuid:846103d2-b1db-4055-b502-9cd510bb7b37
-10     10 Chirodzo 2016-12-16 00:00:00 uuid:8f4e49bc-da81-4356-ae34-e0d794a23721
-# ℹ 121 more rows
+# A tibble: 1 × 1
+      n
+  <int>
+1   131
+```
+
+
+```r
+interviews %>% 
+  select(instanceID) %>% 
+  distinct() %>% 
+  count()
+```
+
+```{.output}
+# A tibble: 1 × 1
+      n
+  <int>
+1   131
 ```
 
 As seen in the code below, for each interview date in each village no
@@ -118,16 +123,16 @@ interviews %>%
 # A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1     70 Chirodzo 2016-11-16 00:00:00 uuid:1feb0108-4599-4bf9-8a07-1f5e66a50a0a
- 2    192 Chirodzo 2017-06-03 00:00:00 uuid:f94409a6-e461-4e4c-a6fb-0072d3d58b00
- 3     56 Chirodzo 2016-11-16 00:00:00 uuid:973c4ac6-f887-48e7-aeaf-4476f2cfab76
- 4      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
- 5     61 Chirodzo 2016-11-16 00:00:00 uuid:2401cf50-8859-44d9-bd14-1bf9128766f2
- 6    200 Chirodzo 2017-06-04 00:00:00 uuid:aa77a0d7-7142-41c8-b494-483a5b68d8a7
- 7     52 Chirodzo 2016-11-16 00:00:00 uuid:6db55cb4-a853-4000-9555-757b7fae2bcf
- 8     54 Chirodzo 2016-11-16 00:00:00 uuid:273ab27f-9be3-4f3b-83c9-d3e1592de919
- 9     49 Chirodzo 2016-11-16 00:00:00 uuid:2303ebc1-2b3c-475a-8916-b322ebf18440
-10     34 Chirodzo 2016-11-17 00:00:00 uuid:14c78c45-a7cc-4b2a-b765-17c82b43feb4
+ 1     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
+ 2     35 Chirodzo 2016-11-17 00:00:00 uuid:ff7496e7-984a-47d3-a8a1-13618b5683ce
+ 3     54 Chirodzo 2016-11-16 00:00:00 uuid:273ab27f-9be3-4f3b-83c9-d3e1592de919
+ 4    192 Chirodzo 2017-06-03 00:00:00 uuid:f94409a6-e461-4e4c-a6fb-0072d3d58b00
+ 5     36 Chirodzo 2016-11-17 00:00:00 uuid:c90eade0-1148-4a12-8c0e-6387a36f45b1
+ 6     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
+ 7     37 Chirodzo 2016-11-17 00:00:00 uuid:408c6c93-d723-45ef-8dee-1b1bd3fe20cd
+ 8     46 Chirodzo 2016-11-17 00:00:00 uuid:35f297e0-aa5d-4149-9b7b-4965004cfc37
+ 9    127 Chirodzo 2016-11-16 00:00:00 uuid:f6d04b41-b539-4e00-868a-0f62b427587d
+10     64 Chirodzo 2016-11-16 00:00:00 uuid:28cfd718-bf62-4d90-8100-55fafbe45d06
 ```
 
 We notice that the layout or format of the `interviews` data is in a format that
