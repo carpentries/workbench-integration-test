@@ -32,7 +32,7 @@ To make sure everyone will use the same dataset for this lesson, we'll read
 again the SAFI dataset that we downloaded earlier.
 
 
-```r
+``` r
 ## load the tidyverse
 library(tidyverse)
 library(here)
@@ -78,14 +78,14 @@ Once we have established that `key_ID` and `instanceID` are both unique we can u
 either variable as an identifier corresponding to the 131 interview records.
 
 
-```r
+``` r
 interviews %>% 
   select(key_ID) %>% 
   distinct() %>% 
   count()
 ```
 
-```output
+``` output
 # A tibble: 1 × 1
       n
   <int>
@@ -93,14 +93,14 @@ interviews %>%
 ```
 
 
-```r
+``` r
 interviews %>% 
   select(instanceID) %>% 
   distinct() %>% 
   count()
 ```
 
-```output
+``` output
 # A tibble: 1 × 1
       n
   <int>
@@ -112,27 +112,27 @@ As seen in the code below, for each interview date in each village no
 format, where each observation occupies only one row in the dataframe.
 
 
-```r
+``` r
 interviews %>%
   filter(village == "Chirodzo") %>%
   select(key_ID, village, interview_date, instanceID) %>%
   sample_n(size = 10)
 ```
 
-```output
+``` output
 # A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1    200 Chirodzo 2017-06-04 00:00:00 uuid:aa77a0d7-7142-41c8-b494-483a5b68d8a7
- 2     46 Chirodzo 2016-11-17 00:00:00 uuid:35f297e0-aa5d-4149-9b7b-4965004cfc37
- 3     56 Chirodzo 2016-11-16 00:00:00 uuid:973c4ac6-f887-48e7-aeaf-4476f2cfab76
- 4     43 Chirodzo 2016-11-17 00:00:00 uuid:b4dff49f-ef27-40e5-a9d1-acf287b47358
- 5     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
- 6     53 Chirodzo 2016-11-16 00:00:00 uuid:cc7f75c5-d13e-43f3-97e5-4f4c03cb4b12
- 7     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
- 8     45 Chirodzo 2016-11-17 00:00:00 uuid:e3554d22-35b1-4fb9-b386-dd5866ad5792
- 9     52 Chirodzo 2016-11-16 00:00:00 uuid:6db55cb4-a853-4000-9555-757b7fae2bcf
-10     57 Chirodzo 2016-11-16 00:00:00 uuid:a7184e55-0615-492d-9835-8f44f3b03a71
+ 1     68 Chirodzo 2016-11-16 00:00:00 uuid:ef04b3eb-b47d-412e-9b09-4f5e08fc66f9
+ 2     50 Chirodzo 2016-11-16 00:00:00 uuid:4267c33c-53a7-46d9-8bd6-b96f58a4f92c
+ 3      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
+ 4     58 Chirodzo 2016-11-16 00:00:00 uuid:a7a3451f-cd0d-4027-82d9-8dcd1234fcca
+ 5     54 Chirodzo 2016-11-16 00:00:00 uuid:273ab27f-9be3-4f3b-83c9-d3e1592de919
+ 6     69 Chirodzo 2016-11-16 00:00:00 uuid:f86933a5-12b8-4427-b821-43c5b039401d
+ 7     62 Chirodzo 2016-11-16 00:00:00 uuid:c6597ecc-cc2a-4c35-a6dc-e62c71b345d6
+ 8     10 Chirodzo 2016-12-16 00:00:00 uuid:8f4e49bc-da81-4356-ae34-e0d794a23721
+ 9     47 Chirodzo 2016-11-17 00:00:00 uuid:2d0b1936-4f82-4ec3-a3b5-7c3c8cd6cc2b
+10     52 Chirodzo 2016-11-16 00:00:00 uuid:6db55cb4-a853-4000-9555-757b7fae2bcf
 ```
 
 We notice that the layout or format of the `interviews` data is in a format that
@@ -215,7 +215,7 @@ it line by line. First we create a new object (`interviews_items_owned`) based o
 the `interviews` data frame.
 
 
-```r
+``` r
 interviews_items_owned <- interviews %>%
 ```
 
@@ -231,7 +231,7 @@ panel, that respondent will now have two rows, one with "television" and the
 other with "solar panel" in the `items_owned` column.
 
 
-```r
+``` r
 separate_longer_delim(items_owned, delim = ";") %>%
 ```
 
@@ -244,7 +244,7 @@ the `NA` values in, and the value that you would like to replace the `NA`s. This
 ends up looking like this:
 
 
-```r
+``` r
 replace_na(list(items_owned = "no_listed_items")) %>%
 ```
 
@@ -256,7 +256,7 @@ with logical values describing whether the household did (`TRUE`) or didn't
 (`FALSE`) own that particular item.
 
 
-```r
+``` r
 mutate(items_owned_logical = TRUE) %>%
 ```
 
@@ -269,7 +269,7 @@ declare that for items that are missing, we want to fill those cells with the
 value of `FALSE` instead of `NA`.
 
 
-```r
+``` r
 pivot_wider(names_from = items_owned,
             values_from = items_owned_logical,
             values_fill = list(items_owned_logical = FALSE))
@@ -280,7 +280,7 @@ pivot_wider(names_from = items_owned,
 Combining the above steps, the chunk looks like this:
 
 
-```r
+``` r
 interviews_items_owned <- interviews %>%
   separate_longer_delim(items_owned, delim = ";") %>%
   replace_na(list(items_owned = "no_listed_items")) %>%
@@ -305,14 +305,14 @@ This format of the data allows us to do interesting things, like make a table
 showing the number of respondents in each village who owned a particular item:
 
 
-```r
+``` r
 interviews_items_owned %>%
   filter(bicycle) %>%
   group_by(village) %>%
   count(bicycle)
 ```
 
-```output
+``` output
 # A tibble: 3 × 3
 # Groups:   village [3]
   village  bicycle     n
@@ -331,7 +331,7 @@ villages and calculate the mean number of items, so each average is grouped
 by village.
 
 
-```r
+``` r
 interviews_items_owned %>%
     select(-no_listed_items) %>% 
     mutate(number_items = rowSums(select(., bicycle:car))) %>%
@@ -339,7 +339,7 @@ interviews_items_owned %>%
     summarize(mean_items = mean(number_items))
 ```
 
-```output
+``` output
 # A tibble: 3 × 2
   village  mean_items
   <chr>         <dbl>
@@ -370,7 +370,7 @@ column names. We will do this in two steps to make this process a bit clearer.
 
 
 
-```r
+``` r
 interviews_long <- interviews_items_owned %>%
   pivot_longer(cols = bicycle:car,
                names_to = "items_owned",
@@ -397,14 +397,14 @@ require a different process.
 ## Solution
 
 
-```r
+``` r
 interviews_long %>%
   filter(items_owned_logical) %>% 
   group_by(village) %>% 
   count(items_owned)
 ```
 
-```output
+``` output
 # A tibble: 47 × 3
 # Groups:   village [3]
    village  items_owned         n
@@ -438,7 +438,7 @@ not   an actual item, but rather the absence thereof.
 ## Solution
 
 
-```r
+``` r
 interviews_long %>% 
   filter(items_owned_logical,
          items_owned != "no_listed_items") %>% 
@@ -448,7 +448,7 @@ interviews_long %>%
   summarise(mean_items = mean(n))
 ```
 
-```output
+``` output
 # A tibble: 3 × 2
   village  mean_items
   <chr>         <dbl>
@@ -478,7 +478,7 @@ we can repeat the steps we applied to `items_owned` and apply them to
 we will call it `interviews_plotting`.
 
 
-```r
+``` r
 interviews_plotting <- interviews %>%
   ## pivot wider by items_owned
   separate_longer_delim(items_owned, delim = ";") %>%
@@ -523,7 +523,7 @@ dataset where each of the columns includes only one data value. Now we can save
 this data frame to our `data_output` directory.
 
 
-```r
+``` r
 write_csv (interviews_plotting, file = "data_output/interviews_plotting.csv")
 ```
 
