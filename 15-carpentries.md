@@ -159,6 +159,20 @@ As a class or in groups, see how many of the following terms you can define.
 
 This should take about 5 minutes.
 
+::::::::::::::::::::::: solution
+
+### Links to definitions
+These terms are defined in our Community Glossary.
+
+- [Lesson](https://github.com/carpentries/community-development/blob/main/glossary.md#lesson)
+- [Episode](https://github.com/carpentries/community-development/blob/main/glossary.md#episode-lesson-episode)
+- [Workshop](https://github.com/carpentries/community-development/blob/main/glossary.md#workshop)
+- [Lesson Program](https://github.com/carpentries/community-development/blob/main/glossary.md#lesson-program)
+- [Instructor](https://github.com/carpentries/community-development/blob/main/glossary.md#instructor)
+- [(Instructor) Trainer](https://github.com/carpentries/community-development/blob/main/glossary.md#instructor-trainer)
+
+::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## How to Organise a Carpentries Workshop Locally
@@ -313,7 +327,7 @@ This exercise should take about 5 minutes.
 [coreteam-page]: https://carpentries.org/team/
 [F1000]: https://f1000research.com/articles/3-62/v2
 [IJDC]: https://ijdc.net/index.php/ijdc/article/view/10.1.135
-[LIBERQ]: https://www.liberquarterly.eu/article/10.18352/lq.10176/
+[LIBERQ]: https://doi.org/10.18352/lq.10176
 [values-page]: https://carpentries.org/values/
 [workshopsreq-page]: https://carpentries.org/workshops/#workshop-core
 [docs-workshop-checklists]: https://docs.carpentries.org/topic_folders/hosts_instructors/hosts_instructors_checklist.html
