@@ -92,4 +92,4 @@ workbench-beta: yes
 
 sandpaper: carpentries/sandpaper
 varnish: carpentries/varnish
-pegboard: carpentries/pegboard#158
+pegboard: carpentries/pegboard
