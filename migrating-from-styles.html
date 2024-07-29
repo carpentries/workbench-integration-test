@@ -324,7 +324,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Migrating lessons from the previous infrastructure</h1>
-        <p>Last updated on 2024-07-01 |
+        <p>Last updated on 2024-07-29 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/learners/migrating-from-styles.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -655,12 +655,19 @@ before making permanent changes to your main lesson repository.</p>
 </div>
 </div>
 </div>
-<ol style="list-style-type: decimal"><li><p>Record your lesson creation date in config.yaml: run
+<ol style="list-style-type: decimal"><li>
+<p>Adjust the <code>config.yaml</code>:</p>
+<ul><li>Record your lesson creation date in config.yaml: run
 <code>git log</code> and hit <kbd>Shift+G</kbd> to jump to end of file,
 note down the date when the first commit was made. Then, using your
 favourite text editor, open <code>config.yaml</code> and modify the
 <code>created</code> field by replacing <code>~</code> with this
-creation date in YYYY-MM-DD format.</p></li>
+creation date in YYYY-MM-DD format.</li>
+<li>Check the <code>source</code> URL specified in
+<code>config.yaml</code>: this may be set incorrectly during the
+transition process. Adjust it to the correct URL for your lesson source
+repository on GitHub.</li>
+</ul></li>
 <li>
 <p>Commit the changes you made to the lesson config file:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -809,7 +816,7 @@ review and merge your changes.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/82d0ee3e5b062e2bc129fa10d711040f8e605bc4" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/ad2542f7f7b9c3f90cc871b355ff81ec14a09ca9" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1f1e219d53c8ac42d5f2864cf2ecaf3f84ff4c0c" class="external-link">varnish (1.0.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/ca752edb75cb0a7cc3cd30710231c062725437ab" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/ad2542f7f7b9c3f90cc871b355ff81ec14a09ca9" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1f1e219d53c8ac42d5f2864cf2ecaf3f84ff4c0c" class="external-link">varnish (1.0.3)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -831,8 +838,8 @@ review and merge your changes.</li>
   "url": "https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html",
   "identifier": "https://carpentries.github.io/sandpaper-docs/migrating-from-styles.html",
   "dateCreated": "2023-11-09",
-  "dateModified": "2024-07-01",
-  "datePublished": "2024-07-22"
+  "dateModified": "2024-07-29",
+  "datePublished": "2024-07-29"
 }
 
   </script><script>
