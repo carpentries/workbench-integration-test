@@ -431,8 +431,7 @@ projections?</li>
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="things-youll-need-to-complete-this-episode" class="callout-inner">
-<h3 class="callout-title">Things You’ll Need To Complete This Episode<a class="anchor" aria-label="anchor" href="#things-youll-need-to-complete-this-episode"></a>
-</h3>
+<h3 class="callout-title">Things You’ll Need To Complete This Episode</h3>
 <div class="callout-content">
 <p>See the <a href=".">lesson homepage</a> for detailed information
 about the software, data, and other prerequisites you will need to work
@@ -446,8 +445,7 @@ different Coordinate Reference Systems (CRS). This episode explains how
 to deal with rasters in different, known CRSs. It will walk though
 reprojecting rasters in R using the <code>project()</code> function in
 the <code>terra</code> package.</p>
-<section><h2 class="section-heading" id="raster-projection-in-r">Raster Projection in R<a class="anchor" aria-label="anchor" href="#raster-projection-in-r"></a>
-<a class="anchor" aria-label="anchor" href="#raster-projection-in-r"></a></h2>
+<section><h2 class="section-heading" id="raster-projection-in-r">Raster Projection in R<a class="anchor" aria-label="anchor" href="#raster-projection-in-r"></a></h2>
 <hr class="half-width"><p>In the <a href="02-raster-plot/">Plot Raster Data in R</a> episode,
 we learned how to layer a raster file on top of a hillshade for a nice
 looking basemap. In that episode, all of our data were in the same CRS.
@@ -538,8 +536,7 @@ something has gone wrong. We can look at Coordinate Reference Systems
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
-</h3>
+<h3 class="callout-title">Exercise</h3>
 <div class="callout-content">
 <p>View the CRS for each of these two datasets. What projection does
 each use?</p>
@@ -638,8 +635,7 @@ is represented by latitude and longitude values.</p>
 when plotted in R. We need to reproject (or change the projection of)
 <code>DTM_hill_HARV</code> into the UTM CRS. Alternatively, we could
 reproject <code>DTM_HARV</code> into WGS84.</p>
-</section><section><h2 class="section-heading" id="reproject-rasters">Reproject Rasters<a class="anchor" aria-label="anchor" href="#reproject-rasters"></a>
-<a class="anchor" aria-label="anchor" href="#reproject-rasters"></a></h2>
+</section><section><h2 class="section-heading" id="reproject-rasters">Reproject Rasters<a class="anchor" aria-label="anchor" href="#reproject-rasters"></a></h2>
 <hr class="half-width"><p>We can use the <code>project()</code> function to reproject a raster
 into a new CRS. Keep in mind that reprojection only works when you first
 have a defined CRS for the raster object that you want to reproject. It
@@ -650,8 +646,7 @@ cannot be used if no CRS is defined. Lucky for us, the
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="data-tip" class="callout-inner">
-<h3 class="callout-title">Data Tip<a class="anchor" aria-label="anchor" href="#data-tip"></a>
-</h3>
+<h3 class="callout-title">Data Tip</h3>
 <div class="callout-content">
 <p>When we reproject a raster, we move it from one “grid” to another.
 Thus, we are modifying the data! Keep this in mind as we work with
@@ -786,8 +781,7 @@ values of <code>DTM_hillUTMZ18N_HARV</code> are different from
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-extent-change-with-crs-change" class="callout-inner">
-<h3 class="callout-title">Challenge: Extent Change with CRS Change<a class="anchor" aria-label="anchor" href="#challenge-extent-change-with-crs-change"></a>
-</h3>
+<h3 class="callout-title">Challenge: Extent Change with CRS Change</h3>
 <div class="callout-content">
 <p>Why do you think the two extents differ?</p>
 </div>
@@ -807,8 +801,7 @@ expressed in decimal degrees.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="deal-with-raster-resolution">Deal with Raster Resolution<a class="anchor" aria-label="anchor" href="#deal-with-raster-resolution"></a>
-<a class="anchor" aria-label="anchor" href="#deal-with-raster-resolution"></a></h2>
+</section><section><h2 class="section-heading" id="deal-with-raster-resolution">Deal with Raster Resolution<a class="anchor" aria-label="anchor" href="#deal-with-raster-resolution"></a></h2>
 <hr class="half-width"><p>Let’s next have a look at the resolution of our reprojected hillshade
 versus our original data.</p>
 <div class="codewrapper sourceCode" id="cb19">
@@ -900,8 +893,7 @@ our hillshade to produce a nice looking, textured map!</p>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-reproject-then-plot-a-digital-terrain-model" class="callout-inner">
-<h3 class="callout-title">Challenge: Reproject, then Plot a Digital Terrain Model<a class="anchor" aria-label="anchor" href="#challenge-reproject-then-plot-a-digital-terrain-model"></a>
-</h3>
+<h3 class="callout-title">Challenge: Reproject, then Plot a Digital Terrain Model</h3>
 <div class="callout-content">
 <p>Create a map of the <a href="https://www.neonscience.org/field-sites/field-sites-map/SJER" class="external-link">San
 Joaquin Experimental Range</a> field site using the
@@ -962,7 +954,7 @@ files.</p>
 </div>
 <div id="challenge-reproject-then-plot-a-digital-terrain-model" class="callout-inner">
 <h3 class="callout-title">Challenge: Reproject, then Plot a Digital
-Terrain Model<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-reproject-then-plot-a-digital-terrain-model"></a>
+Terrain Model<em> (continued)</em>
 </h3>
 <div class="callout-content">
 <p>If you completed the San Joaquin plotting challenge in the <a href="02-raster-plot/">Plot Raster Data in R</a> episode, how does the
@@ -989,8 +981,7 @@ plotting.</p>
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
+<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>In order to plot two raster data sets together, they must be in the
 same CRS.</li>
@@ -1035,7 +1026,7 @@ CRSs.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/13778fc3e8bc18a612ab6a2c15d25ccfe637be36" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/ad2542f7f7b9c3f90cc871b355ff81ec14a09ca9" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1f1e219d53c8ac42d5f2864cf2ecaf3f84ff4c0c" class="external-link">varnish (1.0.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/2b29aeb8b29a6dce2336b595c53d31b81594a5d2" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/ad2542f7f7b9c3f90cc871b355ff81ec14a09ca9" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1f1e219d53c8ac42d5f2864cf2ecaf3f84ff4c0c" class="external-link">varnish (1.0.3)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1058,7 +1049,7 @@ CRSs.</li>
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/instructor/03-raster-reproject-in-r.html",
   "dateCreated": "2015-10-22",
   "dateModified": "2024-07-22",
-  "datePublished": "2024-08-05"
+  "datePublished": "2024-08-12"
 }
 
   </script><script>
