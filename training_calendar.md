@@ -20,10 +20,6 @@ Invited trainees can register for events listed below by clicking on the link fo
 
 Registration codes provided to members and other groups are active immediately and may be used for any event until one week prior to its start date.
 
-#### Open Instructor Training
-
-Open Instructor Training codes become active for each event starting one month before the start date. All events are closed one week before their start date. Please register for only one training; duplicate registrations may be deleted.
-
 ### Cancellation Policies
 
 Cancellation may be performed in Eventbrite up to the start of the event. To support our program and honor the time donated by our Instructor Trainers, we ask that cancellations be made as far in advance as possible to allow other trainees to register before the 1 week deadline.
@@ -43,12 +39,6 @@ More details on our [cancellation and makeup policy](https://docs.carpentries.or
 ### Upcoming Instructor Training
 
 New trainings are added to this calendar on a quarterly basis (generally in early March, June, September, and December).
-
-<hr>
-
-#### [August 27-28 2024](https://www.eventbrite.com/e/online-instructor-training-august-27-28-2024-tickets-917293217707)
-
-**Two 8-hour days:** 9 am to 5 pm N. America Pacific Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=The+Carpentries+Instructor+Training+&iso=20240827T09&p1=137&ah=8)
 
 <hr>
 
