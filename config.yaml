@@ -88,8 +88,8 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
-workbench-beta: yes
 
-sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish
+
+sandpaper: carpentries/sandpaper#601
+varnish: carpentries/varnish#148
 pegboard: carpentries/pegboard
