@@ -109,8 +109,9 @@ profiles:
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 
-
+analytics: carpentries
 url: 'https://carpentries.github.io/instructor-training'
+lang: en
 sandpaper: carpentries/sandpaper
 varnish: carpentries/varnish
 pegboard: carpentries/pegboard
