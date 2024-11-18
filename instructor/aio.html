@@ -390,7 +390,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction to The Carpentries Workbench</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -776,7 +776,7 @@ is the engine that puts everything together.</li>
 </div>
 </section></section><section id="aio-episodes"><p>Content from <a href="episodes.html">Episode Structure</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/episodes.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 17 minutes</p>
@@ -2272,7 +2272,7 @@ docs: adding a caption to your table</a><a href="#fnref3" class="footnote-back">
 </ol>
 </div></section><section id="aio-editing"><p>Content from <a href="editing.html">Editing a {sandpaper} lesson</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/editing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -2388,7 +2388,7 @@ preview the lesson again.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>What you should notice is that the only file updated when you
 re-render the lesson is the file you changed
@@ -2576,7 +2576,7 @@ change?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The episodes appear in the same order as the configuration file and
 the timings have rearranged themselves to reflect that.</p>
@@ -2584,6 +2584,48 @@ the timings have rearranged themselves to reflect that.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level3">
+<h3 id="configuring-web-analytics">Configuring web analytics<a class="anchor" aria-label="anchor" href="#configuring-web-analytics"></a>
+</h3>
+<p>The optional <code>analytics</code> field can be used to configure
+web analytics, e.g. with <a href="https://matomo.org/" class="external-link">Matomo</a> or
+Google Analytics. There are currently three options for
+<code>analytics</code>:</p>
+<ol style="list-style-type: decimal">
+<li>
+<code>NULL</code>: disables tracking for that lesson. This is the
+default behviour, and is equivalent to omitting the
+<code>analytics</code> field from <code>config.yaml</code>
+altogether.</li>
+<li>
+<code>carpentries</code>: adds the tracking script needed for the
+lesson to be tracked by The Carpentries self-hosted Matomo system. This
+option works only for The Carpentries lessons: community-owned lessons
+cannot be tracked in the same way.</li>
+<li>
+<code>&lt;user_string&gt;</code>: allows the user to define their
+own tracker script string. For legibility, use the <code>|</code> symbol
+to indicate that the value of the YAML field will be split across
+multiple indented lines (<a href="https://stackoverflow.com/a/21699210" class="external-link">known as a ‘literal block’
+in YAML</a>). For example, to configure for Google Analytics:</li>
+</ol>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">analytics</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  &lt;script async src='https://www.googletagmanager.com/gtag/js?id={YOUR TRACKING ID}#' &gt;&lt;/script&gt;</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  &lt;script&gt;</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    window.dataLayer = window.dataLayer || [];</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    function gtag(){dataLayer.push(arguments);}</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    gtag('js', new Date());</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    gtag('config', '{YOUR TRACKING ID}');</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  &lt;/script&gt;</span></code></pre>
+</div>
+<p>Tracking scripts configured with the <code>analytics</code> option
+are added to the footer element of the lesson website HTML.</p>
 </div>
 </section><section><h2 class="section-heading" id="episodes">
 <code>episodes/</code><a class="anchor" aria-label="anchor" href="#episodes"></a>
@@ -2594,7 +2636,7 @@ episodes, figures, and data files needed for the lesson. By default, it
 will contain an episode called introduction.Rmd. You can edit this file
 to use as your introduction. To create a new Markdown episode, use the
 folowing function:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2608,7 +2650,7 @@ in <code>config.yaml</code>, which serves as the table of contents.</p>
 <p>If you want to create an episode, but are not yet ready to render or
 publish it, you can create a draft using the <code>draft_episode</code>
 family of functions:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2622,7 +2664,7 @@ without the need to publish it.</p>
 <p>When you are ready to publish an episode or want to move an existing
 episode to a new place, you can use <code>move_episode()</code> to pull
 up an interactive menu for moving the episode.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2693,11 +2735,11 @@ file in this folder. The format of the glossary section of the
 list</a>. Definition lists are formatted as two lines for each term, the
 first includes the term to be defined and then the second line starts
 with a “:” and a space then the definition. i.e.</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>term</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>: definition</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>term</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>: definition</span></code></pre>
 </div>
 <dl>
 <dt>term</dt>
@@ -2753,7 +2795,7 @@ appropriate type for a lesson</a>.)</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Example CFF for this lesson </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <pre><code>cff-version: 1.2.0
 title: Introduction to The Carpentries Workbench
@@ -2836,7 +2878,7 @@ wanting to cite your lesson in their publications/projects.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Example plain text CITATION file </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <pre><code>Please cite this lesson as:
 
@@ -2875,7 +2917,7 @@ Markdown</li>
 </div>
 </section></section><section id="aio-example"><p>Content from <a href="example.html">EXAMPLE: Using RMarkdown</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/example.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 7 minutes</p>
@@ -2936,7 +2978,7 @@ reinforce the objectives.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -2994,7 +3036,7 @@ highlighted and executed:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3021,7 +3063,7 @@ highlighted and executed:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -3114,7 +3156,7 @@ locally</li>
 </div>
 </section></section><section id="aio-deployment"><p>Content from <a href="deployment.html">Lesson Deployment</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/deployment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -3260,7 +3302,7 @@ to their websites</li>
 </div>
 </section></section><section id="aio-update"><p>Content from <a href="update.html">Maintaining a Healthy Infrastructure</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/update.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -3479,7 +3521,7 @@ your local R library.</li>
 </div>
 </section></section><section id="aio-pull-request"><p>Content from <a href="pull-request.html">Auditing Pull Requests</a></p>
 <hr>
-<p>Last updated on 2024-11-11 |
+<p>Last updated on 2024-11-18 |
 
         <a href="https://github.com/carpentries/sandpaper-docs/edit/main/episodes/pull-request.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -3758,7 +3800,7 @@ the website</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/release-0.16.10" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/release-0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/release-1.0.5" class="external-link">varnish (1.0.5)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/d174084c7e20eee462b1c6ab3ec34206952e8d83" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/bad0be19a12f0c6545801b276ddf26c945f8bfd1" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/ab51231e5ff374108c93a27c151fd6c9d11b848e" class="external-link">varnish (1.0.5)</a></p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -3781,8 +3823,8 @@ the website</li>
   "url": "https://carpentries.github.io/sandpaper-docs/instructor/aio.html",
   "identifier": "https://carpentries.github.io/sandpaper-docs/instructor/aio.html",
   "dateCreated": "2023-11-09",
-  "dateModified": "2024-11-11",
-  "datePublished": "2024-11-11"
+  "dateModified": "2024-11-18",
+  "datePublished": "2024-11-18"
 }
 
   </script><script>
