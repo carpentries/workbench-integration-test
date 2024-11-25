@@ -482,13 +482,17 @@ We can use those line widths when we plot the data.
 
 ``` r
 ggplot() +
-  geom_sf(data = lines_HARV, aes(color = TYPE, size = TYPE)) +
+  geom_sf(data = lines_HARV, aes(color = TYPE, linewidth = TYPE)) +
   scale_color_manual(values = road_colors) +
   labs(color = 'Road Type') +
   scale_size_manual(values = line_widths) +
   ggtitle("NEON Harvard Forest Field Site",
           subtitle = "Roads & Trails - Line width varies") +
   coord_sf()
+```
+
+``` warning
+Warning: Using linewidth for a discrete variable is not advised.
 ```
 
 <div class="figure" style="text-align: center">
@@ -604,18 +608,10 @@ ggplot() +
   scale_color_manual(values = road_colors) +
   labs(color = 'Road Type') +
   theme(legend.text = element_text(size = 20),
-        legend.box.background = element_rect(size = 1)) +
+        legend.box.background = element_rect(linewidth = 1)) +
   ggtitle("NEON Harvard Forest Field Site",
           subtitle = "Roads & Trails - Modified Legend") +
   coord_sf()
-```
-
-``` warning
-Warning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
-ℹ Please use the `linewidth` argument instead.
-This warning is displayed once every 8 hours.
-Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-generated.
 ```
 
 <div class="figure" style="text-align: center">
@@ -636,6 +632,14 @@ ggplot() +
   ggtitle("NEON Harvard Forest Field Site",
           subtitle = "Roads & Trails - Pretty Colors") +
   coord_sf()
+```
+
+``` warning
+Warning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.
 ```
 
 <div class="figure" style="text-align: center">
