@@ -90,6 +90,6 @@ profiles:
 
 
 url: 'https://datacarpentry.org/r-raster-vector-geospatial'
-sandpaper: carpentries/sandpaper#618
-varnish: carpentries/varnish#158
-pegboard: carpentries/pegboard#161
+sandpaper: carpentries/sandpaper
+varnish: carpentries/varnish
+pegboard: carpentries/pegboard
