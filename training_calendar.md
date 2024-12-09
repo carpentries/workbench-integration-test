@@ -34,21 +34,11 @@ Trainees who miss more than 1 hour of an Instructor Training event may be marked
 
 A link is provided next to each event that will convert the start time to your local time zone. Please be sure to verify your availability for the full instructional time of your event. If you expect to miss more than a total of 1 hour, please select a different event.
 
-More details on our [cancellation and makeup policy](https://docs.carpentries.org/topic_folders/instructor_training/cancellations_and_makeups.html) are available in The Carpentries Handbook.
+More details on our [cancellation and makeup policy](https://docs.carpentries.org/handbooks/instructors.html#instructor-training-attendance-policy) are available in The Carpentries Handbook.
 
 ### Upcoming Instructor Training
 
 New trainings are added to this calendar on a quarterly basis (generally in early March, June, September, and December).
-
-<hr>
-
-#### [December 10-11 2024](https://www.eventbrite.com/e/copy-of-online-instructor-training-december-10-11-2024-tickets-1007701451167)
-**Two 8-hour days:** 9 am to 5 pm N. America Eastern Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Carpentries+Instructor+Training&iso=20241210T09&p1=179&ah=8)
-
-<hr>
-
-#### [December 10-13 2024](https://www.eventbrite.com/e/online-instructor-training-december-10-13-2024-tickets-1007692273717)
-**Four 4-hour days:** 9 am to 1 pm Central European Time / 1:30 pm to 5:30 pm India Standard Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Carpentries+Instructor+Training&iso=20241210T09&p1=195&ah=4)
 
 <hr>
 
