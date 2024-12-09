@@ -347,7 +347,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Gene set enrichment analysis</h1>
-        <p>Last updated on 2024-11-18 |
+        <p>Last updated on 2024-12-09 |
 
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/07-gene-set-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -904,9 +904,9 @@ distribution of its statistic.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>Unit: microseconds
-   expr     min       lq      mean  median       uq     max neval
- fisher 242.182 245.3980 255.80434 247.252 253.7535 548.103   100
-  hyper   1.473   1.6985   2.57522   2.725   2.8710  20.197   100</code></pre>
+   expr     min       lq      mean   median      uq     max neval
+ fisher 244.416 249.6805 259.20438 252.6010 259.003 490.294   100
+  hyper   1.483   1.7080   2.52532   1.9635   2.940  20.027   100</code></pre>
 </div>
 <p>It is very astonishing that <code>phyper()</code> is hundreds of
 times faster than <code>fisher.test()</code>. Main reason is in
@@ -1681,7 +1681,7 @@ sets are automatically retrieved and processed from
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 55978,20397,237860,14160,114875,17128</code></pre>
+<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 18802,21857,12977,22764,21679,74143</code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1958,19 +1958,19 @@ mmu00592                               alpha-Linolenic acid metabolism - Mus mus
 mmu04913                                       Ovarian steroidogenesis - Mus musculus (house mouse)
 mmu04061 Viral protein interaction with cytokine and cytokine receptor - Mus musculus (house mouse)
          GeneRatio BgRatio RichFactor FoldEnrichment   zScore       pvalue
-mmu00590    16/460 89/9793  0.1797753       3.827259 5.948251 3.207060e-06
-mmu00591    12/460 55/9793  0.2181818       4.644901 6.017779 6.933577e-06
-mmu00565    11/460 48/9793  0.2291667       4.878759 5.980348 1.015443e-05
-mmu00592     8/460 25/9793  0.3200000       6.812522 6.460048 1.188715e-05
-mmu04913    12/460 64/9793  0.1875000       3.991712 5.330644 3.532032e-05
-mmu04061    14/460 95/9793  0.1473684       3.137346 4.647286 1.293380e-04
+mmu00590    16/460 89/9819  0.1797753       3.837421 5.961259 3.100253e-06
+mmu00591    12/460 55/9819  0.2181818       4.657233 6.029702 6.749901e-06
+mmu00565    11/460 48/9819  0.2291667       4.891712 5.991941 9.904573e-06
+mmu00592     8/460 25/9819  0.3200000       6.830609 6.471122 1.165986e-05
+mmu04913    12/460 64/9819  0.1875000       4.002310 5.342045 3.442007e-05
+mmu04061    14/460 95/9819  0.1473684       3.145675 4.658853 1.258021e-04
              p.adjust       qvalue
-mmu00590 0.0009242256 0.0008008183
-mmu00591 0.0009242256 0.0008008183
-mmu00565 0.0009242256 0.0008008183
-mmu00592 0.0009242256 0.0008008183
-mmu04913 0.0021969238 0.0019035793
-mmu04061 0.0067040202 0.0058088650
+mmu00590 0.0009094692 0.0007855064
+mmu00591 0.0009094692 0.0007855064
+mmu00565 0.0009094692 0.0007855064
+mmu00592 0.0009094692 0.0007855064
+mmu04913 0.0021478125 0.0018550607
+mmu04061 0.0065417091 0.0056500592
                                                                                                        geneID
 mmu00590 18783/19215/211429/329502/78390/19223/67103/242546/13118/18781/18784/11689/232889/15446/237625/11687
 mmu00591                        18783/211429/329502/78390/242546/18781/18784/13113/622127/232889/237625/11687
@@ -2699,7 +2699,7 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/69aaefee46a17928e2a1694825599e169b9793e3" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/bad0be19a12f0c6545801b276ddf26c945f8bfd1" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/ab51231e5ff374108c93a27c151fd6c9d11b848e" class="external-link">varnish (1.0.5)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/74ef69fee3b9a51bd95b9c48e6307a49b817763a" class="external-link">sandpaper (0.16.10.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/bad0be19a12f0c6545801b276ddf26c945f8bfd1" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/ab51231e5ff374108c93a27c151fd6c9d11b848e" class="external-link">varnish (1.0.5)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -2721,8 +2721,8 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/07-gene-set-analysis.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/07-gene-set-analysis.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2024-11-18",
-  "datePublished": "2024-12-02"
+  "dateModified": "2024-12-09",
+  "datePublished": "2024-12-09"
 }
 
   </script><script>
