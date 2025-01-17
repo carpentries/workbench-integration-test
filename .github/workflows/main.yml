@@ -55,7 +55,7 @@ jobs:
             lesson-name: "USER TEST ${{ github.event.inputs.test-lesson }}"
             experimental: true
     name: ${{ matrix.lesson-name }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     continue-on-error: ${{ matrix.experimental }}
     defaults:
       run:
