@@ -86,6 +86,6 @@ profiles:
 
 
 url: 'https://datacarpentry.org/r-socialsci'
-sandpaper: carpentries/sandpaper
+sandpaper: carpentries/sandpaper#629
 varnish: carpentries/varnish
 pegboard: carpentries/pegboard
