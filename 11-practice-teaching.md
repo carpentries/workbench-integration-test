@@ -106,9 +106,9 @@ Sometimes it can be hard to receive feedback, especially negative feedback.
 ![](fig/deathbulge-jerk.jpg "Comic from http://www.deathbulge.com/comics/155"){alt='A three panel comic. In the first panel, a smiling figure is surrounded by speech bubbles with mostly positive feedback. In the second panel, the figure is eating dinner. All of the previous speech bubbles appear faded out, except the one negative bubble. The third panel shows the figure in bed, with an unhappy face, with the one piece of negative feedback lingering after all others have faded.'}
 
 Feedback is most effective when the people involved
-share ground rules and expectations. In Carpentries teaching, we use the 2x2
+share ground rules and expectations. In Carpentries teaching, we use the **2x2**
 paradigm for feedback. Each person giving feedback is expected to provide at least one
-piece of negative and one piece of positive feedback each for content and delivery. This
+piece of **negative** and one piece of **positive** feedback each for **content** and **delivery**. This
 helps overcome two common tendencies when giving feedback on teaching: to focus on the content
 (even though delivery is at least as important) and to either provide only negative or
 only positive feedback.
@@ -173,15 +173,14 @@ it is OK to remind yourself:
 
 We will start by observing some examples of teaching and providing some feedback.
 
-Watch this example teaching video as a group
-and then give feedback on it.
-[https://www.youtube.com/watch?v=-ApVt04rB4U][bad-teaching-video]
+Watch this [example teaching video][bad-teaching-video] as a group 
+and then give feedback on it: [https://www.youtube.com/watch?v=-ApVt04rB4U][bad-teaching-video]
 Put your feedback in the Etherpad.
 Organize your feedback along two axes:
 positive vs. opportunities for growth (sometimes called "negative")
 and content (what was said) vs. presentation (how it was said).
 
-Note: there is a version of this video with subtitles in both Spanish and English here: [https://www.youtube.com/watch?v=jxgMVwQamO0](https://www.youtube.com/watch?v=jxgMVwQamO0)
+Note: there is [a version of this video with subtitles in both Spanish and English](https://www.youtube.com/watch?v=jxgMVwQamO0) [https://www.youtube.com/watch?v=jxgMVwQamO0](https://www.youtube.com/watch?v=jxgMVwQamO0)
 
 This exercise should take about 10 minutes.
 
