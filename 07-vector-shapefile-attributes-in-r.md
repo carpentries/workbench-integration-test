@@ -34,6 +34,7 @@ and other prerequisites you will need to work through the examples in this
 episode.
 
 
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 This episode continues our discussion of vector layer attributes and covers how
@@ -44,7 +45,7 @@ attribute values.
 
 ## Load the Data
 
-We will continue using the `sf`, `terra` and `ggplot2` packages in this
+We will continue using the `sf`, `terra` `dplyr` and `ggplot2` packages in this
 episode. Make sure that you have these packages loaded. We will continue to
 work with the three ESRI `shapefiles` (vector layers) that we loaded in the
 [Open and Plot Vector Layers in R](06-vector-open-shapefile-in-r/) episode.
@@ -87,7 +88,7 @@ Projected CRS: WGS 84 / UTM zone 18N
 
 We can use the `ncol` function to count the number of attributes associated
 with a spatial object too. Note that the geometry is just another column and
-counts towards the total.
+counts towards the total. Let's look at the roads file:
 
 
 ``` r
@@ -307,14 +308,14 @@ there is only one feature? Let's adjust the colors used in our plot. If we have
 2 features in our vector object, we can plot each using a unique color by
 assigning a column name to the color aesthetic (`color =`). We use the syntax
 `aes(color = )` to do this. We can also alter the default line thickness by
-using the `size =` parameter, as the default value of 0.5 can be hard to see.
+using the `linewidth =` parameter, as the default value of 0.5 can be hard to see.
 Note that size is placed outside of the `aes()` function, as we are not
 connecting line thickness to a data variable.
 
 
 ``` r
 ggplot() +
-  geom_sf(data = footpath_HARV, aes(color = factor(OBJECTID)), size = 1.5) +
+  geom_sf(data = footpath_HARV, aes(color = factor(OBJECTID)), linewidth = 1.5) +
   labs(color = 'Footpath ID') +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Footpaths") +
   coord_sf()
@@ -361,7 +362,7 @@ Now let's plot that data:
 
 ``` r
 ggplot() +
-  geom_sf(data = boardwalk_HARV, size = 1.5) +
+  geom_sf(data = boardwalk_HARV, linewidth = 1.5) +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Boardwalks") +
   coord_sf()
 ```
@@ -405,7 +406,7 @@ Now we can plot the data:
 
 ``` r
 ggplot() +
-  geom_sf(data = stoneWall_HARV, aes(color = factor(OBJECTID)), size = 1.5) +
+  geom_sf(data = stoneWall_HARV, aes(color = factor(OBJECTID)), linewidth = 1.5) +
   labs(color = 'Wall ID') +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Stonewalls") +
   coord_sf()
@@ -426,7 +427,7 @@ In the examples above, `ggplot()` automatically selected colors for each line
 based on a default color order. If we don't like those default colors, we can
 create a vector of colors - one for each feature.
 
-First we will check how many unique levels our factor has:
+First we will check how many unique values our TYPE attribute has:
 
 
 ``` r
@@ -466,7 +467,7 @@ ggplot() +
 ### Adjust Line Width
 
 We adjusted line width universally earlier. If we want a unique line width for
-each level or attribute category in our spatial object, we can use the
+each attribute category in our spatial object, we can use the
 same syntax that we used for colors, above.
 
 We already know that we have four different `TYPE`s in the lines\_HARV object,
@@ -521,7 +522,7 @@ following thicknesses:
 
 ## Answers
 
-First we need to look at the levels of our factor to see
+First we need to look at the values of our data to see
 what order the road types are in:
 
 
@@ -546,11 +547,15 @@ Now we can create our plot.
 
 ``` r
 ggplot() +
-  geom_sf(data = lines_HARV, aes(size = TYPE)) +
+  geom_sf(data = lines_HARV, aes(linewidth = TYPE)) +
   scale_size_manual(values = line_width) +
   ggtitle("NEON Harvard Forest Field Site",
           subtitle = "Roads & Trails - Line width varies") +
   coord_sf()
+```
+
+``` warning
+Warning: Using linewidth for a discrete variable is not advised.
 ```
 
 <div class="figure" style="text-align: center">
@@ -567,22 +572,18 @@ ggplot() +
 We can add a legend to our plot too. When we add a legend, we use the following
 elements to specify labels and colors:
 
-- `bottomright`: We specify the location of our legend by using a default
-  keyword. We could also use `top`, `topright`, etc.
-- `levels(objectName$attributeName)`: Label the legend elements using the
-  categories of levels in an attribute (e.g., levels(lines\_HARV$TYPE) means
-  use the levels boardwalk, footpath, etc).
-- `fill =`: apply unique colors to the boxes in our legend. `palette()` is the
-  default set of colors that R applies to all plots.
 
 Let's add a legend to our plot. We will use the `road_colors` object
 that we created above to color the legend. We can customize the
 appearance of our legend by manually setting different parameters.
 
 
+
+
+
 ``` r
 ggplot() +
-  geom_sf(data = lines_HARV, aes(color = TYPE), size = 1.5) +
+  geom_sf(data = lines_HARV, aes(color = TYPE), linewidth = 1.5) +
   scale_color_manual(values = road_colors) +
   labs(color = 'Road Type') +
   ggtitle("NEON Harvard Forest Field Site",
@@ -604,7 +605,7 @@ parameters.
 
 ``` r
 ggplot() +
-  geom_sf(data = lines_HARV, aes(color = TYPE), size = 1.5) +
+  geom_sf(data = lines_HARV, aes(color = TYPE), linewidth = 1.5) +
   scale_color_manual(values = road_colors) +
   labs(color = 'Road Type') +
   theme(legend.text = element_text(size = 20),
@@ -624,7 +625,7 @@ ggplot() +
 new_colors <- c("springgreen", "blue", "magenta", "orange")
 
 ggplot() +
-  geom_sf(data = lines_HARV, aes(color = TYPE), size = 1.5) +
+  geom_sf(data = lines_HARV, aes(color = TYPE), linewidth = 1.5) +
   scale_color_manual(values = new_colors) +
   labs(color = 'Road Type') +
   theme(legend.text = element_text(size = 20),
@@ -711,7 +712,7 @@ line width.
 ``` r
 ggplot() +
   geom_sf(data = lines_HARV) +
-  geom_sf(data = lines_showHarv, aes(color = BicyclesHo), size = 2) +
+  geom_sf(data = lines_showHarv, aes(color = BicyclesHo), linewidth = 2) +
   scale_color_manual(values = "magenta") +
   ggtitle("NEON Harvard Forest Field Site",
           subtitle = "Roads Where Bikes and Horses Are Allowed") +
@@ -783,7 +784,7 @@ Now we can create our plot:
 
 ``` r
 ggplot() +
-  geom_sf(data = state_boundary_US, aes(color = region), size = 1) +
+  geom_sf(data = state_boundary_US, aes(color = region), linewidth = 1) +
   scale_color_manual(values = colors) +
   ggtitle("Contiguous U.S. State Boundaries") +
   coord_sf()
