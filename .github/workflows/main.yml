@@ -116,7 +116,7 @@ jobs:
 
       - name: "Setup Package Cache"
         if: "${{ matrix.lesson != '' }}"
-        uses: carpentries/actions/setup-lesson-deps@zkamvar-patch-1
+        uses: carpentries/actions/setup-lesson-deps@main
         with:
           cache-version: ${{ matrix.lesson }}
 
