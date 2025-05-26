@@ -255,7 +255,7 @@ experiences getting started in programming. Trips down memory lane can be produc
 you take care not to generalize from your experience to that of your novice learners.
 
 We will talk more about knowing your audience in a later episode. For now, here are
-two points to keep in mind when contemplating the learner experience
+two points to keep in mind when contemplating the learner experience:
 
 - In most cases a researcher's **primary goal is not to learn programming**, but to do better and more efficient research.
   They may not wish to take the time to learn how fundamental syntax or data structures work, or
@@ -300,7 +300,7 @@ path toward developing that skill.
 How can you make sure that expert awareness gaps are not negatively affecting your workshop?
 Keep in touch with your learners through frequent formative assessment! If you stumble
 into an expert awareness gap, create confusion by using interchangeable terms, or
-accidentally discourage rather than inviting questions, formative assessment has the power
+accidentally discourage rather than invite questions, formative assessment has the power
 to bring these problems to the surface. As you develop teaching skill, you may be able
 to avoid these pitfalls. Until then, becoming aware of when they occur will help you to
 keep their impact under control.
