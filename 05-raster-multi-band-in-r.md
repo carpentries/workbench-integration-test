@@ -35,7 +35,7 @@ episode.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 We introduced multi-band raster data in
-[an earlier lesson](https://datacarpentry.org/organization-geospatial/01-intro-raster-data). 
+[an earlier episode](https://datacarpentry.org/organization-geospatial/01-intro-raster-data). 
 This episode explores how to import and plot a multi-band raster in R.
 
 ## Getting Started with Multi-Band Data in R
@@ -94,7 +94,7 @@ RGB_band1_HARV
 
 ``` output
 class       : SpatRaster 
-dimensions  : 2317, 3073, 1  (nrow, ncol, nlyr)
+size        : 2317, 3073, 1  (nrow, ncol, nlyr)
 resolution  : 0.25, 0.25  (x, y)
 extent      : 731998.5, 732766.8, 4712956, 4713536  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
@@ -209,7 +209,7 @@ RGB_stack_HARV
 
 ``` output
 class       : SpatRaster 
-dimensions  : 2317, 3073, 3  (nrow, ncol, nlyr)
+size        : 2317, 3073, 3  (nrow, ncol, nlyr)
 resolution  : 0.25, 0.25  (x, y)
 extent      : 731998.5, 732766.8, 4712956, 4713536  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
@@ -230,7 +230,7 @@ RGB_stack_HARV[[2]]
 
 ``` output
 class       : SpatRaster 
-dimensions  : 2317, 3073, 1  (nrow, ncol, nlyr)
+size        : 2317, 3073, 1  (nrow, ncol, nlyr)
 resolution  : 0.25, 0.25  (x, y)
 extent      : 731998.5, 732766.8, 4712956, 4713536  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
@@ -652,7 +652,7 @@ RGB_sds_HARV[[1]]
 
 ``` output
 class       : SpatRaster 
-dimensions  : 2317, 3073, 3  (nrow, ncol, nlyr)
+size        : 2317, 3073, 3  (nrow, ncol, nlyr)
 resolution  : 0.25, 0.25  (x, y)
 extent      : 731998.5, 732766.8, 4712956, 4713536  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
@@ -668,7 +668,7 @@ RGB_sds_HARV[[2]]
 
 ``` output
 class       : SpatRaster 
-dimensions  : 2317, 3073, 3  (nrow, ncol, nlyr)
+size        : 2317, 3073, 3  (nrow, ncol, nlyr)
 resolution  : 0.25, 0.25  (x, y)
 extent      : 731998.5, 732766.8, 4712956, 4713536  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
