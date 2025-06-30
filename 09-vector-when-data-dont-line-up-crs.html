@@ -393,7 +393,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Handling Spatial Projection &amp; CRS</h1>
-        <p>Last updated on 2025-06-23 |
+        <p>Last updated on 2025-06-30 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/09-vector-when-data-dont-line-up-crs.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -439,17 +439,17 @@ through the examples in this episode.</p>
 </div>
 </div>
 </div>
-<p>In <a href="03-raster-reproject-in-r/">an earlier episode</a> we
-learned how to handle a situation where you have two different files
-with raster data in different projections. Now we will apply those same
-principles to working with vector data. We will create a base map of our
-study site using United States state and country boundary information
-accessed from the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html" class="external-link">United
+<p>In <a href="https://datacarpentry.org/r-raster-vector-geospatial/03-raster-reproject-in-r" class="external-link">an
+earlier episode</a> we learned how to handle a situation where you have
+two different files with raster data in different projections. Now we
+will apply those same principles to working with vector data. We will
+create a base map of our study site using United States state and
+country boundary information accessed from the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html" class="external-link">United
 States Census Bureau</a>. We will learn how to map vector data that are
 in different CRSs and thus don’t line up on a map.</p>
 <p>We will continue to work with the three ESRI <code>shapefiles</code>
-that we loaded in the <a href="06-vector-open-shapefile-in-r/">Open and
-Plot Vector Layers in R</a> episode.</p>
+that we loaded in the <a href="https://datacarpentry.org/r-raster-vector-geospatial/06-vector-open-shapefile-in-r" class="external-link">Open
+and Plot Vector Layers in R</a> episode.</p>
 <section><h2 class="section-heading" id="working-with-spatial-data-from-different-sources">Working With Spatial Data From Different Sources<a class="anchor" aria-label="anchor" href="#working-with-spatial-data-from-different-sources"></a></h2>
 <hr class="half-width"><p>We often need to gather spatial datasets from different sources
 and/or data that cover different spatial extents. These data are often
@@ -696,13 +696,13 @@ library.</li>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="reproject-vector-data-or-no">Reproject Vector Data or No?<a class="anchor" aria-label="anchor" href="#reproject-vector-data-or-no"></a></h2>
-<hr class="half-width"><p>We saw in <a href="03-raster-reproject-in-r/">an earlier episode</a>
-that when working with raster data in different CRSs, we needed to
-convert all objects to the same CRS. We can do the same thing with our
-vector data - however, we don’t need to! When using the
-<code>ggplot2</code> package, <code>ggplot</code> automatically converts
-all objects to the same CRS before plotting. This means we can plot our
-three data sets together without doing any conversion:</p>
+<hr class="half-width"><p>We saw in <a href="https://datacarpentry.org/r-raster-vector-geospatial/03-raster-reproject-in-r" class="external-link">an
+earlier episode</a> that when working with raster data in different
+CRSs, we needed to convert all objects to the same CRS. We can do the
+same thing with our vector data - however, we don’t need to! When using
+the <code>ggplot2</code> package, <code>ggplot</code> automatically
+converts all objects to the same CRS before plotting. This means we can
+plot our three data sets together without doing any conversion:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -739,7 +739,7 @@ Tower location point.</li>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -831,7 +831,7 @@ the same CRS.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/d03c89cd0fa3931a82df26aa15388efab7cf4e9b" class="external-link">sandpaper (0.16.13.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/5e0d711121a581777d83cf270e298c933f112d52" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/b044487316f51820d538084a2992a5f3da72965a" class="external-link">varnish (1.0.7.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/d03c89cd0fa3931a82df26aa15388efab7cf4e9b" class="external-link">sandpaper (0.16.13.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/5e0d711121a581777d83cf270e298c933f112d52" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/e1281ef5bb7f41db27ef0e7972d7fa7fd35e53b8" class="external-link">varnish (1.0.7.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -853,8 +853,8 @@ the same CRS.</li>
   "url": "https://datacarpentry.org/r-raster-vector-geospatial/09-vector-when-data-dont-line-up-crs.html",
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/09-vector-when-data-dont-line-up-crs.html",
   "dateCreated": "2015-10-22",
-  "dateModified": "2025-06-23",
-  "datePublished": "2025-06-23"
+  "dateModified": "2025-06-30",
+  "datePublished": "2025-06-30"
 }
 
   </script><script>
