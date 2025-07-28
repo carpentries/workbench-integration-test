@@ -38,12 +38,7 @@ More details on our [cancellation and makeup policy](https://docs.carpentries.or
 
 ### Upcoming Instructor Training
 
-New trainings are added to this calendar on a quarterly basis (generally in early March, June, September, and December).
-
-<hr>
-
-#### [29 July to 1 August 2025](https://www.eventbrite.com/e/online-instructor-training-29-july-1-august-2025-tickets-1389754576349)
-**Four 4-hour days:** 9 am to 1 pm British Summer Time / 1:30 pm to 5:30 pm India Standard Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training&iso=20250729T09&p1=136&ah=4)
+Registration closes one week prior to the training event. New trainings are added to this calendar on a quarterly basis (generally in early March, June, September, and December).
 
 <hr>
 
