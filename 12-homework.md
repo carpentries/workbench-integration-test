@@ -35,6 +35,7 @@ To prepare for our next session, please:
   Data Carpentry, or Library Carpentry lesson and
   read through it carefully.
   In the next two parts, you will use this to practice live coding/participatory instruction for 3 minutes.
+  These future exercises do not have built in prep time like the short 90 second teaching practice we did earlier. Your preparation **before** we start tomorrow is all of your preparation time. 
   Remember, imperfect presentations can generate useful feedback!
   If you have not yet selected an episode to focus on and would like a recommendation, consider one of the following:
   
@@ -73,7 +74,7 @@ This exercise should take 5 minutes.
 Before we wrap up for the day, take 5 minutes to think over
 everything we have covered so far.  On a piece of paper, write
 down something that captures what you want to remember about
-the day.  The Trainers will not look at this - it is just for you.
+the first half of the training.  The Trainers will not look at this - it is just for you.
 
 If you do not know where to start, consider
 the following list for a starting point:
