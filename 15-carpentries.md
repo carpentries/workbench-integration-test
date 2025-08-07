@@ -189,7 +189,8 @@ Centrally organised workshops are included in institutional [membership][members
 will recruit Instructors to teach, this is a great way to host workshops before your local Instructor team feels fully prepared to run a complete workshop
 independently, or to host workshops beyond the areas of expertise you may have locally.
 
-If you have enough local Instructors available to organise your own workshop, you can run a self-organised workshop at any time at no cost.
+If you have enough local Instructors available to organise your own workshop, you can run a self-organised workshop at any time at no cost. If you need support with AWS instances for a Genomics 
+workshop, there may be an associated fee. You can learn more about Genomic workshops in the [Genomics Workshops Terms of Agreement](https://docs.carpentries.org/resources/workshops/genomics_policy.html).
 If you would like to recruit additional Instructors or Helpers, [this blog post][SO-recruiting-blog] has guidelines for using Carpentries communications channels. Registering
 your workshop with us allows you to use The Carpentries branding, includes our pre- and post- workshop surveys and results for your workshop, and ensures
 that all Instructors and Helpers in our database have the experience recorded in their profile. Registering your workshop also helps us: reporting
@@ -342,7 +343,7 @@ This exercise should take about 5 minutes.
 [IJDC]: https://ijdc.net/index.php/ijdc/article/view/10.1.135
 [LIBERQ]: https://doi.org/10.18352/lq.10176
 [values-page]: https://carpentries.org/values/
-[workshopsreq-page]: https://carpentries.org/workshops/#workshop-core
+[workshopsreq-page]: [https://carpentries.org/workshops/#workshop-core](https://carpentries.org/workshops/host-workshop/#curriculum-requirements-for-standard-carpentries-workshops)
 [docs-workshop-checklists]: https://docs.carpentries.org/resources/workshops/checklists.html
 [workshops-form]: https://amy.carpentries.org/forms/workshop/
 [workshops-page]: https://carpentries.org/workshops/#workshop-organising
