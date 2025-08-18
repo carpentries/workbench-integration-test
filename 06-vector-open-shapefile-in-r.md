@@ -45,10 +45,13 @@ into a single plot.
 
 ## Import Vector Data
 
-We will use the `sf` package to work with vector data in R. `sf` stands for simple features.
-We will also use the `terra` package, which has been loaded in previous episodes, so we can
-explore raster and vector spatial metadata using similar commands. Make sure
-you have the `sf` library loaded.
+We will use the `sf` package to work with vector data in R. `sf` stands for
+[simple features](https://en.wikipedia.org/wiki/Simple_Features), an international standard for
+representing spatial data that is used widely by databases (e.g., PostGIS) and other open source
+geospatial software (e.g., GDAL). We will also use the `terra` package, which has been loaded
+in previous episodes, so we can explore raster and vector spatial metadata using similar commands.
+
+Make sure you have the `sf` library loaded.
 
 
 ``` r
@@ -244,6 +247,15 @@ ggplot() +
 ```
 
 <img src="fig/06-vector-open-shapefile-in-r-rendered-plot-shapefile-1.png" style="display: block; margin: auto;" />
+
+
+On the boundary plot, the x and y axes are labeled in units of decimal degrees. However, the CRS
+for `aoi_boundary_HARV` is UTM zone 18N, which has units of meters. `geom_sf` will use
+the CRS of the data to set the CRS for the plot, so why is there a mismatch?
+
+By default, `coord_sf()` generates a graticule with a CRS of WGS 84 (where the units
+are decimal degrees), and this sets our axis labels. To draw the graticule in the native
+CRS of our shapefile, we can set `datum=NULL` in the `coord_sf()` function.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
