@@ -44,11 +44,6 @@ Registration closes one week prior to the training event. New trainings are adde
 
 <hr>
 
-#### [8-9 September 2025](https://www.eventbrite.com/e/online-instructor-training-8-9-september-2025-tickets-1389797675259)
-**Two 8-hour days:** 9 am to 5 pm N. America Pacific Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training&iso=20250908T09&p1=137&ah=8)
-
-<hr>
-
 #### [16-17 September 2025](https://www.eventbrite.com/e/online-instructor-training-16-17-september-2025-tickets-1389800604019)
 **Two 8-hour days:** 9 am to 5 pm Central European Summer Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training&iso=20250916T09&p1=195&ah=8)
 
@@ -59,34 +54,40 @@ Registration closes one week prior to the training event. New trainings are adde
 
 <hr>
 
+#### [6-9 October 2025](https://www.eventbrite.com/e/online-instructor-training-october-6-9-2025-tickets-1657264254999)
+**Four 4-hour days:** 9 am to 1 pm Australia Eastern Daylight Time / 11 am to 3 pm New Zealand Daylight Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251006T09&p1=240&ah=4)
 
+<hr>
 
+#### [20-23 October 2025](https://www.eventbrite.com/e/online-instructor-training-october-20-23-2025-tickets-1669818826059)
+**Four 4-hour days:** 9 am to 1 pm N. America Pacific Time / 12 noon to 4 pm N. America Eastern Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training&iso=20251020T09&p1=137&ah=4)
 
+<hr>
 
+#### [28-31 October 2025](https://www.eventbrite.com/e/online-instructor-training-october-28-31-2025-tickets-1657293121339)
+**Four 4-hour days:** 9 am to 1 pm N. America Eastern Time / 1 pm to 5 pm UTC / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251028T09&p1=179&ah=4)
 
+<hr>
 
+#### [10-13 November 2025](https://www.eventbrite.com/e/online-instructor-training-november-10-13-2025-tickets-1657310864409)
+**Four 4-hour days:** 9 am to 1 pm N. America Eastern Time / 2 pm to 6 pm UTC / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251110T09&p1=179&ah=4)
 
+<hr>
 
+#### [17-20 November 2025](https://www.eventbrite.com/e/online-instructor-training-november-17-20-2025-tickets-1657332097919)
+**Four 4-hour days:** 9 am to 1 pm Central European Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251117T09&p1=195&ah=4)
 
+<hr>
 
+#### [19-20 November 2025](https://www.eventbrite.com/e/online-instructor-training-november-19-20-2025-tickets-1657344645449)
+**Two 8-hour days:** 9 am to 5 pm N. America Eastern Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251119T09&p1=179&ah=8)
 
+<hr>
 
+#### [2-5 December 2025](https://www.eventbrite.com/e/online-instructor-training-december-2-5-2025-tickets-1657347945319)
+**Four 4-hour days:** / 9 am to 1 pm N. America Pacific Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251202T09&p1=137&ah=4)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<hr>
 
 
 ### Accommodations
