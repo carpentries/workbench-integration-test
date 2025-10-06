@@ -20,6 +20,12 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+:::::::::::::::::::::::::::::::::::::::instructor
+In an online training, ensure that captions are turned on, that one trainer claims host, and that the host adds other trainers as co-hosts. 
+The host key is in the email to trainers from the core team prior to the training. 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Motivation Matters
 
 Teaching and learning are not the same process. As we have seen, an instructor can make choices that facilitate the cognitive processes
@@ -255,7 +261,7 @@ serious hazards in the classroom! Here are a few **things you should not do in y
   more if you are frank about the limitations of your knowledge, and
   will be more likely to ask questions and seek help. (Also see "Presenting the instructor as a learner," above)
 - **Use the word "just" or other demotivating words** we talked about in a
-  [previous lesson](04-expertise.html). These signal to the learner that
+  [previous episode](04-expertise.html). These signal to the learner that
   the instructor thinks their problem is trivial
   and by extension that they therefore must be deficient
   if they are not able to figure it out.
