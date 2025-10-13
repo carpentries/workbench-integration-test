@@ -500,9 +500,9 @@ microbenchmark(
 
 ``` output
 Unit: microseconds
-   expr     min      lq      mean   median       uq     max neval
- fisher 251.830 257.030 267.57347 262.0190 273.9115 460.510   100
-  hyper   1.563   1.738   2.59093   2.6395   3.2360   6.923   100
+   expr     min       lq      mean   median       uq     max neval
+ fisher 249.686 256.2985 268.43778 262.1745 273.7605 480.015   100
+  hyper   1.553   1.7635   2.57724   2.0940   3.2910   7.063   100
 ```
 
 It is very astonishing that `phyper()` is hundreds of times faster than
@@ -1047,7 +1047,7 @@ setName: DESCARTES_MAIN_FETAL_CHROMAFFIN_CELLS
 geneIds: Asic5, Cntfr, ..., Slc22a22 (total: 28)
 geneIdType: Symbol
 collectionType: Broad
-  bcCategory: c8 (Cell Type Signatures)
+  bcCategory: c8 (Cell Type Signatures)mh (Mouse-Ortholog Hallmark)
   bcSubCategory: NA
 details: use 'details(object)'
 ```
@@ -1058,7 +1058,7 @@ collectionType(gs)
 
 ``` output
 collectionType: Broad
-  bcCategory: c8 (Cell Type Signatures)
+  bcCategory: c8 (Cell Type Signatures)mh (Mouse-Ortholog Hallmark)
   bcSubCategory: NA
 ```
 
@@ -1191,7 +1191,7 @@ resTimeGO = enrichGO(gene = timeDEgenes,
 ```
 
 ``` output
---> Expected input gene ID: 57765,16882,52276,76781,232714,67239
+--> Expected input gene ID: 27393,83945,245109,67245,21427,76781
 ```
 
 ``` output
@@ -1439,19 +1439,19 @@ mmu00592                               alpha-Linolenic acid metabolism
 mmu04913                                       Ovarian steroidogenesis
 mmu04061 Viral protein interaction with cytokine and cytokine receptor
          GeneRatio  BgRatio RichFactor FoldEnrichment   zScore       pvalue
-mmu00590    16/456 89/10569  0.1797753       4.166765 6.370434 1.069127e-06
-mmu00591    12/456 55/10569  0.2181818       5.056938 6.405227 2.910485e-06
-mmu00565    11/456 49/10569  0.2244898       5.203142 6.261855 5.630024e-06
-mmu00592     8/456 25/10569  0.3200000       7.416842 6.820677 6.383250e-06
-mmu04913    12/456 65/10569  0.1846154       4.278947 5.630573 1.804781e-05
-mmu04061    14/456 95/10569  0.1473684       3.415651 5.022021 5.248763e-05
+mmu00590    16/456 89/10570  0.1797753       4.167159 6.370910 1.067808e-06
+mmu00591    12/456 55/10570  0.2181818       5.057416 6.405664 2.907655e-06
+mmu00565    11/456 49/10570  0.2244898       5.203634 6.262278 5.624971e-06
+mmu00592     8/456 25/10570  0.3200000       7.417544 6.821085 6.378818e-06
+mmu04913    12/456 65/10570  0.1846154       4.279352 5.630988 1.803094e-05
+mmu04061    14/456 95/10570  0.1473684       3.415974 5.022442 5.243429e-05
              p.adjust       qvalue
-mmu00590 0.0003367749 0.0002745967
-mmu00591 0.0004584013 0.0003737675
-mmu00565 0.0005026809 0.0004098718
-mmu00592 0.0005026809 0.0004098718
-mmu04913 0.0011370119 0.0009270874
-mmu04061 0.0027556005 0.0022468388
+mmu00590 0.0003363595 0.0002742581
+mmu00591 0.0004579556 0.0003734041
+mmu00565 0.0005023319 0.0004095873
+mmu00592 0.0005023319 0.0004095873
+mmu04913 0.0011359490 0.0009262207
+mmu04061 0.0027528000 0.0022445554
                                                                                                        geneID
 mmu00590 18783/19215/211429/329502/78390/19223/67103/242546/13118/18781/18784/11689/232889/15446/237625/11687
 mmu00591                        18783/211429/329502/78390/242546/18781/18784/13113/622127/232889/237625/11687
