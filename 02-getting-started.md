@@ -167,8 +167,21 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-The output tells us that we are on the main branch (more on this later) and that we have nothing to commit (no
+The output tells us that we are on the main branch and that we have nothing to commit (no
 unsaved changes).
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Branches and commits
+
+Commits in Git are like snapshots of our project.
+They are ordered into sequences, or "branches", with each commit pointing back to the one before it in the branch.
+Git keeps track of the last commit in each branch with a special label;
+in this lesson we mostly use one branch with the label "main".
+
+![](fig/git-branch.svg){alt='The label ‘main’ points to commit c2; c2 points to its parent c1, which points to c0.'}
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Two steps: Adding and committing
 
@@ -297,12 +310,12 @@ and `git commit` then *actually takes* the snapshot, and
 makes a permanent record of it (as a commit).
 If you don't have anything staged when you type `git commit`,
 Git will prompt you to use `git commit -a` or `git commit --all`,
-which is kind of like gathering *everyone* for the picture!
+which is kind of like gathering *everyone* to take a group photo!
 However, it's almost always better to
 explicitly add things to the staging area, because you might
-commit changes you forgot you made. (Going back to snapshots,
-you might get the extra with incomplete makeup walking on
-the stage for the snapshot because you used `-a`!)
+commit changes you forgot you made. (Going back to the group photo simile,
+you might get an extra with incomplete makeup walking on
+the stage for the picture because you used `-a`!)
 Try to stage things manually,
 or you might find yourself searching for "git undo commit" more
 than you would like!

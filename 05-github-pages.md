@@ -21,10 +21,10 @@ exercises: 20
 
 ## GitHub Pages
 
-GitHub Pages is a simple service to publish a website directly on GitHub from a Git repository.
+GitHub Pages is a service for publishing a website directly on GitHub from a Git repository.
 You add some files and folders to a repository and GitHub Pages turns it into a website.
 You can use HTML directly if you like, but they also provide Jekyll,
-which renders Markdown into HTML and makes it really easy to setup a blog or a template-based website.
+a tool that can build a blog or a template-based website from a set of Markdown files.
 
 ### Why GitHub Pages is awesome!
 
@@ -130,6 +130,20 @@ group of people who plan to collaborate closely, on the other hand,
 it's more practical to grant everyone access to commit directly instead.
 
 :::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Branching and merging
+
+Branches get their name because you can create a new one (say, "patch")
+that splits off from an existing one like "main",
+allowing different sets of changes to be made in parallel.
+Later on, Git can take the changes from "patch" and merge (copy) them into the "main" branch.
+In the last challenge, GitHub did all this for us in the background.
+
+![](fig/git-branches.svg){alt='The label ‘main’ points to commit c5; arrows point from c5 to c3 to c1 to c0. The label ‘patch’ points to commit c4; arrows point from c4 to c2 to c1. A dotted arrow points from c5 to c4.'}
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
