@@ -542,7 +542,7 @@ why.</p>
 </div>
 </section></section><section id="aio-02-getting-started"><p>Content from <a href="02-getting-started.html">Getting started with Git</a></p>
 <hr>
-<p>Last updated on 2024-09-04 |
+<p>Last updated on 2025-11-03 |
 
         <a href="https://github.com/librarycarpentry/lc-git/edit/main/episodes/02-getting-started.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -775,8 +775,25 @@ state of a project. Let’s do that now.</p>
 No commits yet
 nothing to commit (create/copy files and use "git add" to track)</code></pre>
 </div>
-<p>The output tells us that we are on the main branch (more on this
-later) and that we have nothing to commit (no unsaved changes).</p>
+<p>The output tells us that we are on the main branch and that we have
+nothing to commit (no unsaved changes).</p>
+<div id="branches-and-commits" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="branches-and-commits" class="callout-inner">
+<h3 class="callout-title">Branches and commits</h3>
+<div class="callout-content">
+<p>Commits in Git are like snapshots of our project. They are ordered
+into sequences, or “branches”, with each commit pointing back to the one
+before it in the branch. Git keeps track of the last commit in each
+branch with a special label; in this lesson we mostly use one branch
+with the label “main”.</p>
+<figure><img src="fig/git-branch.svg" alt="The label ‘main’ points to commit c2; c2 points to its parent c1, which points to c0." class="figure mx-auto d-block"></figure>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="two-steps-adding-and-committing">Two steps: Adding and committing<a class="anchor" aria-label="anchor" href="#two-steps-adding-and-committing"></a>
@@ -930,13 +947,13 @@ snapshot (putting things in the staging area), and
 makes a permanent record of it (as a commit). If you don’t have anything
 staged when you type <code>git commit</code>, Git will prompt you to use
 <code>git commit -a</code> or <code>git commit --all</code>, which is
-kind of like gathering <em>everyone</em> for the picture! However, it’s
-almost always better to explicitly add things to the staging area,
-because you might commit changes you forgot you made. (Going back to
-snapshots, you might get the extra with incomplete makeup walking on the
-stage for the snapshot because you used <code>-a</code>!) Try to stage
-things manually, or you might find yourself searching for “git undo
-commit” more than you would like!</p>
+kind of like gathering <em>everyone</em> to take a group photo! However,
+it’s almost always better to explicitly add things to the staging area,
+because you might commit changes you forgot you made. (Going back to the
+group photo simile, you might get an extra with incomplete makeup
+walking on the stage for the picture because you used <code>-a</code>!)
+Try to stage things manually, or you might find yourself searching for
+“git undo commit” more than you would like!</p>
 </div>
 </div>
 </div>
@@ -965,7 +982,7 @@ Git repository.</li>
 </div>
 </div></section><section id="aio-03-sharing"><p>Content from <a href="03-sharing.html">Sharing your work</a></p>
 <hr>
-<p>Last updated on 2025-08-04 |
+<p>Last updated on 2025-11-03 |
 
         <a href="https://github.com/librarycarpentry/lc-git/edit/main/episodes/03-sharing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1462,6 +1479,52 @@ To https://github.com/&lt;your_github_username&gt;/hello-world
    e9e8fd3..8e2eb99  main -&gt; main</code></pre>
 </div>
 <p>And let’s check on GitHub that we now have 2 commits there.</p>
+<div id="challenge-two-different-push-commands" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-two-different-push-commands" class="callout-inner">
+<h3 class="callout-title">Challenge: Two different push commands</h3>
+<div class="callout-content">
+<p>The first time we pushed our changes, we used a longer command:</p>
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> git push <span class="at">-u</span> origin main</span></code></pre>
+</div>
+<p>The second time, we used a shorter command:</p>
+<div class="codewrapper sourceCode" id="cb29">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre>
+</div>
+<p>Why didn’t we use the same command both times?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Branches can be configured with an “upstream” branch (a branch on a
+remote repository), which is used automatically for <code>push</code>
+and <code>pull</code> operations.</p>
+<p>The <code>main</code> branch’s upstream wasn’t set when we created
+it. The <code>-u</code> (or <code>--set-upstream</code>) flag tells
+<code>git push</code> which remote branch to use; it also sets the
+remote branch as the local branch’s upstream. Once we’ve set it, we
+don’t need to specify the remote branch in future <code>push</code> and
+<code>pull</code> operations. This saves on typing and means we won’t
+<code>push</code> to or <code>pull</code> from the wrong remote
+branch.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="pulling-changes">Pulling changes<a class="anchor" aria-label="anchor" href="#pulling-changes"></a>
 </h2>
 <hr class="half-width">
@@ -1493,10 +1556,10 @@ automatically surface your README to repository visitors</p>
 <p>Our local repository is now out of sync with our remote repository,
 so let’s fix that by pulling the remote changes into our local
 repository using the <code>git pull</code> command.</p>
-<div class="codewrapper sourceCode" id="cb28">
+<div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1621,7 +1684,7 @@ workflow</li>
 </div>
 </section></section><section id="aio-05-github-pages"><p>Content from <a href="05-github-pages.html">GitHub Pages</a></p>
 <hr>
-<p>Last updated on 2025-08-04 |
+<p>Last updated on 2025-11-03 |
 
         <a href="https://github.com/librarycarpentry/lc-git/edit/main/episodes/05-github-pages.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1660,12 +1723,11 @@ collaborate on a website</li>
 <section><h2 class="section-heading" id="github-pages">GitHub Pages<a class="anchor" aria-label="anchor" href="#github-pages"></a>
 </h2>
 <hr class="half-width">
-<p>GitHub Pages is a simple service to publish a website directly on
-GitHub from a Git repository. You add some files and folders to a
-repository and GitHub Pages turns it into a website. You can use HTML
-directly if you like, but they also provide Jekyll, which renders
-Markdown into HTML and makes it really easy to setup a blog or a
-template-based website.</p>
+<p>GitHub Pages is a service for publishing a website directly on GitHub
+from a Git repository. You add some files and folders to a repository
+and GitHub Pages turns it into a website. You can use HTML directly if
+you like, but they also provide Jekyll, a tool that can build a blog or
+a template-based website from a set of Markdown files.</p>
 <div class="section level3">
 <h3 id="why-github-pages-is-awesome">Why GitHub Pages is awesome!<a class="anchor" aria-label="anchor" href="#why-github-pages-is-awesome"></a>
 </h3>
@@ -1779,7 +1841,7 @@ bit cumbersome. Try to think of why it was needed? And why it’s called
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>We made a fork and a pull request because we did not have permission
 to edit (or commit) the repository directly. A fork is a copy of the
@@ -1792,6 +1854,23 @@ you are a group of people who plan to collaborate closely, on the other
 hand, it’s more practical to grant everyone access to commit directly
 instead.</p>
 </div>
+</div>
+</div>
+</div>
+<div id="branching-and-merging" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="branching-and-merging" class="callout-inner">
+<h3 class="callout-title">Branching and merging</h3>
+<div class="callout-content">
+<p>Branches get their name because you can create a new one (say,
+“patch”) that splits off from an existing one like “main”, allowing
+different sets of changes to be made in parallel. Later on, Git can take
+the changes from “patch” and merge (copy) them into the “main” branch.
+In the last challenge, GitHub did all this for us in the background.</p>
+<figure><img src="fig/git-branches.svg" alt="The label ‘main’ points to commit c5; arrows point from c5 to c3 to c1 to c0. The label ‘patch’ points to commit c4; arrows point from c4 to c2 to c1. A dotted arrow points from c5 to c4." class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -1986,15 +2065,17 @@ workflow you learned for collaborating via a GitHub repository</li>
 	
         | <a href="https://github.com/librarycarpentry/lc-git/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/librarycarpentry/lc-git/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/librarycarpentry/lc-git/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/librarycarpentry/lc-git/blob/main/" class="external-link">Cite</a>
+        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/release-0.17.0" class="external-link">sandpaper (0.17.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/5e0d711121a581777d83cf270e298c933f112d52" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/release-1.0.7" class="external-link">varnish (1.0.7)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/frog-cite-1" class="external-link">sandpaper (0.17.2.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/frog-cite-1" class="external-link">varnish (1.0.7)</a></p>
+		</div>
 		</footer>
 </div> <!-- / div.container -->
 	<div id="to-top">
@@ -2016,8 +2097,8 @@ workflow you learned for collaborating via a GitHub repository</li>
   "url": "https://librarycarpentry.github.io/lc-git/aio.html",
   "identifier": "https://librarycarpentry.github.io/lc-git/aio.html",
   "dateCreated": "2018-04-12",
-  "dateModified": "2025-08-07",
-  "datePublished": "2025-08-07"
+  "dateModified": "2025-11-03",
+  "datePublished": "2025-11-03"
 }
 
   </script><script>
