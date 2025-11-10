@@ -44,11 +44,6 @@ Registration closes one week prior to the training event. New trainings are adde
 
 <hr>
 
-#### [10-13 November 2025](https://www.eventbrite.com/e/online-instructor-training-november-10-13-2025-tickets-1657310864409)
-**Four 4-hour days:** 9 am to 1 pm N. America Eastern Time / 2 pm to 6 pm UTC / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251110T09&p1=179&ah=4)
-
-<hr>
-
 #### [17-20 November 2025](https://www.eventbrite.com/e/online-instructor-training-november-17-20-2025-tickets-1657332097919)
 **Four 4-hour days:** 9 am to 1 pm Central European Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training+&iso=20251117T09&p1=195&ah=4)
 
@@ -65,10 +60,10 @@ Registration closes one week prior to the training event. New trainings are adde
 <hr>
 
 
-### Accommodations
+### Accessibility Support
 
 We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
 However, we do want to help create an inclusive, accessible experience for all participants. 
 We encourage you to share any information that would be helpful to make your Carpentries experience accessible. 
-To request an accommodation for this training, please fill out the [accommodation request form](https://carpentries.typeform.com/to/B2OSYaD0)
-If you have questions or need assistance with the accommodation form please [email us](mailto:instructor.training@carpentries.org).
+To request accessibility support (also known as accommodations) for this training, please fill out the [accessibility support request form](https://carpentries.typeform.com/to/B2OSYaD0)
+If you have questions or need assistance with the accessibility support form please [email us](mailto:instructor.training@carpentries.org).
