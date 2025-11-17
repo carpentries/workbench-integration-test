@@ -90,6 +90,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-sandpaper: carpentries/sandpaper#678
+sandpaper: carpentries/sandpaper
 varnish: carpentries/varnish
 pegboard: carpentries/pegboard
