@@ -546,7 +546,7 @@ why.</p>
 </div>
 </section></section><section id="aio-02-getting-started"><p>Content from <a href="02-getting-started.html">Getting started with Git</a></p>
 <hr>
-<p>Last updated on 2025-11-03 |
+<p>Last updated on 2026-01-16 |
 
         <a href="https://github.com/librarycarpentry/lc-git/edit/main/episodes/02-getting-started.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -685,7 +685,8 @@ with Git.</p>
 <p>Any text editor can be made default by adding the correct file path
 and command line options (see <a href="https://help.github.com/articles/associating-text-editors-with-git/" class="external-link">GitHub
 help</a>). However, the simplest <code>core.editor</code> value is
-<code>"nano -w"</code> on Mac, Windows, and Linux.</p>
+<code>"nano -w"</code> on Mac, Windows, and Linux, which will run the
+Nano text editor directly in your shell.</p>
 <p>For example:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -870,15 +871,57 @@ Changes to be committed:
 changed colour (from red to green). Git also tells us that there is a
 new file to be committed but, before we do that, let’s add some text to
 the file.</p>
-<p>We will open the file <code>index.md</code> with any text editor we
-have at hand (e.g. Notepad on Windows or TextEdit on Mac OSX) and enter
-<code># Hello, world!</code>. The hash character is one way of writing a
-header with Markdown. Now, let’s save the file within the text editor
-and check if Git has spotted the changes.</p>
+<p>We will open the file <code>index.md</code> with a text editor. If
+you set Nano as your <code>core.editor</code> value, this would be a
+good time to try it out:</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">nano</span> <span class="at">-w</span> index.md</span></code></pre>
+</div>
+<p>If you don’t want to try Nano, use whatever text editor you feel
+comfortable with (e.g. Notepad on Windows or TextEdit on macOS) to open
+the file.</p>
+<p>When you have the file open, enter <code># Hello, world!</code>. The
+hash character is one way of writing a header with Markdown. Then save
+the file and close the text editor.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Demonstrating how to edit a text file
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>When showing how to edit <code>index.md</code> for the first time,
+Nano is the most convenient editor to use – you don’t have to leave the
+shell and it should work for everyone – but few learners will be fully
+confident with it. Take them step-by-step through one of the two ways of
+saving and closing the file:</p>
+<ul>
+<li>
+<strong>Ctrl + X</strong> to close the file; <strong>Y</strong> to
+save the file; <strong>Enter</strong> to keep the same filename.</li>
+<li>
+<strong>Ctrl + O</strong> to save the file; <strong>Enter</strong>
+to keep the same filename; <strong>Ctrl + X</strong> to close the
+file.</li>
+</ul>
+<p>You could also keep a file manager window open (e.g. File Explorer,
+Finder, Files/Nautilus, Dolphin) to demonstrate locating the file and
+opening it in a suitable GUI text editor. Look out for learners who need
+help with this.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Now, let’s check if Git has spotted the changes:</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -901,19 +944,19 @@ Changes not staged for commit:
 <p>This lets us know that git has indeed spotted the changes to our
 file, but that it hasn’t yet staged them, so let’s add the new version
 of the file to the staging area.</p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">$</span> git add index.md</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> git add index.md</span></code></pre>
 </div>
 <p>Now we are ready to <strong>commit</strong> our first changes. Commit
 is similar to ‘saving’ a file to Git. However, compared to saving, a
 commit provides a lot more information about the changes we have made,
 and this information will remain visible to us later.</p>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">'Add index.md'</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">'Add index.md'</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -923,13 +966,13 @@ and this information will remain visible to us later.</p>
  create mode 100644 index.md</code></pre>
 </div>
 <p>We can see that one file has changed and that we made one insertion,
-which was a line with the text ‘#Hello, world!’. We can also see the
+which was a line with the text ‘# Hello, world!’. We can also see the
 commit message ‘Add index.md’, which we added by using the
 <code>-m</code> flag after <code>git commit</code>. The commit message
 is used to record a short, descriptive, and specific summary of what we
 did to help us remember later on without having to look at the actual
 changes. If we just run <code>git commit</code> without the
-<code>-m</code> option, Git will launch nano (or whatever other editor
+<code>-m</code> option, Git will launch Nano (or whatever other editor
 we configured as <code>core.editor</code>) so that we can write a longer
 message.</p>
 <p>Having made a commit, we now have a permanent record of what was
@@ -1690,7 +1733,7 @@ workflow</li>
 </div>
 </section></section><section id="aio-05-github-pages"><p>Content from <a href="05-github-pages.html">GitHub Pages</a></p>
 <hr>
-<p>Last updated on 2025-11-03 |
+<p>Last updated on 2026-01-16 |
 
         <a href="https://github.com/librarycarpentry/lc-git/edit/main/episodes/05-github-pages.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -1764,22 +1807,24 @@ can be turned on in the settings menu for any repository.</p>
 <p>Let’s set up a new site by enabling GitHub Pages for our project.</p>
 <p>Go to the Pages section of your repository’s Settings:</p>
 <figure><img src="../fig/github-repo-settings-pages.png" alt="GitHub repository's Pages settings" class="figure mx-auto d-block"></figure><div class="section level4">
-<h4 id="source-branch-required">Source branch (required)<a class="anchor" aria-label="anchor" href="#source-branch-required"></a>
+<h4 id="source-and-branch">Source and branch<a class="anchor" aria-label="anchor" href="#source-and-branch"></a>
 </h4>
-<p>Pages needs to know the branch in your repository from which you want
-to serve your site. This can be any branch, including
-<code>main</code>.</p>
-<p>Select then save the source branch:</p>
-<figure><img src="../fig/github-repo-settings-pages-branch.png" alt="GitHub Pages source branch menu" class="figure mx-auto d-block"></figure><figure><img src="../fig/github-repo-settings-pages-save.png" alt="GitHub Pages source branch save" class="figure mx-auto d-block"></figure>
-</div>
-<div class="section level4">
-<h4 id="theme-optional">Theme (optional)<a class="anchor" aria-label="anchor" href="#theme-optional"></a>
-</h4>
-<p>GitHub Pages provides different themes to visually style and organize
-your site’s content. Choosing a theme is optional, and themes can be
-interchanged quickly.</p>
-<figure><img src="../fig/github-repo-settings-pages-theme.png" alt="GitHub Pages choose theme" class="figure mx-auto d-block"></figure><p>See the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser" class="external-link">GitHub
-Pages documentation</a> for further information on using themes.</p>
+<p>Pages gives you a choice between using the built-in Jekyll tool for
+building your website or providing your own tool. We’re going to use
+Jekyll, so leave the “Source” setting on its default value, “Deploy from
+a branch”.</p>
+<p>Jekyll needs to know the branch and folder in your repository from
+which you want to serve your site. There are no particular restrictions
+here. This means we could develop a resource in one branch or folder,
+and maintain a website to describe it in another. But on this occasion,
+we’ll only use the repository for the site.</p>
+<p>Select <code>main</code> as the branch, “/ (root)” as the folder, and
+then save these values:</p>
+<figure><img src="../fig/github-repo-settings-pages-branch.png" alt="GitHub Pages source branch menu" class="figure mx-auto d-block"></figure><figure><img src="../fig/github-repo-settings-pages-save.png" alt="GitHub Pages source branch save" class="figure mx-auto d-block"></figure><p>That’s all the configuration we need to get started with GitHub
+Pages, but there are other things you can change, such as the theme used
+to visually style and organize your site’s content. If you want to
+explore further after the lesson, see the <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll" class="external-link">GitHub
+Pages documentation</a>.</p>
 </div>
 </div>
 <div class="section level3">
@@ -1848,7 +1893,7 @@ bit cumbersome. Try to think of why it was needed? And why it’s called
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>We made a fork and a pull request because we did not have permission
 to edit (or commit) the repository directly. A fork is a copy of the
@@ -1992,7 +2037,7 @@ remote:      https://github.com/&lt;your_github_username&gt;/hello-world-1/pull/
 remote:</code></pre>
 </div>
 <p>You can visit that link in your browser, but if you go back to your
-fork in GitHib you will also see a button has appeared that says
+fork in GitHub you will also see a button has appeared that says
 “Compare &amp; pull request”. You can click on that button instead if
 you prefer.</p>
 <figure><img src="../fig/github-pr-create.png" alt="GitHub compare and pull request button" class="figure mx-auto d-block"></figure>
@@ -2081,7 +2126,7 @@ workflow you learned for collaborating via a GitHub repository</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/release-0.17.2" class="external-link">sandpaper (0.17.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/release-1.0.8" class="external-link">varnish (1.0.8)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/8d115ac226f69e9a562ccc97e698f148c0227fd5" class="external-link">sandpaper (0.17.4.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -2104,8 +2149,8 @@ workflow you learned for collaborating via a GitHub repository</li>
   "url": "https://librarycarpentry.github.io/lc-git/instructor/aio.html",
   "identifier": "https://librarycarpentry.github.io/lc-git/instructor/aio.html",
   "dateCreated": "2018-04-12",
-  "dateModified": "2025-12-02",
-  "datePublished": "2025-12-02"
+  "dateModified": "2026-01-16",
+  "datePublished": "2026-01-16"
 }
 
   </script><script>
