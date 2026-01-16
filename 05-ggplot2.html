@@ -343,7 +343,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Data Visualisation with ggplot2</h1>
-        <p>Last updated on 2025-11-10 |
+        <p>Last updated on 2026-01-16 |
 
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/05-ggplot2.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -499,7 +499,7 @@ but customizing them can be cumbersome compared to
 <span>     xlab <span class="op">=</span> <span class="st">"Number of Household Members"</span>,</span>
 <span>     ylab <span class="op">=</span> <span class="st">"Number of Livestock Owned"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-unnamed-chunk-3-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/05-ggplot2-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 <div class="section level3">
 <h3 id="lattice"><strong><code>Lattice</code></strong><a class="anchor" aria-label="anchor" href="#lattice"></a></h3>
 <p>Lattice is another plotting system in R, which allows for creating
@@ -523,7 +523,7 @@ plotting are limited.</p>
 <span>       xlab <span class="op">=</span> <span class="st">"Number of Household Members"</span>,</span>
 <span>       ylab <span class="op">=</span> <span class="st">"Number of Livestock Owned"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/05-ggplot2-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </section><section><h2 class="section-heading" id="plotting-with-ggplot2">Plotting with <strong><code>ggplot2</code></strong>
 <a class="anchor" aria-label="anchor" href="#plotting-with-ggplot2"></a></h2>
 <hr class="half-width"><p><strong><code>ggplot2</code></strong> is a plotting package that
@@ -608,7 +608,7 @@ first:</p>
 <span>    <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">no_membrs</span>, y <span class="op">=</span> <span class="va">number_items</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-first-ggplot-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The <code>+</code> in the <strong><code>ggplot2</code></strong>
+<figure><img src="fig/05-ggplot2-rendered-first-ggplot-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The <code>+</code> in the <strong><code>ggplot2</code></strong>
 package is particularly useful because it allows you to modify existing
 <code>ggplot</code> objects. This means you can easily set up plot
 templates and conveniently explore different types of plots, so the
@@ -786,7 +786,7 @@ observation:</p>
 <span>    <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">no_membrs</span>, y <span class="op">=</span> <span class="va">number_items</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">geom_jitter</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">village</span><span class="op">)</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>, width <span class="op">=</span> <span class="fl">0.2</span>, height <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-color-by-species-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>There appears to be a positive trend between number of household
+<figure><img src="fig/05-ggplot2-rendered-color-by-species-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>There appears to be a positive trend between number of household
 members and number of items owned (from the list provided).
 Additionally, this trend does not appear to be different by village.</p>
 <div id="notes-1" class="callout">
@@ -836,7 +836,7 @@ data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -908,7 +908,7 @@ where the shape (of the density of points) is drawn.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -925,7 +925,7 @@ where the shape (of the density of points) is drawn.</p>
 <pre class="warning" tabindex="0"><code>Warning: Groups with fewer than two datapoints have been dropped.
 ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes.</code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-violin-plot-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/05-ggplot2-rendered-violin-plot-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
@@ -952,7 +952,7 @@ measurements.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -987,7 +987,7 @@ the respondent is a member of an irrigation association
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1090,7 +1090,7 @@ proportion of respondents in an irrigation association?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1283,7 +1283,7 @@ cheat sheet</a>, and think of ways you could improve the plot.</p>
 <span>         y <span class="op">=</span> <span class="st">"Percent of Respondents"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-ggplot-customization-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The axes have more informative names, but their readability can be
+<figure><img src="fig/05-ggplot2-rendered-ggplot-customization-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The axes have more informative names, but their readability can be
 improved by increasing the font size:</p>
 <div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1299,7 +1299,7 @@ improved by increasing the font size:</p>
 <span>    <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">16</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-ggplot-customization-font-size-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Note that it is also possible to change the fonts of your plots. If
+<figure><img src="fig/05-ggplot2-rendered-ggplot-customization-font-size-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Note that it is also possible to change the fonts of your plots. If
 you are on Windows, you may have to install the <a href="https://github.com/wch/extrafont" class="external-link"><strong><code>extrafont</code></strong>
 package</a>, and follow the instructions included in the README for this
 package.</p>
@@ -1353,7 +1353,7 @@ title:</p>
 <span>         y <span class="op">=</span> <span class="st">"Percent of Respondents"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="va">grey_theme</span></span></code></pre>
 </div>
-<figure><img src="fig/05-ggplot2-rendered-ggplot-custom-themes-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="exercise-4" class="callout discussion">
+<figure><img src="fig/05-ggplot2-rendered-ggplot-custom-themes-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="exercise-4" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1462,7 +1462,7 @@ categorical variable.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/fa8b4ca39911e4466bdbd8112357d90b43ce693d" class="external-link">sandpaper (0.17.4.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/8d115ac226f69e9a562ccc97e698f148c0227fd5" class="external-link">sandpaper (0.17.4.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1484,11 +1484,27 @@ categorical variable.</li>
   "url": "https://datacarpentry.org/r-socialsci/05-ggplot2.html",
   "identifier": "https://datacarpentry.org/r-socialsci/05-ggplot2.html",
   "dateCreated": "2017-05-25",
-  "dateModified": "2025-11-10",
-  "datePublished": "2026-01-05"
+  "dateModified": "2026-01-16",
+  "datePublished": "2026-01-16"
 }
 
   </script><script>
 		feather.replace();
-	</script></body></html><!-- END:   inst/pkgdown/templates/layout.html-->
+	</script><!-- Matomo --><script>
+          var _paq = window._paq = window._paq || [];
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+          _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io", "*.carpentries.github.io"]]);
+          _paq.push(["setDoNotTrack", true]);
+          _paq.push(["disableCookies"]);
+          _paq.push(["trackPageView"]);
+          _paq.push(["enableLinkTracking"]);
+          (function() {
+              var u="https://matomo.carpentries.org/";
+              _paq.push(["setTrackerUrl", u+"matomo.php"]);
+              _paq.push(["setSiteId", "1"]);
+              var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+              g.async=true; g.src="https://matomo.carpentries.org/matomo.js"; s.parentNode.insertBefore(g,s);
+          })();
+        </script><!-- End Matomo Code --></body></html><!-- END:   inst/pkgdown/templates/layout.html-->
 
