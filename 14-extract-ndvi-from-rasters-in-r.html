@@ -396,7 +396,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Derive Values from Raster Time Series</h1>
-        <p>Last updated on 2025-12-15 |
+        <p>Last updated on 2026-01-26 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/14-extract-ndvi-from-rasters-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -707,7 +707,7 @@ directory.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>First we will read in the NDVI data for the SJER field site.</p>
 <div class="codewrapper sourceCode" id="cb21">
@@ -784,7 +784,7 @@ days. Let’s plot our data.</p>
 <span>          subtitle <span class="op">=</span> <span class="st">"NEON Harvard Forest Field Site"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Julian Days"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Mean NDVI"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-ggplot-data-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge-plot-san-joaquin-experimental-range-data" class="callout challenge">
+<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-ggplot-data-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge-plot-san-joaquin-experimental-range-data" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -805,7 +805,7 @@ in a different color.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -816,7 +816,7 @@ in a different color.</p>
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Landsat Derived NDVI - 2011"</span>, subtitle <span class="op">=</span> <span class="st">"NEON SJER Field Site"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Julian Day"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Mean NDVI"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-avg-ndvi-sjer-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-avg-ndvi-sjer-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
@@ -844,7 +844,7 @@ to be merged.</p>
 <span>          subtitle <span class="op">=</span> <span class="st">"Harvard Forest vs San Joaquin"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Julian Day"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Mean NDVI"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-ndvi-harv-sjer-comp-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge-plot-ndvi-with-date" class="callout challenge">
+<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-ndvi-harv-sjer-comp-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge-plot-ndvi-with-date" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -864,7 +864,7 @@ Julian day, on the x-axis.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -877,7 +877,7 @@ Julian day, on the x-axis.</p>
 <span>          subtitle <span class="op">=</span> <span class="st">"Harvard Forest vs San Joaquin"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Date"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Mean NDVI"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-ndvi-harv-sjer-date-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-ndvi-harv-sjer-date-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
@@ -893,7 +893,7 @@ earlier episode</a> that data points with very low NDVI values can be
 associated with images that are filled with clouds. Thus, we can
 attribute the low NDVI values to high levels of cloud cover. Is the same
 thing happening at SJER?</p>
-<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-view-all-rgb-SJER-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Without significant additional processing, we will not be able to
+<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-view-all-rgb-SJER-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Without significant additional processing, we will not be able to
 retrieve a strong reflection from vegetation, from a remotely sensed
 image that is predominantly cloud covered. Thus, these points are likely
 bad data points. Let’s remove them.</p>
@@ -942,7 +942,7 @@ knowledge of the data and the desired outcomes!</p>
 <span>          subtitle <span class="op">=</span> <span class="st">"NEON Harvard Forest Field Site"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Julian Days"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Mean NDVI"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-plot-clean-HARV-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Now our outlier data points are removed and the pattern of “green-up”
+<figure><img src="fig/14-extract-ndvi-from-rasters-in-r-rendered-plot-clean-HARV-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Now our outlier data points are removed and the pattern of “green-up”
 and “brown-down” makes more sense.</p>
 </section><section><h2 class="section-heading" id="write-ndvi-data-to-a--csv-file">Write NDVI data to a .csv File<a class="anchor" aria-label="anchor" href="#write-ndvi-data-to-a--csv-file"></a></h2>
 <hr class="half-width"><p>We can write our final NDVI dataframe out to a text format, to
@@ -1023,7 +1023,7 @@ sites.</li>
   Answers
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1107,7 +1107,7 @@ have the same column names.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/017f3dfd3242bef7d1c29e418f63efc51a343ee6" class="external-link">sandpaper (0.18.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/17fb117fcbc4ee18c1718adf1fadcd6e3da0f836" class="external-link">sandpaper (0.18.4)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/5c2d7048e460689fcd39f676f7b08844bf21e676" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1129,8 +1129,8 @@ have the same column names.</li>
   "url": "https://datacarpentry.org/r-raster-vector-geospatial/14-extract-ndvi-from-rasters-in-r.html",
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/14-extract-ndvi-from-rasters-in-r.html",
   "dateCreated": "2015-10-22",
-  "dateModified": "2025-12-15",
-  "datePublished": "2026-01-19"
+  "dateModified": "2026-01-26",
+  "datePublished": "2026-01-26"
 }
 
   </script><script>
