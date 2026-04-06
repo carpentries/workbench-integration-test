@@ -38,8 +38,8 @@
 </div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu">
+<li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -64,10 +64,8 @@
             </li>
           </ul>
 </li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu>
+<div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
         </button>
@@ -122,7 +120,7 @@
 <li><a class="dropdown-item" href="checkout.html">Checkout Instructions</a></li>
 <li><a class="dropdown-item" href="demo_lessons.html">Lessons for Teaching Demonstrations</a></li>
 <li><a class="dropdown-item" href="demos_rubric.html">Suggested Rubric for Teaching Demonstrations</a></li>
-<li><a class="dropdown-item" href="members.html">Information for Member Organisations</a></li>
+<li><a class="dropdown-item" href="members.html">Information for Partner Organisations</a></li>
 <li><a class="dropdown-item" href="fromthelearners.html">From the Learners</a></li>
 <li><a class="dropdown-item" href="reference.html">Glossary</a></li>
           </ul>
@@ -142,29 +140,18 @@
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div>
 <!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Instructor Training
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
-    %
-  </div>
-  <div class="progress carpentries">
-    <div class="progress-bar carpentries" role="progressbar" style="width: %" aria-valuenow="" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
-    </div>
-  </div>
-</aside><div class="container">
+</nav><div class="container">
       <div class="row">
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Collapse" alt="Collapse" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar">
+<li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -189,19 +176,19 @@
                   </li>
                 </ul>
 </li>
-            </div>
-          </div>
+            </menu>
+</div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="../aio.html">Learner View</a>
                       </div>
@@ -219,15 +206,15 @@
 </div>
 <!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   EPISODES
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -547,14 +534,14 @@
             </div>
 
             <hr class="half-width">
-<div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+<div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul>
 <li>
@@ -574,7 +561,7 @@
 <li><a class="dropdown-item" href="checkout.html">Checkout Instructions</a></li>
 <li><a class="dropdown-item" href="demo_lessons.html">Lessons for Teaching Demonstrations</a></li>
 <li><a class="dropdown-item" href="demos_rubric.html">Suggested Rubric for Teaching Demonstrations</a></li>
-<li><a class="dropdown-item" href="members.html">Information for Member Organisations</a></li>
+<li><a class="dropdown-item" href="members.html">Information for Partner Organisations</a></li>
 <li><a class="dropdown-item" href="fromthelearners.html">From the Learners</a></li>
 <li><a class="dropdown-item" href="reference.html">Glossary</a></li>
                     </ul>
@@ -604,7 +591,7 @@
         <!-- START: inst/pkgdown/templates/content-extra.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <main id="main-content" class="main-content"><div class="container lesson-content">
-        
+        <h1>All in One View</h1>
         
 <section id="aio-01-welcome"><p>Content from <a href="01-welcome.html">Welcome</a></p>
 <hr>
@@ -651,7 +638,7 @@ an incident.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>In an online training, ensure that captions are turned on, that one
 trainer claims host, and that the host adds other trainers as co-hosts.
@@ -687,7 +674,7 @@ listed when participants provide them.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Further reading on pronouns </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>The resources below can provide additional guidance on respectful
 pronoun usage:</p>
@@ -719,7 +706,7 @@ Grand-Duc, Wikipedia, <a href="https://en.wikipedia.org/wiki/User:Grand-Duc" cla
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Getting to know each other </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p>There are multiple ways to build a sense of community early in an
 instructor training event and help ensure participants engage fully with
@@ -2165,7 +2152,7 @@ is important.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>For a semi-anonymous alternative to having learners write their score
 in the etherpad on the challenge below, you can create a list with
@@ -2175,19 +2162,19 @@ score distribution.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ss">- </span>0</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ss">- </span>1</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ss">- </span>2</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ss">- </span>3</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ss">- </span>4</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ss">- </span>5</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ss">- </span>6</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ss">- </span>7</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="ss">- </span>8</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="ss">- </span>9</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="ss">- </span>10</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="ss">- </span>11</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="ss">- </span>12+</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ss">- </span>0</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ss">- </span>1</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ss">- </span>2</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ss">- </span>3</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="ss">- </span>4</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="ss">- </span>5</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="ss">- </span>6</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="ss">- </span>7</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="ss">- </span>8</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="ss">- </span>9</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="ss">- </span>10</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a><span class="ss">- </span>11</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1" aria-label="code-block-1-13"></a><span class="ss">- </span>12+</span></code></pre>
 </div>
 </div>
 </div>
@@ -2812,7 +2799,7 @@ promotes.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>In an online training, ensure that captions are turned on, that one
 trainer claims host, and that the host adds other trainers as co-hosts.
@@ -2958,7 +2945,7 @@ appropriate heading in the Etherpad.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>After trainees write in the etherpad, one way to discuss/review
 comments is to note which items in either list suggest practices that
@@ -3131,7 +3118,7 @@ at what you learned trying to solve it!</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Effort-based.</li>
@@ -3409,7 +3396,7 @@ information.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>In your discussion of accessibility, it is helpful to point out that
 accessibility may not always affect only individual learners, such as
@@ -4539,7 +4526,7 @@ event.</li>
 </div>
 </section></section><section id="aio-15-carpentries"><p>Content from <a href="15-carpentries.html">The Carpentries: How We Operate</a></p>
 <hr>
-<p>Last updated on 2026-01-16 |
+<p>Last updated on 2026-04-06 |
 
         <a href="https://github.com/carpentries/instructor-training/edit/main/episodes/15-carpentries.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 45 minutes</p>
@@ -4664,7 +4651,7 @@ volunteer participants in our global and local communities. The
 <a href="https://carpentries.org/community/instructor-trainers/" class="external-link">Instructor
 Trainers</a>, <a href="https://carpentries.org/community/maintainers/" class="external-link">Maintainers</a>,
 <a href="https://carpentries.org/community/lesson_developers/" class="external-link">Lesson
-Developers</a>, <a href="https://carpentries.org/support/membership/member-list/" class="external-link">Institutional
+Developers</a>, <a href="https://carpentries.org/support/partnership/partner-list/" class="external-link">Institutional
 Partners</a>, members of various committees, a <a href="https://carpentries.org/governance/" class="external-link">governance structure</a>, and
 other supporters who participate, synchronously or asynchronously, in
 building our programs for all to share. At the <strong>local
@@ -4830,7 +4817,7 @@ Trainer</a></li>
 <strong>centrally-organised</strong> and
 <strong>self-organised</strong>. You can read (and hopefully have
 already read) about these on our <a href="https://carpentries.org/workshops/#workshop-organising" class="external-link">website</a>.</p>
-<p>Centrally organised workshops are included in institutional <a href="https://carpentries.org/membership/" class="external-link">membership</a> packages and
+<p>Centrally organised workshops are included in institutional <a href="https://carpentries.org/partnership/" class="external-link">Partnership</a> packages and
 can also be requested separately for a fee. Since The Carpentries will
 recruit Instructors to teach, this is a great way to host workshops
 before your local Instructor team feels fully prepared to run a complete
@@ -4875,17 +4862,20 @@ stay abreast of the latest updates!</p>
 want to travel. In that case, you will coordinate with your community to
 gain access to teaching opportunities through locally organised
 workshops.</p>
-<p>If you want to be presented with opportunities to teach outside your
-community – locally or far from home, be sure to join our <a href="https://carpentries.topicbox.com/groups/instructors" class="external-link">Instructors
-mailing list</a>. This is how we recruit Instructors to teach in
-centrally-organised workshops around the world.</p>
+<p>The Carpentries relies on contributions from individual community
+members. To recognise the impact of community members, we offer
+discounts on Partnerships for organisations with members who actively
+contribute to The Carpentries mission in a range of roles. As an
+Instructor when you teach Centrally-Organised workshops, your
+organisation may qualify for a 5% discount on their Partnership. For
+more information, visit our <a href="https://carpentries.org/support/pricing/" class="external-link">pricing page</a>.</p>
 <p>The Carpentries can not guarantee that all Instructors who respond to
-recruitment calls will be selected, and depending on your area these
-opportunities may be scarce. If you want to get started right away,
-consider organizing your own workshop or even teaching a single lesson
-with a few friends. If your friends have not been through Instructor
-Training, you will need to set aside some time to help them understand
-how best to support your efforts.</p>
+recruitment calls will be selected, and depending on your geographic
+area these opportunities may be scarce. If you want to get started right
+away, consider organising your own workshop or even teaching a single
+lesson with a few friends. If your friends have not been through
+Instructor Training, you will need to set aside some time to help them
+understand how best to support your efforts.</p>
 </div>
 </div>
 </div>
@@ -5130,7 +5120,7 @@ both a learner’s and an instructor’s point of view in the Etherpad.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Some advantages are:</p>
 <ul>
@@ -5223,7 +5213,7 @@ is assumed learners are familiar with how to use a variable, the
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The instructor will lead a discussion about the videos and your
 feedback on them, making sure that the points of the Top Ten Tips below
@@ -5418,7 +5408,7 @@ aside time <em>before</em> deeply reviewing your technical content to
   A note on cutting
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>This episode is a common place for Trainers to cut parts of while
 preparing to teach. That’s not because this is not important – this page
@@ -5831,7 +5821,7 @@ your screen to give your eyes a rest.</p></section><section id="aio-20-performan
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>In an online training, ensure that captions are turned on, that one
 trainer claims host, and that the host adds other trainers as co-hosts.
@@ -7003,7 +6993,7 @@ minutes.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Compare your list of topics with the list below. What is missing,
 either in your list or the one below?</p>
@@ -7063,7 +7053,7 @@ exercise.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Excalidraw </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>The online tool we used in the mental models exercise is <a href="https://excalidraw.com/" class="external-link">Excalidraw</a>, in case you’d like to use
 it here.</p>
@@ -7289,7 +7279,7 @@ teach.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/4f7bf1e60415b10ba35e645a618620b5d88a6e37" class="external-link">sandpaper (0.20.1.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/70f20347f916e3306f2fec8a1ce69d8de8af33e9" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/d8b84a7e5361dcd6b28f030f8e2e43075b56720e" class="external-link">sandpaper (0.20.1.9000)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/0be4a89daf9389ffba5c2e61bf54a5ebda69c61b" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -7312,8 +7302,8 @@ teach.</li>
   "url": "https://carpentries.github.io/instructor-training/instructor/aio.html",
   "identifier": "https://carpentries.github.io/instructor-training/instructor/aio.html",
   "dateCreated": "2014-11-16",
-  "dateModified": "2026-03-30",
-  "datePublished": "2026-03-30"
+  "dateModified": "2026-04-06",
+  "datePublished": "2026-04-06"
 }
 
   </script><script>
