@@ -113,6 +113,6 @@ profiles:
 analytics: carpentries
 url: 'https://carpentries.github.io/instructor-training'
 lang: en
-sandpaper: carpentries/sandpaper
-varnish: carpentries/varnish
+sandpaper: carpentries/sandpaper#717
+varnish: carpentries/varnish#205
 pegboard: carpentries/pegboard
