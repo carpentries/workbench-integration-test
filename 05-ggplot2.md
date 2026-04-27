@@ -89,21 +89,21 @@ interviews_plotting <- read_csv("https://raw.githubusercontent.com/datacarpentry
 
 ``` r
 ## Can be used to load in data from previous lesson!
-interviews_plotting <- interviews %>%
+interviews_plotting <- interviews |>
   ## pivot wider by items_owned
-  separate_longer_delim(items_owned, delim = ";") %>%
-  replace_na(list(items_owned = "no_listed_items")) %>%
+  separate_longer_delim(items_owned, delim = ";") |>
+  replace_na(list(items_owned = "no_listed_items")) |>
   ## Use of grouped mutate to find number of rows
-  group_by(key_ID) %>% 
+  group_by(key_ID) |> 
   mutate(items_owned_logical = TRUE,
-         number_items = if_else(items_owned == "no_listed_items", 0, n())) %>% 
+         number_items = if_else(items_owned == "no_listed_items", 0, n())) |> 
   pivot_wider(names_from = items_owned,
               values_from = items_owned_logical,
-              values_fill = list(items_owned_logical = FALSE)) %>% 
+              values_fill = list(items_owned_logical = FALSE)) |> 
   ## pivot wider by months_lack_food
-  separate_longer_delim(months_lack_food, delim = ";") %>%
+  separate_longer_delim(months_lack_food, delim = ";") |>
   mutate(months_lack_food_logical = TRUE,
-         number_months_lack_food = if_else(months_lack_food == "none", 0, n())) %>%
+         number_months_lack_food = if_else(months_lack_food == "none", 0, n())) |>
   pivot_wider(names_from = months_lack_food,
               values_from = months_lack_food_logical,
               values_fill = list(months_lack_food_logical = FALSE))
@@ -118,7 +118,7 @@ Before we start with **`ggplot2`**, it's helpful to know that there are several 
 ### R Base Plots
 Base R plots are the simplest form of visualization and are great for quick, exploratory analysis. You can create plots with very little code, but customizing them can be cumbersome compared to **`ggplot2`**.
 
-Example of a simple scatterplot in base R using the `no_membrs` and `liv_count` variables:
+Example of a basic scatterplot in base R using the `no_membrs` and `liv_count` variables:
 
 
 ``` r
@@ -128,7 +128,7 @@ plot(interviews_plotting$no_membrs, interviews_plotting$liv_count,
      ylab = "Number of Livestock Owned")
 ```
 
-<img src="fig/05-ggplot2-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-unnamed-chunk-3-1.png" alt="a greyscale base R scatterplot of number of household members by number of livestock owned" style="display: block; margin: auto;" />
 
 ### **`Lattice`**
 Lattice is another plotting system in R, which allows for creating multi-panel plots easily. It’s different from ggplot2 because you define the entire plot in a single function call, and modifications after plotting are limited.
@@ -147,7 +147,7 @@ xyplot(liv_count ~ no_membrs | village, data = interviews_plotting,
        ylab = "Number of Livestock Owned")
 ```
 
-<img src="fig/05-ggplot2-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-unnamed-chunk-4-1.png" alt="A Lattice scatter plot of number of household members by number of livestock owned, with 3 panels, each showing data from one village" style="display: block; margin: auto;" />
 
 
 ## Plotting with **`ggplot2`**
@@ -183,18 +183,18 @@ Each chart built with ggplot2 must include the following
 Thus, the template for graphic in ggplot2 is:
 
 ```
-<DATA> %>%
+<DATA> |>
     ggplot(aes(<MAPPINGS>)) +
     <GEOM_FUNCTION>()
 ```
 
-Remember from the last lesson that the pipe operator `%>%` places the result of the previous line(s) into the first argument of the function. **`ggplot`** is a function that expects a data frame to be the first argument. This allows for us to change from specifying the `data =` argument within the `ggplot` function and instead pipe the data into the function.
+Remember from the last lesson that the pipe operator `|>` places the result of the previous line(s) into the first argument of the function. **`ggplot`** is a function that expects a data frame to be the first argument. This allows for us to change from specifying the `data =` argument within the `ggplot` function and instead pipe the data into the function.
 
 - use the `ggplot()` function and bind the plot to a specific data frame.
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot()
 ```
 
@@ -202,7 +202,7 @@ interviews_plotting %>%
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items))
 ```
 
@@ -218,12 +218,17 @@ To add a geom to the plot use the `+` operator. Because we have two continuous v
 
 
 ``` r
-interviews_plotting %>%
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_point()
 ```
 
-<img src="fig/05-ggplot2-rendered-first-ggplot-1.png" alt="" style="display: block; margin: auto;" />
+``` error
+Error in `fortify()` at ggplot2/R/plot.R:126:3:
+! `data` must be a <data.frame>, or an object coercible by `fortify()`,
+  or a valid <data.frame>-like object coercible by `as.data.frame()`, not a
+  <ggplot2::mapping> object.
+ℹ Did you accidentally pass `aes()` to the `data` argument?
+```
 
 The `+` in the **`ggplot2`** package is particularly useful because it allows
 you to modify existing `ggplot` objects. This means you can easily set up plot
@@ -234,7 +239,7 @@ approach in the previous lesson:
 
 ``` r
 # Assign plot to a variable
-interviews_plot <- interviews_plotting %>%
+interviews_plot <- interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items))
 
 # Draw the plot as a dot plot
@@ -276,7 +281,7 @@ defining the dataset we'll use, lay out the axes, and choose a geom:
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_point()
 ```
@@ -312,7 +317,7 @@ opposed to lighter gray):
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_point(alpha = 0.5)
 ```
@@ -334,7 +339,7 @@ We can jitter our points using the `geom_jitter()` function instead of the
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_jitter()
 ```
@@ -350,7 +355,7 @@ between 0.1 and 0.4. Experiment with the values to see how your plot changes.
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_jitter(alpha = 0.5,
                 width = 0.2,
@@ -364,7 +369,7 @@ a `color` argument inside the `geom_jitter()` function:
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_jitter(alpha = 0.5,
                 color = "blue",
@@ -389,12 +394,12 @@ of the observation:
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = no_membrs, y = number_items)) +
     geom_jitter(aes(color = village), alpha = 0.5, width = 0.2, height = 0.2)
 ```
 
-<img src="fig/05-ggplot2-rendered-color-by-species-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-color-by-species-1.png" alt="Previous plot with points colored by village and an added legend with color keys for each village" style="display: block; margin: auto;" />
 
 There appears to be a positive trend between number of household
 members and number of items owned (from the list provided). Additionally,
@@ -412,13 +417,13 @@ of that type and the legend gives point sizes associated to particular
 numbers of items.
 
 
-``` r
-interviews_plotting %>%
+
+```{r color-by-village-notes, fig.alt="Previous plot with points colored by village and sized based on the number of cases at each coordinate set. There are two legends, one labeled 'n' and one labeled 
+'village'", purl=FALSE}
+interviews_plotting |>
    ggplot(aes(x = no_membrs, y = number_items, color = village)) +
    geom_count()
 ```
-
-<img src="fig/05-ggplot2-rendered-color-by-species-notes-1.png" alt="Previous plot with dots colored by village." style="display: block; margin: auto;" />
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -437,7 +442,7 @@ What other kinds of plots might you use to show this type of data?
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = village, y = rooms)) +
     geom_jitter(aes(color = respondent_wall_type),
 	    alpha = 0.5,
@@ -462,7 +467,7 @@ wall type:
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = respondent_wall_type, y = rooms)) +
     geom_boxplot()
 ```
@@ -474,7 +479,7 @@ measurements and of their distribution:
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = respondent_wall_type, y = rooms)) +
     geom_boxplot(alpha = 0) +
     geom_jitter(alpha = 0.5,
@@ -508,7 +513,7 @@ boxplot. An alternative to the boxplot is the violin plot, where the shape
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
   ggplot(aes(x = respondent_wall_type, y = rooms)) +
   geom_violin(alpha = 0) +
   geom_jitter(alpha = 0.5, color = "tomato")
@@ -519,7 +524,7 @@ Warning: Groups with fewer than two datapoints have been dropped.
 ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes.
 ```
 
-<img src="fig/05-ggplot2-rendered-violin-plot-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-violin-plot-1.png" alt="A violin plot showing number of rooms within homes of each wall type. The points are jittered to avoid overplotting and the width of each vertical segment is determined by the number of points of that wall type with similar number of rooms" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::
 
@@ -536,7 +541,7 @@ type.
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
    ggplot(aes(x = respondent_wall_type, y = liv_count)) +
    geom_boxplot(alpha = 0) +
    geom_jitter(alpha = 0.5, width = 0.2, height = 0.2)
@@ -555,7 +560,7 @@ interviews_plotting %>%
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
   ggplot(aes(x = respondent_wall_type, y = liv_count)) +
   geom_boxplot(alpha = 0) +
   geom_jitter(aes(color = memb_assoc), alpha = 0.5, width = 0.2, height = 0.2)
@@ -575,7 +580,7 @@ value of x (in this case, wall type) appears in the dataset.
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = respondent_wall_type)) +
     geom_bar()
 ```
@@ -587,7 +592,7 @@ the portion of each count that is from each village.
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = respondent_wall_type)) +
     geom_bar(aes(fill = village))
 ```
@@ -601,7 +606,7 @@ argument for `geom_bar()` and setting it to "dodge".
 
 
 ``` r
-interviews_plotting %>%
+interviews_plotting |>
     ggplot(aes(x = respondent_wall_type)) +
     geom_bar(aes(fill = village), position = "dodge")
 ```
@@ -618,11 +623,11 @@ houses with cement walls, as there was only one in the dataset.
 
 
 ``` r
-percent_wall_type <- interviews_plotting %>%
-    filter(respondent_wall_type != "cement") %>%
-    count(village, respondent_wall_type) %>%
-    group_by(village) %>%
-    mutate(percent = (n / sum(n)) * 100) %>%
+percent_wall_type <- interviews_plotting |>
+    filter(respondent_wall_type != "cement") |>
+    count(village, respondent_wall_type) |>
+    group_by(village) |>
+    mutate(percent = (n / sum(n)) * 100) |>
     ungroup()
 ```
 
@@ -631,7 +636,7 @@ percentage of each house type in each village.
 
 
 ``` r
-percent_wall_type %>%
+percent_wall_type |>
     ggplot(aes(x = village, y = percent, fill = respondent_wall_type)) +
     geom_bar(stat = "identity", position = "dodge")
 ```
@@ -654,14 +659,14 @@ respondents in an irrigation association?
 
 
 ``` r
-percent_memb_assoc <- interviews_plotting %>%
-  filter(!is.na(memb_assoc)) %>%
-  count(village, memb_assoc) %>%
-  group_by(village) %>%
-  mutate(percent = (n / sum(n)) * 100) %>%
+percent_memb_assoc <- interviews_plotting |>
+  filter(!is.na(memb_assoc)) |>
+  count(village, memb_assoc) |>
+  group_by(village) |>
+  mutate(percent = (n / sum(n)) * 100) |>
   ungroup()
 
-percent_memb_assoc %>%
+percent_memb_assoc |>
    ggplot(aes(x = village, y = percent, fill = memb_assoc)) +
     geom_bar(stat = "identity", position = "dodge")
 ```
@@ -692,7 +697,7 @@ The `labs` function takes the following arguments:
 
 
 ``` r
-percent_wall_type %>%
+percent_wall_type |>
     ggplot(aes(x = village, y = percent, fill = respondent_wall_type)) +
     geom_bar(stat = "identity", position = "dodge") +
     labs(title = "Proportion of wall type by village",
@@ -719,7 +724,7 @@ multi-panel plot:
 
 
 ``` r
-percent_wall_type %>%
+percent_wall_type |>
     ggplot(aes(x = respondent_wall_type, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     labs(title="Proportion of wall type by village",
@@ -739,7 +744,7 @@ the grid:
 
 
 ``` r
-percent_wall_type %>%
+percent_wall_type |>
     ggplot(aes(x = respondent_wall_type, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     labs(title="Proportion of wall type by village",
@@ -760,9 +765,9 @@ calculate the percentage of people in each village who own each item:
 
 
 ``` r
-percent_items <- interviews_plotting %>%
-    group_by(village) %>%
-    summarize(across(bicycle:no_listed_items, ~ sum(.x) / n() * 100)) %>%
+percent_items <- interviews_plotting |>
+    group_by(village) |>
+    summarize(across(bicycle:no_listed_items, ~ sum(.x) / n() * 100)) |>
     pivot_longer(bicycle:no_listed_items, names_to = "items", values_to = "percent")
 ```
 
@@ -790,7 +795,7 @@ multi-paneled bar plot.
 
 
 ``` r
-percent_items %>%
+percent_items |>
     ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
@@ -836,7 +841,7 @@ Now, let's change names of axes to something more informative than 'village' and
 
 
 ``` r
-percent_items %>%
+percent_items |>
     ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
@@ -846,14 +851,14 @@ percent_items %>%
     theme_bw()
 ```
 
-<img src="fig/05-ggplot2-rendered-ggplot-customization-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-ggplot-customization-1.png" alt="Faceted barplot of the percent of respondents in each village who owned each type of item, styled in a black and white theme" style="display: block; margin: auto;" />
 
 The axes have more informative names, but their readability can be improved by
 increasing the font size:
 
 
 ``` r
-percent_items %>%
+percent_items |>
     ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
@@ -864,7 +869,7 @@ percent_items %>%
     theme(text = element_text(size = 16))
 ```
 
-<img src="fig/05-ggplot2-rendered-ggplot-customization-font-size-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-ggplot-customization-font-size-1.png" alt="Previous plot, but with font size increased from default to 16 points" style="display: block; margin: auto;" />
 
 Note that it is also possible to change the fonts of your plots. If you are on
 Windows, you may have to install the [**`extrafont`**
@@ -880,7 +885,7 @@ for the title to insert a new line:
 
 
 ``` r
-percent_items %>%
+percent_items |>
     ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
@@ -894,7 +899,7 @@ percent_items %>%
           text = element_text(size = 16))
 ```
 
-<img src="fig/05-ggplot2-rendered-ggplot-customization-label-orientation-1.png" alt="Multi-panel bar charts showing percent of respondents in each village and who owned each item, with grids behind the bars." style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-ggplot-customization-label-orientation-1.png" alt="Multi-panel bar charts showing percent of respondents in each village and who owned each item, with grids behind the bars and village labes displayed at a 45 degree angle to avoid overlapping labels" style="display: block; margin: auto;" />
 
 If you like the changes you created better than the default theme, you can save
 them as an object to be able to easily apply them to other plots you may create.
@@ -910,7 +915,7 @@ grey_theme <- theme(axis.text.x = element_text(colour = "grey20", size = 12,
                     plot.title = element_text(hjust = 0.5))
 
 
-percent_items %>%
+percent_items |>
     ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
@@ -920,7 +925,7 @@ percent_items %>%
     grey_theme
 ```
 
-<img src="fig/05-ggplot2-rendered-ggplot-custom-themes-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/05-ggplot2-rendered-ggplot-custom-themes-1.png" alt="Identical plot to previous multi-panel bar chart, but with the figure title centered horizontally" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -945,7 +950,7 @@ Make sure you have the `fig_output/` folder in your working directory.
 
 
 ``` r
-my_plot <- percent_items %>%
+my_plot <- percent_items |>
     ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
