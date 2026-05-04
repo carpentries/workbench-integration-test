@@ -58,7 +58,7 @@
         </ul></div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav data" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav data" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
@@ -107,12 +107,8 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><aside class="col-md-12 lesson-progress"><div style="width: 25%" class="percentage">
-    25%
-  </div>
-  <div class="progress data">
-    <div class="progress-bar data" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" style="width: 25%">
-    </div>
+</nav><aside class="col-md-12 lesson-progress"><div class="progress data">
+    <div class="progress-bar data" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">25%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -168,7 +164,7 @@
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
 
-            <hr></div><!--/div.mobile-row -->
+          </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
@@ -321,8 +317,8 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/01-intro-to-r.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/03-dplyr.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="../instructor/01-intro-to-r.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="../instructor/03-dplyr.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -335,9 +331,9 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
-      <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
+    </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Starting with Data</h1>
-        <p>Last updated on 2026-04-27 |
+        <p>Last updated on 2026-05-04 |
 
         <a href="https://github.com/datacarpentry/r-socialsci/edit/main/episodes/02-starting-with-data.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -432,40 +428,40 @@ was produced through cleaning in OpenRefine
 (<code>data/SAFI_clean.csv</code>). In this dataset, the missing data is
 encoded as “NULL”, each row holds information for a single interview
 respondent, and the columns represent:</p>
-<table class="table"><colgroup><col width="13%"><col width="86%"></colgroup><thead><tr class="header"><th>column_name</th>
+<table class="table"><colgroup><col width="13%"><col width="86%"></colgroup><thead><tr><th>column_name</th>
 <th>description</th>
-</tr></thead><tbody><tr class="odd"><td>key_id</td>
+</tr></thead><tbody><tr><td>key_id</td>
 <td>Added to provide a unique Id for each observation. (The InstanceID
 field does this as well but it is not as convenient to use)</td>
-</tr><tr class="even"><td>village</td>
+</tr><tr><td>village</td>
 <td>Village name</td>
-</tr><tr class="odd"><td>interview_date</td>
+</tr><tr><td>interview_date</td>
 <td>Date of interview</td>
-</tr><tr class="even"><td>no_membrs</td>
+</tr><tr><td>no_membrs</td>
 <td>How many members in the household?</td>
-</tr><tr class="odd"><td>years_liv</td>
+</tr><tr><td>years_liv</td>
 <td>How many years have you been living in this village or neighboring
 village?</td>
-</tr><tr class="even"><td>respondent_wall_type</td>
+</tr><tr><td>respondent_wall_type</td>
 <td>What type of walls does their house have (from list)</td>
-</tr><tr class="odd"><td>rooms</td>
+</tr><tr><td>rooms</td>
 <td>How many rooms in the main house are used for sleeping?</td>
-</tr><tr class="even"><td>memb_assoc</td>
+</tr><tr><td>memb_assoc</td>
 <td>Are you a member of an irrigation association?</td>
-</tr><tr class="odd"><td>affect_conflicts</td>
+</tr><tr><td>affect_conflicts</td>
 <td>Have you been affected by conflicts with other irrigators in the
 area?</td>
-</tr><tr class="even"><td>liv_count</td>
+</tr><tr><td>liv_count</td>
 <td>Number of livestock owned.</td>
-</tr><tr class="odd"><td>items_owned</td>
+</tr><tr><td>items_owned</td>
 <td>Which of the following items are owned by the household? (list)</td>
-</tr><tr class="even"><td>no_meals</td>
+</tr><tr><td>no_meals</td>
 <td>How many meals do people in your household normally eat in a
 day?</td>
-</tr><tr class="odd"><td>months_lack_food</td>
+</tr><tr><td>months_lack_food</td>
 <td>Indicate which months, In the last 12 months have you faced a
 situation when you did not have enough food to feed the household?</td>
-</tr><tr class="even"><td>instanceID</td>
+</tr><tr><td>instanceID</td>
 <td>Unique identifier for the form data submission</td>
 </tr></tbody></table></section><section><h2 class="section-heading" id="importing-data">Importing data<a class="anchor" aria-label="anchor" href="#importing-data"></a></h2>
 <hr class="half-width"><p>You are going to load the data in R’s memory using the function
@@ -1551,7 +1547,7 @@ cannot be parsed.</p>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/dd826df5977a33e624097030cb369027d9a9e7c1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/3ea93383d08ad2fe868fedcebce03d79fe0d3730" class="external-link">varnish (1.1.0)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/dd826df5977a33e624097030cb369027d9a9e7c1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/01c642a08d88eb3cad5b5b3fdfcd72337b9f1722" class="external-link">varnish (1.1.1.9000)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1573,8 +1569,8 @@ cannot be parsed.</p>
   "url": "https://datacarpentry.org/r-socialsci/instructor/02-starting-with-data.html",
   "identifier": "https://datacarpentry.org/r-socialsci/instructor/02-starting-with-data.html",
   "dateCreated": "2017-05-25",
-  "dateModified": "2026-04-27",
-  "datePublished": "2026-04-27"
+  "dateModified": "2026-05-04",
+  "datePublished": "2026-05-04"
 }
 
   </script><script>
