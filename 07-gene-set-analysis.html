@@ -68,7 +68,7 @@
         </ul></div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav incubator" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav incubator" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
@@ -117,12 +117,8 @@
     -->
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><aside class="col-md-12 lesson-progress"><div style="width: 83%" class="percentage">
-    83%
-  </div>
-  <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="83" style="width: 83%">
-    </div>
+</nav><aside class="col-md-12 lesson-progress"><div class="progress incubator">
+    <div class="progress-bar incubator" role="progressbar" style="width: 83%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">83%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -178,7 +174,7 @@
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
 
-            <hr></div><!--/div.mobile-row -->
+          </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
@@ -328,8 +324,8 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="06-extra-design.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="08-next-steps.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="06-extra-design.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="08-next-steps.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -342,9 +338,9 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
-      <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
+    </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Gene set enrichment analysis</h1>
-        <p>Last updated on 2026-04-13 |
+        <p>Last updated on 2026-05-04 |
 
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/07-gene-set-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -577,19 +573,19 @@ size of the <em>XY gene set</em> (i.e. the number of member genes),
 <span class="math inline">\(n_{1+}\)</span> is the number of DE genes,
 <span class="math inline">\(n\)</span> is the number of total genes.</p>
 <center>
-<table class="table"><thead><tr class="header"><th></th>
+<table class="table"><thead><tr><th></th>
 <th>In the gene set</th>
 <th>Not in the gene set</th>
 <th>Total</th>
-</tr></thead><tbody><tr class="odd"><td><strong>DE</strong></td>
+</tr></thead><tbody><tr><td><strong>DE</strong></td>
 <td><span class="math inline">\(n_{11}\)</span></td>
 <td><span class="math inline">\(n_{12}\)</span></td>
 <td><span class="math inline">\(n_{1+}\)</span></td>
-</tr><tr class="even"><td><strong>Not DE</strong></td>
+</tr><tr><td><strong>Not DE</strong></td>
 <td><span class="math inline">\(n_{21}\)</span></td>
 <td><span class="math inline">\(n_{22}\)</span></td>
 <td><span class="math inline">\(n_{2+}\)</span></td>
-</tr><tr class="odd"><td><strong>Total</strong></td>
+</tr><tr><td><strong>Total</strong></td>
 <td><span class="math inline">\(n_{+1}\)</span></td>
 <td><span class="math inline">\(n_{+2}\)</span></td>
 <td><span class="math inline">\(n\)</span></td>
@@ -634,19 +630,19 @@ size of the <em>XY gene set</em> (i.e. the number of member genes),
 </div>
 <p>And we fill these numbers into the 2x2 contingency table:</p>
 <center>
-<table class="table"><thead><tr class="header"><th></th>
+<table class="table"><thead><tr><th></th>
 <th>In the gene set</th>
 <th>Not in the gene set</th>
 <th>Total</th>
-</tr></thead><tbody><tr class="odd"><td><strong>DE</strong></td>
+</tr></thead><tbody><tr><td><strong>DE</strong></td>
 <td>13</td>
 <td>41</td>
 <td>54</td>
-</tr><tr class="even"><td><strong>Not DE</strong></td>
+</tr><tr><td><strong>Not DE</strong></td>
 <td>1121</td>
 <td>20023</td>
 <td>21144</td>
-</tr><tr class="odd"><td><strong>Total</strong></td>
+</tr><tr><td><strong>Total</strong></td>
 <td>1134</td>
 <td>20064</td>
 <td>21198</td>
@@ -720,19 +716,19 @@ over-representation of DE genes on the gene set.</p>
 the Fisher’s exact test. E.g. let’s put whether genes are in the gene
 sets on rows, and put whether genes are DE on columns.</p>
 <center>
-<table class="table"><thead><tr class="header"><th></th>
+<table class="table"><thead><tr><th></th>
 <th>DE</th>
 <th>Not DE</th>
 <th>Total</th>
-</tr></thead><tbody><tr class="odd"><td><strong>In the gene set</strong></td>
+</tr></thead><tbody><tr><td><strong>In the gene set</strong></td>
 <td>13</td>
 <td>1121</td>
 <td>1134</td>
-</tr><tr class="even"><td><strong>Not in the gene set</strong></td>
+</tr><tr><td><strong>Not in the gene set</strong></td>
 <td>41</td>
 <td>20023</td>
 <td>20064</td>
-</tr><tr class="odd"><td><strong>Total</strong></td>
+</tr><tr><td><strong>Total</strong></td>
 <td>54</td>
 <td>21144</td>
 <td>21198</td>
@@ -900,9 +896,9 @@ distribution of its statistic.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>Unit: microseconds
-   expr     min      lq      mean   median       uq     max neval
- fisher 250.297 254.691 268.25671 259.4345 271.9775 669.580   100
-  hyper   1.563   1.743   2.75652   2.1340   3.0605  18.234   100</code></pre>
+   expr     min      lq      mean  median       uq     max neval
+ fisher 173.978 181.073 189.56787 184.674 191.5085 456.006   100
+  hyper   1.191   1.402   1.72347   1.683   1.8980   5.949   100</code></pre>
 </div>
 <p>It is very astonishing that <code>phyper()</code> is hundreds of
 times faster than <code>fisher.test()</code>. Main reason is in
@@ -1129,43 +1125,43 @@ terms and genes are integrated in the Bioconductor standard packages:
 <em>the organism annotation packages</em>. In the current Bioconductor
 release, there are the following organism packages:</p>
 <center>
-<table class="table"><colgroup><col width="27%"><col width="25%"><col width="36%"><col width="10%"></colgroup><thead><tr class="header"><th>Package</th>
+<table class="table"><colgroup><col width="27%"><col width="25%"><col width="36%"><col width="10%"></colgroup><thead><tr><th>Package</th>
 <th>Organism</th>
 <th>Package</th>
 <th>Organism</th>
-</tr></thead><tbody><tr class="odd"><td>org.Hs.eg.db</td>
+</tr></thead><tbody><tr><td>org.Hs.eg.db</td>
 <td>Human</td>
 <td>org.Mm.eg.db</td>
 <td>Mouse</td>
-</tr><tr class="even"><td>org.Rn.eg.db</td>
+</tr><tr><td>org.Rn.eg.db</td>
 <td>Rat</td>
 <td>org.Dm.eg.db</td>
 <td>Fly</td>
-</tr><tr class="odd"><td>org.At.tair.db</td>
+</tr><tr><td>org.At.tair.db</td>
 <td>Arabidopsis</td>
 <td>org.Dr.eg.db</td>
 <td>Zebrafish</td>
-</tr><tr class="even"><td>org.Sc.sgd.db</td>
+</tr><tr><td>org.Sc.sgd.db</td>
 <td>Yeast</td>
 <td>org.Ce.eg.db</td>
 <td>Worm</td>
-</tr><tr class="odd"><td>org.Bt.eg.db</td>
+</tr><tr><td>org.Bt.eg.db</td>
 <td>Bovine</td>
 <td>org.Gg.eg.db</td>
 <td>Chicken</td>
-</tr><tr class="even"><td>org.Ss.eg.db</td>
+</tr><tr><td>org.Ss.eg.db</td>
 <td>Pig</td>
 <td>org.Mmu.eg.db</td>
 <td>Rhesus</td>
-</tr><tr class="odd"><td>org.Cf.eg.db</td>
+</tr><tr><td>org.Cf.eg.db</td>
 <td>Canine</td>
 <td>org.EcK12.eg.db</td>
 <td>E coli strain K12</td>
-</tr><tr class="even"><td>org.Xl.eg.db</td>
+</tr><tr><td>org.Xl.eg.db</td>
 <td>Xenopus</td>
 <td>org.Pt.eg.db</td>
 <td>Chimp</td>
-</tr><tr class="odd"><td>org.Ag.eg.db</td>
+</tr><tr><td>org.Ag.eg.db</td>
 <td>Anopheles</td>
 <td>org.EcSakai.eg.db</td>
 <td>E coli strain Sakai</td>
@@ -1648,7 +1644,7 @@ sets are automatically retrieved and processed from
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 226153,68017,75317,51869,71819,226409</code></pre>
+<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 83945,12181,14211,78656,50755,16183</code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1926,19 +1922,19 @@ mmu00592                               alpha-Linolenic acid metabolism
 mmu04913                                       Ovarian steroidogenesis
 mmu04061 Viral protein interaction with cytokine and cytokine receptor
          GeneRatio  BgRatio RichFactor FoldEnrichment   zScore       pvalue
-mmu00590    16/461 89/11156  0.1797753       4.350484 6.588437 6.084088e-07
-mmu00591    12/461 55/11156  0.2181818       5.279905 6.605859 1.866714e-06
-mmu00565    11/461 49/11156  0.2244898       5.432556 6.455780 3.736525e-06
-mmu00592     8/461 25/11156  0.3200000       7.743861 7.008198 4.649931e-06
-mmu04913    12/461 64/11156  0.1875000       4.537419 5.892049 9.963826e-06
-mmu04061    14/461 95/11156  0.1473684       3.566252 5.215053 3.295101e-05
+mmu00590    16/461 89/11157  0.1797753       4.350874 6.588894 6.076909e-07
+mmu00591    12/461 55/11157  0.2181818       5.280379 6.606279 1.864982e-06
+mmu00565    11/461 49/11157  0.2244898       5.433043 6.456186 3.733326e-06
+mmu00592     8/461 25/11157  0.3200000       7.744555 7.008591 4.646860e-06
+mmu04913    12/461 64/11157  0.1875000       4.537825 5.892450 9.954886e-06
+mmu04061    14/461 95/11157  0.1473684       3.566572 5.215457 3.291887e-05
              p.adjust       qvalue
-mmu00590 0.0001934740 0.0001517820
-mmu00591 0.0002968076 0.0002328481
-mmu00565 0.0003696695 0.0002900088
-mmu00592 0.0003696695 0.0002900088
-mmu04913 0.0006336993 0.0004971425
-mmu04061 0.0017464036 0.0013700684
+mmu00590 0.0001932457 0.0001516029
+mmu00591 0.0002965322 0.0002326320
+mmu00565 0.0003694254 0.0002898173
+mmu00592 0.0003694254 0.0002898173
+mmu04913 0.0006331307 0.0004966964
+mmu04061 0.0017447002 0.0013687321
                                                                                                        geneID
 mmu00590 18783/19215/211429/329502/78390/19223/67103/242546/13118/18781/18784/11689/232889/15446/237625/11687
 mmu00591                        18783/211429/329502/78390/242546/18781/18784/13113/622127/232889/237625/11687
@@ -2159,19 +2155,19 @@ affects three values of <span class="math inline">\(n_{22}\)</span>,
 <span class="math inline">\(n_{02}\)</span> and <span class="math inline">\(n_{20}\)</span> more, which correspond to the
 non-DE genes or non-gene-set genes.</p>
 <center>
-<table class="table"><colgroup><col width="19%"><col width="28%"><col width="38%"><col width="13%"></colgroup><thead><tr class="header"><th></th>
+<table class="table"><colgroup><col width="19%"><col width="28%"><col width="38%"><col width="13%"></colgroup><thead><tr><th></th>
 <th>In the gene set</th>
 <th>Not in the gene set</th>
 <th>Total</th>
-</tr></thead><tbody><tr class="odd"><td><strong>DE</strong></td>
+</tr></thead><tbody><tr><td><strong>DE</strong></td>
 <td><span class="math inline">\(n_{11}\)</span></td>
 <td><span class="math inline">\(n_{12}\)</span></td>
 <td><span class="math inline">\(n_{1+}\)</span></td>
-</tr><tr class="even"><td><strong>Not DE</strong></td>
+</tr><tr><td><strong>Not DE</strong></td>
 <td><span class="math inline">\(n_{21}\)</span></td>
 <td><span class="math inline">\(\color{red}{n_{22}}\)</span></td>
 <td><span class="math inline">\(\color{red}{n_{2+}}\)</span></td>
-</tr><tr class="odd"><td><strong>Total</strong></td>
+</tr><tr><td><strong>Total</strong></td>
 <td><span class="math inline">\(n_{+1}\)</span></td>
 <td><span class="math inline">\(\color{red}{n_{+2}}\)</span></td>
 <td><span class="math inline">\(\color{red}{n}\)</span></td>
@@ -2670,7 +2666,7 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/dd826df5977a33e624097030cb369027d9a9e7c1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/3ea93383d08ad2fe868fedcebce03d79fe0d3730" class="external-link">varnish (1.1.0)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/dd826df5977a33e624097030cb369027d9a9e7c1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/01c642a08d88eb3cad5b5b3fdfcd72337b9f1722" class="external-link">varnish (1.1.1.9000)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -2692,8 +2688,8 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/07-gene-set-analysis.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/07-gene-set-analysis.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2026-04-13",
-  "datePublished": "2026-04-27"
+  "dateModified": "2026-05-04",
+  "datePublished": "2026-05-04"
 }
 
   </script><script>
