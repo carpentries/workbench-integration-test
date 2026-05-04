@@ -489,7 +489,7 @@ loaded via a namespace (and not attached):
 [49] tibble_3.3.1            shiny_1.13.0            withr_3.0.2            
 [52] S7_0.2.1                evaluate_1.0.5          circlize_0.4.18        
 [55] pillar_1.11.1           affyio_1.78.0           BiocManager_1.30.27    
-[58] renv_1.2.1              DT_0.34.0               foreach_1.5.2          
+[58] renv_1.2.2              DT_0.34.0               foreach_1.5.2          
 [61] shinyjs_2.1.1           scales_1.4.0            xtable_1.8-8           
 [64] glue_1.8.0              tools_4.5.3             colourpicker_1.3.0     
 [67] locfit_1.5-9.12         colorspace_2.1-2        nlme_3.1-169           
