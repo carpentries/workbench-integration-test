@@ -12,15 +12,15 @@ In addition to Instructor Training, certification as a Carpentries Instructor in
 
 ### How to Register for an Instructor Training
 
-Invited trainees can register for events listed below by clicking on the link for that event and completing the registration through Eventbrite. When you were invited, you should have received a registration code. If you are an Open Instructor Training applicant, please see your acceptance email for your code. If you were invited through a member organisation or other group, contact the person who invited you if you did not receive a registration code from them.
+Invited trainees can register for events listed below by clicking on the link for that event and completing the registration through Eventbrite. When you were invited, you should have received a registration code. If you are an Open Instructor Training applicant, please see your acceptance email for your code. If you were invited through a partner organisation or other group, contact the person who invited you if you did not receive a registration code from them.
 
 In addition to registering via Eventbrite, you **must** complete the [Instructor Training Profile Creation Form](https://amy.carpentries.org/forms/request_training/) before attending Instructor Training. This creates an entry in our database and allows us to record attendance and track your progress through the Instructor certification process. Please use the same registration code that was provided for Eventbrite.
 
 ### When to Register
 
-#### Members and other groups
+#### Partner organizations and other groups
 
-Registration codes provided to members and other groups are active immediately and may be used for any event until one week prior to its start date.
+Registration codes provided to Carpentries partner organizations and other groups are active immediately and may be used for any event until one week prior to its start date.
 
 ### Cancellation Policies
 
@@ -41,11 +41,6 @@ More details on our [cancellation and makeup policy](https://docs.carpentries.or
 ### Upcoming Instructor Training
 
 Registration closes one week prior to the training event. New trainings are added to this calendar on a quarterly basis (generally in early March, June, September, and December).
-
-<hr>
-
-#### [11-14 May 2026](https://www.eventbrite.com/e/online-instructor-training-may-11-14-2026-tickets-1984382195565?aff=oddtdtcreator&keep_tld=true)
-**Four 4-hour days:** 9 am to 1 pm British Summer Time / 1:30 pm to 5:30 pm India Standard Time / [See the start date and time in your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Instructor+Training&iso=20260511T09&p1=136)
 
 <hr>
 
