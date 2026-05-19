@@ -55,7 +55,7 @@ jobs:
             lesson-name: "USER TEST ${{ github.event.inputs.test-lesson }}"
             experimental: true
     name: ${{ matrix.lesson-name }}
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     continue-on-error: ${{ matrix.experimental }}
     defaults:
       run:
@@ -66,11 +66,11 @@ jobs:
     steps:
       - name: "Checkout this repo"
         if: "${{ matrix.lesson != '' }}"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: "Checkout Lesson"
         if: "${{ matrix.lesson != '' }}"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: ${{ matrix.lesson }}
           path: lesson
