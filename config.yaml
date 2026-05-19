@@ -83,6 +83,6 @@ profiles:
 url: 'https://librarycarpentry.github.io/lc-git'
 analytics: carpentries
 lang: en
-sandpaper: carpentries/sandpaper#717
-varnish: carpentries/varnish#205
+sandpaper: carpentries/sandpaper#721
+varnish: carpentries/varnish#218
 pegboard: carpentries/pegboard
