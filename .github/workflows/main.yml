@@ -103,6 +103,7 @@ jobs:
         with:
           use-public-rspm: true
           install-r: true
+          r-version: 4.5.3
 
       - name: "Set up Pandoc"
         if: "${{ matrix.lesson != '' }}"
