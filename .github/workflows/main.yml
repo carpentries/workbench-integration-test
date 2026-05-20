@@ -35,7 +35,7 @@ jobs:
       fail-fast: false
       matrix:
         # lesson: [carpentries-incubator/bioc-rnaseq, carpentries/instructor-training, datacarpentry/r-socialsci, carpentries/sandpaper-docs, datacarpentry/r-raster-vector-geospatial, datacarpentry/ecology-workshop, "${{ github.event.inputs.test-lesson }}"]
-        r-version: [latest, oldrel, renv]
+        r-version: [latest, oldrel]
         experimental: [false]
         include:
           # - lesson: carpentries-incubator/bioc-rnaseq
@@ -55,7 +55,7 @@ jobs:
           - lesson: "${{ github.event.inputs.test-lesson }}"
             lesson-name: "USER TEST ${{ github.event.inputs.test-lesson }}"
             experimental: true
-    name: ${{ matrix.lesson-name }}
+    name: "${{ matrix.lesson-name }} - R ${{ matrix.r-version }}"
     runs-on: ubuntu-24.04
     continue-on-error: ${{ matrix.experimental }}
     defaults:
