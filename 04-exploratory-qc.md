@@ -439,11 +439,11 @@ sessionInfo()
 ``` output
 R version 4.5.3 (2026-03-11)
 Platform: x86_64-pc-linux-gnu
-Running under: Ubuntu 22.04.5 LTS
+Running under: Ubuntu 24.04.4 LTS
 
 Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
-LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0  LAPACK version 3.10.0
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0
 
 locale:
  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
@@ -489,7 +489,7 @@ loaded via a namespace (and not attached):
 [49] tibble_3.3.1            shiny_1.13.0            withr_3.0.2            
 [52] S7_0.2.1                evaluate_1.0.5          circlize_0.4.18        
 [55] pillar_1.11.1           affyio_1.78.0           BiocManager_1.30.27    
-[58] renv_1.2.2              DT_0.34.0               foreach_1.5.2          
+[58] renv_1.2.3              DT_0.34.0               foreach_1.5.2          
 [61] shinyjs_2.1.1           scales_1.4.0            xtable_1.8-8           
 [64] glue_1.8.0              tools_4.5.3             colourpicker_1.3.0     
 [67] locfit_1.5-9.12         colorspace_2.1-2        nlme_3.1-169           
