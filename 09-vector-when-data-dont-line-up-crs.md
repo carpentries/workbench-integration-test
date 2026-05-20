@@ -107,7 +107,7 @@ Reading layer `US-State-Boundaries-Census-2014' from data source
   using driver `ESRI Shapefile'
 Simple feature collection with 58 features and 10 fields
 Geometry type: MULTIPOLYGON
-Dimension:     XYZ
+Dimension:     XY, XYZ
 Bounding box:  xmin: -124.7258 ymin: 24.49813 xmax: -66.9499 ymax: 49.38436
 z_range:       zmin: 0 zmax: 0
 Geodetic CRS:  WGS 84
@@ -336,7 +336,7 @@ Reading layer `Boundary-US-State-NEast' from data source
   using driver `ESRI Shapefile'
 Simple feature collection with 12 features and 9 fields
 Geometry type: MULTIPOLYGON
-Dimension:     XYZ
+Dimension:     XY, XYZ
 Bounding box:  xmin: -80.51989 ymin: 37.91685 xmax: -66.9499 ymax: 47.45716
 z_range:       zmin: 0 zmax: 0
 Geodetic CRS:  WGS 84
