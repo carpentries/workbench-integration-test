@@ -34,7 +34,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lesson: [carpentries-incubator/bioc-rnaseq, carpentries/instructor-training, datacarpentry/r-socialsci, carpentries/sandpaper-docs, datacarpentry/r-raster-vector-geospatial, datacarpentry/ecology-workshop, "${{ github.event.inputs.test-lesson }}"]
+        # lesson: [carpentries-incubator/bioc-rnaseq, carpentries/instructor-training, datacarpentry/r-socialsci, carpentries/sandpaper-docs, datacarpentry/r-raster-vector-geospatial, datacarpentry/ecology-workshop, "${{ github.event.inputs.test-lesson }}"]
+        r-version: [latest, oldrel, renv]
         experimental: [false]
         include:
           - lesson: carpentries-incubator/bioc-rnaseq
@@ -103,7 +104,7 @@ jobs:
         with:
           use-public-rspm: true
           install-r: true
-          r-version: 4.5.3
+          r-version: ${{ matrix.r-version }}
 
       - name: "Set up Pandoc"
         if: "${{ matrix.lesson != '' }}"
