@@ -340,7 +340,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Gene set enrichment analysis</h1>
-        <p>Last updated on 2026-05-04 |
+        <p>Last updated on 2026-05-20 |
 
         <a href="https://github.com/carpentries-incubator/bioc-rnaseq/edit/main/episodes/07-gene-set-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -898,9 +898,9 @@ distribution of its statistic.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>Unit: microseconds
-   expr     min      lq      mean  median       uq     max neval
- fisher 173.978 181.073 189.56787 184.674 191.5085 456.006   100
-  hyper   1.191   1.402   1.72347   1.683   1.8980   5.949   100</code></pre>
+   expr     min       lq      mean   median       uq     max neval
+ fisher 221.389 225.3500 239.06614 231.0580 239.8965 731.797   100
+  hyper   1.633   1.7775   2.21042   2.2335   2.4535   6.780   100</code></pre>
 </div>
 <p>It is very astonishing that <code>phyper()</code> is hundreds of
 times faster than <code>fisher.test()</code>. Main reason is in
@@ -1056,7 +1056,7 @@ convert a list to a two-column data frame?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1646,7 +1646,7 @@ sets are automatically retrieved and processed from
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 83945,12181,14211,78656,50755,16183</code></pre>
+<pre class="output" tabindex="0"><code>--&gt; Expected input gene ID: 68193,230784,16571,14957,74393,113002583</code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1924,19 +1924,19 @@ mmu00592                               alpha-Linolenic acid metabolism
 mmu04913                                       Ovarian steroidogenesis
 mmu04061 Viral protein interaction with cytokine and cytokine receptor
          GeneRatio  BgRatio RichFactor FoldEnrichment   zScore       pvalue
-mmu00590    16/461 89/11157  0.1797753       4.350874 6.588894 6.076909e-07
-mmu00591    12/461 55/11157  0.2181818       5.280379 6.606279 1.864982e-06
-mmu00565    11/461 49/11157  0.2244898       5.433043 6.456186 3.733326e-06
-mmu00592     8/461 25/11157  0.3200000       7.744555 7.008591 4.646860e-06
-mmu04913    12/461 64/11157  0.1875000       4.537825 5.892450 9.954886e-06
-mmu04061    14/461 95/11157  0.1473684       3.566572 5.215457 3.291887e-05
+mmu00590    16/461 89/11159  0.1797753       4.351654 6.589807 6.062579e-07
+mmu00591    12/461 55/11159  0.2181818       5.281325 6.607120 1.861524e-06
+mmu00565    11/461 49/11159  0.2244898       5.434017 6.456998 3.726937e-06
+mmu00592     8/461 25/11159  0.3200000       7.745944 7.009377 4.640726e-06
+mmu04913    12/461 64/11159  0.1875000       4.538639 5.893251 9.937032e-06
+mmu04061    14/461 95/11159  0.1473684       3.567211 5.216265 3.285469e-05
              p.adjust       qvalue
-mmu00590 0.0001932457 0.0001516029
-mmu00591 0.0002965322 0.0002326320
-mmu00565 0.0003694254 0.0002898173
-mmu00592 0.0003694254 0.0002898173
-mmu04913 0.0006331307 0.0004966964
-mmu04061 0.0017447002 0.0013687321
+mmu00590 0.0001927900 0.0001512454
+mmu00591 0.0002959823 0.0002322006
+mmu00565 0.0003689377 0.0002894348
+mmu00592 0.0003689377 0.0002894348
+mmu04913 0.0006319952 0.0004958056
+mmu04061 0.0017412987 0.0013660635
                                                                                                        geneID
 mmu00590 18783/19215/211429/329502/78390/19223/67103/242546/13118/18781/18784/11689/232889/15446/237625/11687
 mmu00591                        18783/211429/329502/78390/242546/18781/18784/13113/622127/232889/237625/11687
@@ -2668,7 +2668,7 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/dd826df5977a33e624097030cb369027d9a9e7c1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/01c642a08d88eb3cad5b5b3fdfcd72337b9f1722" class="external-link">varnish (1.1.1.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.2" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/release-1.1.1" class="external-link">varnish (1.1.1)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -2690,8 +2690,8 @@ topological relations in the GO hierarchy.<a href="#fnref7" class="footnote-back
   "url": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/07-gene-set-analysis.html",
   "identifier": "https://carpentries-incubator.github.io/bioc-rnaseq/instructor/07-gene-set-analysis.html",
   "dateCreated": "2020-09-15",
-  "dateModified": "2026-05-04",
-  "datePublished": "2026-05-11"
+  "dateModified": "2026-05-20",
+  "datePublished": "2026-05-20"
 }
 
   </script><script>
