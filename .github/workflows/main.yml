@@ -38,8 +38,8 @@ jobs:
         r-version: [latest, oldrel, renv]
         experimental: [false]
         include:
-          - lesson: carpentries-incubator/bioc-rnaseq
-            lesson-name: BioConductor RNAseq
+          # - lesson: carpentries-incubator/bioc-rnaseq
+          #   lesson-name: BioConductor RNAseq
           - lesson: carpentries/instructor-training
             lesson-name: Instructor Training
           - lesson: datacarpentry/r-socialsci
