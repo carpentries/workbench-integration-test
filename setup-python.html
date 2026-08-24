@@ -54,7 +54,7 @@
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"><li><button class="dropdown-item" type="button" onclick="window.location.href='instructor/NEWS.html';">Instructor View</button></li>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"><li><button class="dropdown-item" type="button" onclick="window.location.href='instructor/setup-python.html';">Instructor View</button></li>
         </ul></div>
     </div>
   </div>
@@ -152,7 +152,7 @@
                     </h2>
                     <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
-                        <a href="instructor/NEWS.html">Instructor View</a>
+                        <a href="instructor/setup-python.html">Instructor View</a>
                       </div>
                     </div>
                   </div><!--/div.accordion-item-->
@@ -213,7 +213,7 @@
         <h1></h1>
         <p>Last updated on 2026-08-24 |
 
-        <a href="https://github.com/datacarpentry/ecology-workshop/edit/main/NEWS.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/datacarpentry/ecology-workshop/edit/main/files/setup-python.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
@@ -222,9 +222,96 @@
         </div>
 
         
-<section><h2 class="section-heading" id="data-carpentry-ecology-workshop-overview-2017-04-0">Data Carpentry Ecology Workshop overview 2017.04.0<a class="anchor" aria-label="anchor" href="#data-carpentry-ecology-workshop-overview-2017-04-0"></a></h2>
-<hr class="half-width"><p>Initial release of the Data Carpentry Ecology Workshop overview</p>
-</section></div> <!-- / div.lesson-content -->
+<div class="section level3">
+<h3 id="python-and-jupyter-notebooks">Python and Jupyter Notebooks<a class="anchor" aria-label="anchor" href="#python-and-jupyter-notebooks"></a></h3>
+<p><a href="https://python.org" class="external-link">Python</a> is a popular language for
+scientific computing, and great for general-purpose programming as well.
+For this workshop we use Python version 3.x. Installing all of its
+scientific packages individually can be a bit difficult, so we provide
+an environment file to help you take care of them all together. We will
+use the <em>Miniforge</em> distribution of Python.</p>
+<p>Please refer to the <a href="https://carpentries.github.io/workshop-template/install_instructions/#python" class="external-link">Python
+section of the workshop website for installation instructions</a>.</p>
+<div class="section level4">
+<h4 id="launching-jupyter">Launching Jupyter<a class="anchor" aria-label="anchor" href="#launching-jupyter"></a></h4>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Windows
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>After following the instructions above, search for the application
+‘Miniforge Prompt’ and open it. Type the following commands, pressing
+<kbd>Enter</kbd> after each one:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">conda</span> activate carpentries</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">jupyter</span> notebook</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  MacOS
+  </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>After following the instructions above, open the Terminal application
+(inside Applications/Utilities). Type the following commands, pressing
+<kbd>Enter</kbd> after each one:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">conda</span> activate carpentries</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="ex">jupyter</span> notebook</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Linux
+  </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div class="accordion-body">
+<p>After following the instructions above, search for the application
+‘Miniforge Prompt’ and open it. Type the following commands, pressing
+<kbd>Enter</kbd> after each one:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">conda</span> activate carpentries</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="ex">jupyter</span> notebook</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The notebook should open automatically in your browser. If it does
+not or you wish to use a different browser, open this link: <a href="https://localhost:8888" class="external-link">http://localhost:8888</a>.</p>
+<p>For a brief introduction to Jupyter Notebooks, please consult our <a href="https://datacarpentry.org/python-ecology-lesson/jupyter_notebooks/" class="external-link">Introduction
+to Jupyter Notebooks</a> page.</p>
+</div>
+</div>
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
       </div>
@@ -243,7 +330,7 @@
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/datacarpentry/ecology-workshop/edit/main/NEWS.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/datacarpentry/ecology-workshop/edit/main/files/setup-python.md" class="external-link">Edit on GitHub</a>
 
 	
         | <a href="https://github.com/datacarpentry/ecology-workshop/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
@@ -269,15 +356,15 @@
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://datacarpentry.github.io/ecology-workshop/NEWS.html",
+  "@id": "https://datacarpentry.github.io/ecology-workshop/setup-python.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "",
   "creativeWorkStatus": "active",
-  "url": "https://datacarpentry.github.io/ecology-workshop/NEWS.html",
-  "identifier": "https://datacarpentry.github.io/ecology-workshop/NEWS.html",
+  "url": "https://datacarpentry.github.io/ecology-workshop/setup-python.html",
+  "identifier": "https://datacarpentry.github.io/ecology-workshop/setup-python.html",
   "dateCreated": "2015-12-12",
   "dateModified": "2026-08-24",
   "datePublished": "2026-08-24"
