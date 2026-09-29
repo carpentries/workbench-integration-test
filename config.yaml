@@ -90,6 +90,6 @@ profiles:
 url: 'https://librarycarpentry.github.io/lc-sql'
 analytics: carpentries
 lang: en
-sandpaper: carpentries/sandpaper#710
-varnish: carpentries/varnish
+sandpaper: carpentries/sandpaper#737
+varnish: carpentries/varnish#234
 pegboard: carpentries/pegboard
