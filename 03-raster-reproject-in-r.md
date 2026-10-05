@@ -359,7 +359,7 @@ ext(dtm_hill_utm_harv)
 ```
 
 ``` output
-SpatExtent : 731402.31567604, 733200.22199435, 4712407.19751409, 4713901.78222079 (xmin, xmax, ymin, ymax)
+SpatExtent : 731402.3156760399, 733200.22199434973, 4712407.1975140907, 4713901.782220793 (xmin, xmax, ymin, ymax)
 ```
 
 ``` r
@@ -367,7 +367,7 @@ ext(dtm_hill_harv)
 ```
 
 ``` output
-SpatExtent : -72.1819236223343, -72.1606102223342, 42.5294079700285, 42.5423355900285 (xmin, xmax, ymin, ymax)
+SpatExtent : -72.181923622334253, -72.160610222334242, 42.529407970028508, 42.542335590028507 (xmin, xmax, ymin, ymax)
 ```
 
 Notice in the output above that the `crs()` of `dtm_hill_utm_harv` is now

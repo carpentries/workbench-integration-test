@@ -194,15 +194,15 @@ dsm_harv
 ```
 
 ``` output
-class       : SpatRaster 
+class       : SpatRaster
 size        : 1367, 1697, 1  (nrow, ncol, nlyr)
 resolution  : 1, 1  (x, y)
 extent      : 731453, 733150, 4712471, 4713838  (xmin, xmax, ymin, ymax)
-coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
-source      : HARV_dsmCrop.tif 
-name        : HARV_dsmCrop 
-min value   :       305.07 
-max value   :       416.07 
+coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
+source      : HARV_dsmCrop.tif
+name        : HARV_dsmCrop
+min value   :   305.070007
+max value   :   416.069977
 ```
 
 The information above includes a report of min and max values, but no other data

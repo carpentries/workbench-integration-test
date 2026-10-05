@@ -286,15 +286,15 @@ dsm_hill_harv
 ```
 
 ``` output
-class       : SpatRaster 
+class       : SpatRaster
 size        : 1367, 1697, 1  (nrow, ncol, nlyr)
 resolution  : 1, 1  (x, y)
 extent      : 731453, 733150, 4712471, 4713838  (xmin, xmax, ymin, ymax)
-coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618) 
-source      : HARV_DSMhill.tif 
-name        : HARV_DSMhill 
-min value   :   -0.7136298 
-max value   :    0.9999997 
+coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
+source      : HARV_DSMhill.tif
+name        : HARV_DSMhill
+min value   :     -0.71363
+max value   :            1
 ```
 
 Next we convert it to a dataframe, so that we can plot it using `ggplot2`:

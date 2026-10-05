@@ -460,15 +460,15 @@ rgb_277
 ```
 
 ``` output
-class       : SpatRaster 
+class       : SpatRaster
 size        : 652, 696, 3  (nrow, ncol, nlyr)
 resolution  : 30, 30  (x, y)
 extent      : 230775, 251655, 4704825, 4724385  (xmin, xmax, ymin, ymax)
-coord. ref. : WGS 84 / UTM zone 19N (EPSG:32619) 
-source      : 277_HARV_landRGB.tif 
-names       : X277_HARV_landRGB_1, X277_HARV_landRGB_2, X277_HARV_landRGB_3 
-min values  :                  26,                  29,                  79 
-max values  :                 255,                 255,                 255 
+coord. ref. : WGS 84 / UTM zone 19N (EPSG:32619)
+source      : 277_HARV_landRGB.tif
+names       : X277_HARV_landRGB_1, X277_HARV_landRGB_2, X277_HARV_landRGB_3
+min values  :                  26,                  29,                  79
+max values  :                 255,                 255,                 255
 ```
 
 The RGB data has a max value of 255, but we need our color intensity to be 
