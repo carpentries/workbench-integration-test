@@ -43,6 +43,15 @@
         <a href="index.html">
         <img id="dc-logo" alt="Data Carpentry" src="assets/images/data-logo.svg"></a>
 
+        <span class="badge text-bg-secondary">
+          <abbr title="This lesson has been retired. It is no longer actively maintained and the content may be outdated.">
+            <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
+              <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
+              Retired
+            </a>
+            <span class="visually-hidden">This lesson has been retired. It is no longer actively maintained and the content may be outdated.</span>
+          </abbr>
+        </span>
 
       </div>
     </div>
@@ -477,7 +486,7 @@
         
 <section id="aio-01-raster-structure"><p>Content from <a href="01-raster-structure.html">Intro to Raster Data</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/01-raster-structure.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -704,8 +713,8 @@ extent      : 731453, 733150, 4712471, 4713838  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_dsmCrop.tif
 name        : HARV_dsmCrop
-min value   :       305.07
-max value   :       416.07 </code></pre>
+min value   :   305.070007
+max value   :   416.069977</code></pre>
 </div>
 <p>The information above includes a report of min and max values, but no
 other data range statistics. Similar to other R data structures like
@@ -1417,7 +1426,7 @@ to convert it to a dataframe.</li>
 </div>
 </section></section><section id="aio-02-raster-plot"><p>Content from <a href="02-raster-plot.html">Plot Raster Data</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/02-raster-plot.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1691,7 +1700,7 @@ divided among the range of pixel values.</li>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1746,8 +1755,8 @@ extent      : 731453, 733150, 4712471, 4713838  (xmin, xmax, ymin, ymax)
 coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_DSMhill.tif
 name        : HARV_DSMhill
-min value   :   -0.7136298
-max value   :    0.9999997 </code></pre>
+min value   :     -0.71363
+max value   :            1</code></pre>
 </div>
 <p>Next we convert it to a dataframe, so that we can plot it using
 <code>ggplot2</code>:</p>
@@ -1845,7 +1854,7 @@ the data.</li>
   Answers
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1949,7 +1958,7 @@ aesthetic.</li>
 </div>
 </section></section><section id="aio-03-raster-reproject-in-r"><p>Content from <a href="03-raster-reproject-in-r.html">Reproject Raster Data</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/03-raster-reproject-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2335,7 +2344,7 @@ DTM hillshade, to see how they are different.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>SpatExtent : 731402.31567604, 733200.22199435, 4712407.19751409, 4713901.78222079 (xmin, xmax, ymin, ymax)</code></pre>
+<pre class="output" tabindex="0"><code>SpatExtent : 731402.3156760399, 733200.22199434973, 4712407.1975140907, 4713901.782220793 (xmin, xmax, ymin, ymax)</code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2346,7 +2355,7 @@ DTM hillshade, to see how they are different.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>SpatExtent : -72.1819236223343, -72.1606102223342, 42.5294079700285, 42.5423355900285 (xmin, xmax, ymin, ymax)</code></pre>
+<pre class="output" tabindex="0"><code>SpatExtent : -72.181923622334253, -72.160610222334242, 42.529407970028508, 42.542335590028507 (xmin, xmax, ymin, ymax)</code></pre>
 </div>
 <p>Notice in the output above that the <code>crs()</code> of
 <code>dtm_hill_utm_harv</code> is now UTM. However, the extent values of
@@ -2578,7 +2587,7 @@ CRSs.</li>
 </div>
 </section></section><section id="aio-04-raster-calculations-in-r"><p>Content from <a href="04-raster-calculations-in-r.html">Raster Calculations</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/04-raster-calculations-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3338,7 +3347,7 @@ data to a file.</li>
 </div>
 </section></section><section id="aio-05-raster-multi-band-in-r"><p>Content from <a href="05-raster-multi-band-in-r.html">Work with Multi-Band Rasters</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/05-raster-multi-band-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3467,7 +3476,7 @@ coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_RGB_Ortho.tif
 name        : HARV_RGB_Ortho_1
 min value   :                0
-max value   :              255 </code></pre>
+max value   :              255</code></pre>
 </div>
 <p>Notice that when we look at the attributes of this band, we see:
 <code>dimensions  : 2317, 3073, 1  (nrow, ncol, nlyr)</code></p>
@@ -3536,7 +3545,7 @@ coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_RGB_Ortho.tif
 names       : HARV_RGB_Ortho_1, HARV_RGB_Ortho_2, HARV_RGB_Ortho_3
 min values  :                0,                0,                0
-max values  :              255,              255,              255 </code></pre>
+max values  :              255,              255,              255</code></pre>
 </div>
 <p>We can view the attributes of each band in the stack in a single
 output. For example, if we had hundreds of bands, we could specify which
@@ -3558,7 +3567,7 @@ coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_RGB_Ortho.tif
 name        : HARV_RGB_Ortho_2
 min value   :                0
-max value   :              255 </code></pre>
+max value   :              255</code></pre>
 </div>
 <p>We can also use the <code>ggplot</code> functions to plot the data in
 any layer of our raster object. Remember, we need to convert to a data
@@ -3996,7 +4005,7 @@ coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_RGB_Ortho.tif
 names       : HARV_RGB_Ortho_1, HARV_RGB_Ortho_2, HARV_RGB_Ortho_3
 min values  :                0,                0,                0
-max values  :              255,              255,              255 </code></pre>
+max values  :              255,              255,              255</code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4015,7 +4024,7 @@ coord. ref. : WGS 84 / UTM zone 18N (EPSG:32618)
 source      : HARV_RGB_Ortho.tif
 names       : HARV_RGB_Ortho_1, HARV_RGB_Ortho_2, HARV_RGB_Ortho_3
 min values  :                0,                0,                0
-max values  :              255,              255,              255 </code></pre>
+max values  :              255,              255,              255</code></pre>
 </div>
 <div id="challenge-what-functions-can-be-used-on-an-r-object-of-a-particular-class" class="callout challenge">
 <div class="callout-square">
@@ -4096,82 +4105,83 @@ RasterStack object:</li>
 [103] expanse               ext                   ext&lt;-
 [106] extend                extract               extractRange
 [109] fillHoles             fillTime              flip
-[112] flowAccumulation      focal                 focal3D
-[115] focalCpp              focalPairs            focalReg
-[118] focalValues           freq                  getTileExtents
-[121] global                gridDist              gridDistance
-[124] has.colors            has.RGB               has.time
-[127] hasMinMax             hasValues             head
-[130] hist                  identical             ifel
-[133] image                 init                  inMemory
-[136] inset                 interpIDW             interpNear
-[139] interpolate           intersect             is.bool
-[142] is.factor             is.finite             is.flipped
-[145] is.infinite           is.int                is.lonlat
-[148] is.na                 is.nan                is.num
-[151] is.related            is.rotated            isFALSE
-[154] isTRUE                k_means               lapp
-[157] layerCor              levels                levels&lt;-
-[160] linearUnits           lines                 log
-[163] Logic                 logic                 longnames
-[166] longnames&lt;-           makeTiles             mask
-[169] match                 math                  Math
-[172] Math2                 mean                  median
-[175] merge                 meta                  metags
-[178] metags&lt;-              minmax                modal
-[181] mosaic                NAflag                NAflag&lt;-
-[184] names                 names&lt;-               nany
-[187] ncell                 ncol                  ncol&lt;-
-[190] NIDP                  nlyr                  nlyr&lt;-
-[193] noNA                  not.na                nrow
-[196] nrow&lt;-                nsrc                  origin
-[199] origin&lt;-              pairs                 panel
-[202] patches               persp                 pitfinder
-[205] plet                  plot                  plotRGB
-[208] points                polys                 prcomp
-[211] predict               princomp              project
-[214] quantile              rangeFill             rapp
-[217] rast                  rasterize             rasterizeGeom
-[220] rasterizeWin          rcl                   readStart
-[223] readStop              readValues            rectify
-[226] regress               relate                rep
-[229] res                   res&lt;-                 resample
-[232] rescale               rev                   RGB
-[235] RGB&lt;-                 roll                  rotate
-[238] rowColCombine         rowColFromCell        rowFromCell
-[241] rowFromY              rowMeans              rowSums
-[244] sapp                  saveRDS               scale_linear
-[247] scale                 scoff                 scoff&lt;-
-[250] sds                   segregate             sel
-[253] selectHighest         selectRange           serialize
-[256] set.cats              set.crs               set.ext
-[259] set.names             set.RGB               set.values
-[262] set.window            setMinMax             setValues
-[265] shift                 show                  sieve
-[268] simplifyLevels        size                  sort
-[271] sources               spatSample            split
-[274] sprc                  stdev                 str
-[277] stretch               subset                subst
-[280] summary               Summary               surfArea
-[283] t                     tail                  tapp
-[286] terrain               text                  thresh
-[289] tighten               time                  time&lt;-
-[292] timeInfo              toMemory              trans
-[295] trim                  unique                units
-[298] units&lt;-               update                values
-[301] values&lt;-              varnames              varnames&lt;-
-[304] viewshed              watershed             weighted.mean
-[307] where.max             where.min             which.lyr
-[310] which.max             which.min             window
-[313] window&lt;-              wrap                  wrapCache
-[316] writeCDF              writeRaster           writeStart
-[319] writeStop             writeValues           xapp
-[322] xFromCell             xFromCol              xmax
-[325] xmax&lt;-                xmin                  xmin&lt;-
-[328] xres                  xyFromCell            yFromCell
-[331] yFromRow              ymax                  ymax&lt;-
-[334] ymin                  ymin&lt;-                yres
-[337] zonal                 zoom
+[112] flowAccumulation      flowDir               focal
+[115] focal3D               focalCpp              focalPairs
+[118] focalReg              focalValues           freq
+[121] geoloc                getTileExtents        global
+[124] gridDist              gridDistance          has.colors
+[127] has.geoloc            has.RGB               has.time
+[130] hasMinMax             hasValues             head
+[133] hist                  identical             ifel
+[136] image                 init                  inMemory
+[139] inset                 interpIDW             interpNear
+[142] interpolate           intersect             is.bool
+[145] is.factor             is.finite             is.flipped
+[148] is.infinite           is.int                is.lonlat
+[151] is.na                 is.nan                is.num
+[154] is.related            is.rotated            isFALSE
+[157] isTRUE                k_means               lapp
+[160] layerCor              levels                levels&lt;-
+[163] linearUnits           lines                 log
+[166] Logic                 logic                 longnames
+[169] longnames&lt;-           makeTiles             mask
+[172] match                 math                  Math
+[175] Math2                 mean                  median
+[178] merge                 meta                  metags
+[181] metags&lt;-              minmax                modal
+[184] mosaic                NAflag                NAflag&lt;-
+[187] names                 names&lt;-               nany
+[190] ncell                 ncol                  ncol&lt;-
+[193] NIDP                  nlyr                  nlyr&lt;-
+[196] noNA                  not.na                nrow
+[199] nrow&lt;-                nsrc                  origin
+[202] origin&lt;-              pairs                 panel
+[205] patches               persp                 pitfiller
+[208] pitfinder             plet                  plot
+[211] plotRGB               points                polys
+[214] prcomp                predict               princomp
+[217] project               quantile              rangeFill
+[220] rapp                  rast                  rasterize
+[223] rasterizeGeom         rasterizeWin          rcl
+[226] readStart             readStop              readValues
+[229] rectify               regress               relate
+[232] rep                   res                   res&lt;-
+[235] resample              rescale               rev
+[238] RGB                   RGB&lt;-                 roll
+[241] rotate                rowColCombine         rowColFromCell
+[244] rowFromCell           rowFromY              rowMeans
+[247] rowSums               sapp                  saveRDS
+[250] scale_linear          scale                 scoff
+[253] scoff&lt;-               sds                   segregate
+[256] sel                   selectHighest         selectRange
+[259] serialize             set.cats              set.crs
+[262] set.ext               set.names             set.RGB
+[265] set.values            set.window            setMinMax
+[268] setValues             shift                 show
+[271] sieve                 simplifyLevels        size
+[274] sort                  sources               spatSample
+[277] split                 sprc                  stdev
+[280] str                   stretch               subset
+[283] subst                 summary               Summary
+[286] surfArea              t                     tail
+[289] tapp                  terrain               text
+[292] thresh                tighten               time
+[295] time&lt;-                timeInfo              toMemory
+[298] trans                 trim                  unique
+[301] units                 units&lt;-               update
+[304] values                values&lt;-              varnames
+[307] varnames&lt;-            viewshed              watershed
+[310] weighted.mean         where.max             where.min
+[313] which.lyr             which.max             which.min
+[316] window                window&lt;-              wrap
+[319] wrapCache             writeCDF              writeRaster
+[322] writeStart            writeStop             writeValues
+[325] xapp                  xFromCell             xFromCol
+[328] xmax                  xmax&lt;-                xmin
+[331] xmin&lt;-                xres                  xyFromCell
+[334] yFromCell             yFromRow              ymax
+[337] ymax&lt;-                ymin                  ymin&lt;-
+[340] yres                  zonal                 zoom
 see '?methods' for accessing help and source code</code></pre>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -4223,82 +4233,83 @@ see '?methods' for accessing help and source code</code></pre>
 [103] expanse               ext                   ext&lt;-
 [106] extend                extract               extractRange
 [109] fillHoles             fillTime              flip
-[112] flowAccumulation      focal                 focal3D
-[115] focalCpp              focalPairs            focalReg
-[118] focalValues           freq                  getTileExtents
-[121] global                gridDist              gridDistance
-[124] has.colors            has.RGB               has.time
-[127] hasMinMax             hasValues             head
-[130] hist                  identical             ifel
-[133] image                 init                  inMemory
-[136] inset                 interpIDW             interpNear
-[139] interpolate           intersect             is.bool
-[142] is.factor             is.finite             is.flipped
-[145] is.infinite           is.int                is.lonlat
-[148] is.na                 is.nan                is.num
-[151] is.related            is.rotated            isFALSE
-[154] isTRUE                k_means               lapp
-[157] layerCor              levels                levels&lt;-
-[160] linearUnits           lines                 log
-[163] Logic                 logic                 longnames
-[166] longnames&lt;-           makeTiles             mask
-[169] match                 math                  Math
-[172] Math2                 mean                  median
-[175] merge                 meta                  metags
-[178] metags&lt;-              minmax                modal
-[181] mosaic                NAflag                NAflag&lt;-
-[184] names                 names&lt;-               nany
-[187] ncell                 ncol                  ncol&lt;-
-[190] NIDP                  nlyr                  nlyr&lt;-
-[193] noNA                  not.na                nrow
-[196] nrow&lt;-                nsrc                  origin
-[199] origin&lt;-              pairs                 panel
-[202] patches               persp                 pitfinder
-[205] plet                  plot                  plotRGB
-[208] points                polys                 prcomp
-[211] predict               princomp              project
-[214] quantile              rangeFill             rapp
-[217] rast                  rasterize             rasterizeGeom
-[220] rasterizeWin          rcl                   readStart
-[223] readStop              readValues            rectify
-[226] regress               relate                rep
-[229] res                   res&lt;-                 resample
-[232] rescale               rev                   RGB
-[235] RGB&lt;-                 roll                  rotate
-[238] rowColCombine         rowColFromCell        rowFromCell
-[241] rowFromY              rowMeans              rowSums
-[244] sapp                  saveRDS               scale_linear
-[247] scale                 scoff                 scoff&lt;-
-[250] sds                   segregate             sel
-[253] selectHighest         selectRange           serialize
-[256] set.cats              set.crs               set.ext
-[259] set.names             set.RGB               set.values
-[262] set.window            setMinMax             setValues
-[265] shift                 show                  sieve
-[268] simplifyLevels        size                  sort
-[271] sources               spatSample            split
-[274] sprc                  stdev                 str
-[277] stretch               subset                subst
-[280] summary               Summary               surfArea
-[283] t                     tail                  tapp
-[286] terrain               text                  thresh
-[289] tighten               time                  time&lt;-
-[292] timeInfo              toMemory              trans
-[295] trim                  unique                units
-[298] units&lt;-               update                values
-[301] values&lt;-              varnames              varnames&lt;-
-[304] viewshed              watershed             weighted.mean
-[307] where.max             where.min             which.lyr
-[310] which.max             which.min             window
-[313] window&lt;-              wrap                  wrapCache
-[316] writeCDF              writeRaster           writeStart
-[319] writeStop             writeValues           xapp
-[322] xFromCell             xFromCol              xmax
-[325] xmax&lt;-                xmin                  xmin&lt;-
-[328] xres                  xyFromCell            yFromCell
-[331] yFromRow              ymax                  ymax&lt;-
-[334] ymin                  ymin&lt;-                yres
-[337] zonal                 zoom
+[112] flowAccumulation      flowDir               focal
+[115] focal3D               focalCpp              focalPairs
+[118] focalReg              focalValues           freq
+[121] geoloc                getTileExtents        global
+[124] gridDist              gridDistance          has.colors
+[127] has.geoloc            has.RGB               has.time
+[130] hasMinMax             hasValues             head
+[133] hist                  identical             ifel
+[136] image                 init                  inMemory
+[139] inset                 interpIDW             interpNear
+[142] interpolate           intersect             is.bool
+[145] is.factor             is.finite             is.flipped
+[148] is.infinite           is.int                is.lonlat
+[151] is.na                 is.nan                is.num
+[154] is.related            is.rotated            isFALSE
+[157] isTRUE                k_means               lapp
+[160] layerCor              levels                levels&lt;-
+[163] linearUnits           lines                 log
+[166] Logic                 logic                 longnames
+[169] longnames&lt;-           makeTiles             mask
+[172] match                 math                  Math
+[175] Math2                 mean                  median
+[178] merge                 meta                  metags
+[181] metags&lt;-              minmax                modal
+[184] mosaic                NAflag                NAflag&lt;-
+[187] names                 names&lt;-               nany
+[190] ncell                 ncol                  ncol&lt;-
+[193] NIDP                  nlyr                  nlyr&lt;-
+[196] noNA                  not.na                nrow
+[199] nrow&lt;-                nsrc                  origin
+[202] origin&lt;-              pairs                 panel
+[205] patches               persp                 pitfiller
+[208] pitfinder             plet                  plot
+[211] plotRGB               points                polys
+[214] prcomp                predict               princomp
+[217] project               quantile              rangeFill
+[220] rapp                  rast                  rasterize
+[223] rasterizeGeom         rasterizeWin          rcl
+[226] readStart             readStop              readValues
+[229] rectify               regress               relate
+[232] rep                   res                   res&lt;-
+[235] resample              rescale               rev
+[238] RGB                   RGB&lt;-                 roll
+[241] rotate                rowColCombine         rowColFromCell
+[244] rowFromCell           rowFromY              rowMeans
+[247] rowSums               sapp                  saveRDS
+[250] scale_linear          scale                 scoff
+[253] scoff&lt;-               sds                   segregate
+[256] sel                   selectHighest         selectRange
+[259] serialize             set.cats              set.crs
+[262] set.ext               set.names             set.RGB
+[265] set.values            set.window            setMinMax
+[268] setValues             shift                 show
+[271] sieve                 simplifyLevels        size
+[274] sort                  sources               spatSample
+[277] split                 sprc                  stdev
+[280] str                   stretch               subset
+[283] subst                 summary               Summary
+[286] surfArea              t                     tail
+[289] tapp                  terrain               text
+[292] thresh                tighten               time
+[295] time&lt;-                timeInfo              toMemory
+[298] trans                 trim                  unique
+[301] units                 units&lt;-               update
+[304] values                values&lt;-              varnames
+[307] varnames&lt;-            viewshed              watershed
+[310] weighted.mean         where.max             where.min
+[313] which.lyr             which.max             which.min
+[316] window                window&lt;-              wrap
+[319] wrapCache             writeCDF              writeRaster
+[322] writeStart            writeStop             writeValues
+[325] xapp                  xFromCell             xFromCol
+[328] xmax                  xmax&lt;-                xmin
+[331] xmin&lt;-                xres                  xyFromCell
+[334] yFromCell             yFromRow              ymax
+[337] ymax&lt;-                ymin                  ymin&lt;-
+[340] yres                  zonal                 zoom
 see '?methods' for accessing help and source code</code></pre>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -4328,7 +4339,7 @@ holds.</li>
 </div>
 </section></section><section id="aio-06-vector-open-shapefile-in-r"><p>Content from <a href="06-vector-open-shapefile-in-r.html">Open and Plot Vector Layers</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/06-vector-open-shapefile-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4861,7 +4872,7 @@ dataframe.</li>
 </div>
 </section></section><section id="aio-07-vector-shapefile-attributes-in-r"><p>Content from <a href="07-vector-shapefile-attributes-in-r.html">Explore and Plot by Vector Layer Attributes</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/07-vector-shapefile-attributes-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -5786,7 +5797,7 @@ functions and options in the <code>ggplot2</code> package.</li>
 </div>
 </section></section><section id="aio-08-vector-plot-shapefiles-custom-legend"><p>Content from <a href="08-vector-plot-shapefiles-custom-legend.html">Plot Multiple Vector Layers</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/08-vector-plot-shapefiles-custom-legend.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -6129,7 +6140,7 @@ colors.</li>
 </div>
 </section></section><section id="aio-09-vector-when-data-dont-line-up-crs"><p>Content from <a href="09-vector-when-data-dont-line-up-crs.html">Handling Spatial Projection &amp; CRS</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/09-vector-when-data-dont-line-up-crs.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -6562,7 +6573,7 @@ the same CRS.</li>
 </div>
 </section></section><section id="aio-10-vector-csv-to-shapefile-in-r"><p>Content from <a href="10-vector-csv-to-shapefile-in-r.html">Convert from .csv to a Vector Layer</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/10-vector-csv-to-shapefile-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -7042,7 +7053,7 @@ your map!</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>First we will read in the new csv file and look at the data
@@ -7212,7 +7223,7 @@ to a spatial object.</li>
 </div>
 </section></section><section id="aio-11-vector-raster-integration"><p>Content from <a href="11-vector-raster-integration.html">Manipulate Raster Data</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/11-vector-raster-integration.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -7777,7 +7788,7 @@ raster object that fall within a particular extent boundary.</li>
 </div>
 </section></section><section id="aio-12-time-series-raster"><p>Content from <a href="12-time-series-raster.html">Raster Time Series Data</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/12-time-series-raster.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -8001,7 +8012,7 @@ questions.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8275,7 +8286,7 @@ these days?</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>First we need to load in the RGB data for Julian day 277 and look at
 its metadata.</p>
@@ -8301,7 +8312,7 @@ coord. ref. : WGS 84 / UTM zone 19N (EPSG:32619)
 source      : 277_HARV_landRGB.tif
 names       : X277_HARV_landRGB_1, X277_HARV_landRGB_2, X277_HARV_landRGB_3
 min values  :                  26,                  29,                  79
-max values  :                 255,                 255,                 255 </code></pre>
+max values  :                 255,                 255,                 255</code></pre>
 </div>
 <p>The RGB data has a max value of 255, but we need our color intensity
 to be between 0 and 1, so we will divide our RasterStack object by
@@ -8386,7 +8397,7 @@ format.</li>
 </div>
 </section></section><section id="aio-13-plot-time-series-rasters-in-r"><p>Content from <a href="13-plot-time-series-rasters-in-r.html">Create Publication-quality Graphics</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/13-plot-time-series-rasters-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -8514,7 +8525,7 @@ figure out how to change this setting.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Learners can find this information in the help files for the
 <code>theme()</code> function. The parameter to set is called
@@ -8761,7 +8772,7 @@ best?</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8810,7 +8821,7 @@ replacement in text.</li>
 </div>
 </section></section><section id="aio-14-extract-ndvi-from-rasters-in-r"><p>Content from <a href="14-extract-ndvi-from-rasters-in-r.html">Derive Values from Raster Time Series</a></p>
 <hr>
-<p>Last updated on 2026-09-29 |
+<p>Last updated on 2026-10-05 |
 
         <a href="https://github.com/datacarpentry/r-raster-vector-geospatial/edit/main/episodes/14-extract-ndvi-from-rasters-in-r.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -9127,7 +9138,7 @@ directory.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>First we will read in the NDVI data for the SJER field site.</p>
 <div class="codewrapper sourceCode" id="cb21">
@@ -9227,7 +9238,7 @@ in a different color.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9289,7 +9300,7 @@ Julian day, on the x-axis.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9455,7 +9466,7 @@ sites.</li>
   Answers
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9530,7 +9541,7 @@ have the same column names.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/release-0.21.1" class="external-link">sandpaper (0.21.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/release-1.1.3" class="external-link">varnish (1.1.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/99aff4cdc6ae8bd8b8401e334840b10f381c7c01" class="external-link">sandpaper (0.21.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/7dc6acfdd6233c0d124a0ecf288325edc40dd96d" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/af711b03a997e9f92c7ad07bc05163092b2b3ad4" class="external-link">varnish (1.1.3)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -9553,8 +9564,8 @@ have the same column names.</li>
   "url": "https://datacarpentry.org/r-raster-vector-geospatial/aio.html",
   "identifier": "https://datacarpentry.org/r-raster-vector-geospatial/aio.html",
   "dateCreated": "2015-10-22",
-  "dateModified": "2026-09-29",
-  "datePublished": "2026-09-29"
+  "dateModified": "2026-10-05",
+  "datePublished": "2026-10-05"
 }
 
   </script><script>
