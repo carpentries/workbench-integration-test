@@ -56,7 +56,7 @@ There are essentially three rules that define a "tidy" dataset:
 
 This graphic visually represents the three rules that define a "tidy" dataset:
 
-![](fig/tidy-data-wickham.png)
+![](fig/tidy-data-wickham.png){alt='Three copies of a table with columns country, year, cases and population: in the first, vertical arrows mark each column as a variable; in the second, horizontal arrows mark each row as an observation; in the third, circles mark each cell as a value.'}
 *R for Data Science*, Wickham H and Grolemund G ([https://r4ds.had.co.nz/index.html](https://r4ds.had.co.nz/index.html))
 © Wickham, Grolemund 2017
 This image is licenced under Attribution-NonCommercial-NoDerivs 3.0 United States (CC-BY-NC-ND 3.0 US)
@@ -105,16 +105,16 @@ interviews |>
 # A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1     46 Chirodzo 2016-11-17 00:00:00 uuid:35f297e0-aa5d-4149-9b7b-4965004cfc37
- 2     57 Chirodzo 2016-11-16 00:00:00 uuid:a7184e55-0615-492d-9835-8f44f3b03a71
- 3     10 Chirodzo 2016-12-16 00:00:00 uuid:8f4e49bc-da81-4356-ae34-e0d794a23721
+ 1     68 Chirodzo 2016-11-16 00:00:00 uuid:ef04b3eb-b47d-412e-9b09-4f5e08fc66f9
+ 2    200 Chirodzo 2017-06-04 00:00:00 uuid:aa77a0d7-7142-41c8-b494-483a5b68d8a7
+ 3     49 Chirodzo 2016-11-16 00:00:00 uuid:2303ebc1-2b3c-475a-8916-b322ebf18440
  4     58 Chirodzo 2016-11-16 00:00:00 uuid:a7a3451f-cd0d-4027-82d9-8dcd1234fcca
- 5     44 Chirodzo 2016-11-17 00:00:00 uuid:f9fadf44-d040-4fca-86c1-2835f79c4952
- 6     66 Chirodzo 2016-11-16 00:00:00 uuid:a457eab8-971b-4417-a971-2e55b8702816
- 7     48 Chirodzo 2016-11-16 00:00:00 uuid:e180899c-7614-49eb-a97c-40ed013a38a2
- 8      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
- 9    199 Chirodzo 2017-06-04 00:00:00 uuid:ffc83162-ff24-4a87-8709-eff17abc0b3b
-10     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
+ 5     34 Chirodzo 2016-11-17 00:00:00 uuid:14c78c45-a7cc-4b2a-b765-17c82b43feb4
+ 6     47 Chirodzo 2016-11-17 00:00:00 uuid:2d0b1936-4f82-4ec3-a3b5-7c3c8cd6cc2b
+ 7     56 Chirodzo 2016-11-16 00:00:00 uuid:973c4ac6-f887-48e7-aeaf-4476f2cfab76
+ 8     10 Chirodzo 2016-12-16 00:00:00 uuid:8f4e49bc-da81-4356-ae34-e0d794a23721
+ 9     64 Chirodzo 2016-11-16 00:00:00 uuid:28cfd718-bf62-4d90-8100-55fafbe45d06
+10     53 Chirodzo 2016-11-16 00:00:00 uuid:cc7f75c5-d13e-43f3-97e5-4f4c03cb4b12
 ```
 
 We notice that the layout or format of the `interviews` data is in a format that
@@ -141,7 +141,7 @@ tools that make transitions between these layouts much simpler than you might
 think! The gif below shows how these two formats relate to each other, and
 gives you an idea of how we can use R to shift from one format to the other.
 
-![](fig/tidyr-pivot_wider_longer.gif)
+![](fig/tidyr-pivot_wider_longer.gif){alt='Animation of a small table converting between wide format, with an id column and value columns x, y and z, and long format, where the column names x, y and z become values in a key column next to their values, and back again.'}
 Long and wide dataframe layouts mainly affect readability. You may find that
 visually you may prefer the "wide" format, since you can see more of the data on
 the screen. However, all of the R functions we have used thus far expect for
