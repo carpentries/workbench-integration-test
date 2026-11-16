@@ -84,6 +84,6 @@ profiles:
 url: 'https://librarycarpentry.github.io/lc-shell'
 analytics: carpentries
 lang: en
-sandpaper: carpentries/sandpaper#744
-varnish: carpentries/varnish#242
-pegboard: carpentries/pegboard
+sandpaper: carpentries/sandpaper
+varnish: carpentries/varnish
+pegboard: carpentries/pegboard#171
